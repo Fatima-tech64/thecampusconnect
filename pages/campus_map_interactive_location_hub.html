@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Map - Interactive Location Hub | TheCampusConnect</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Navigate your campus universe with our interactive map featuring neon-styled markers, event density visualization, and AR-style location indicators. Transform campus exploration into an urban adventure." />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fthecampusc2880back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background text-text-primary font-inter overflow-x-hidden">
+    <!-- Sticky Navigation -->
+    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/20 transition-smooth">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="w-8 h-8 mr-3" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
+                        <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white"/>
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                <stop offset="0%" stop-color="#00FFFF"/>
+                                <stop offset="100%" stop-color="#FF1493"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="font-montserrat font-bold text-xl text-primary">TheCampusConnect</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage_interactive_campus_event_hub.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Home</a>
+                    <a href="events_discovery_dynamic_event_ecosystem.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Events</a>
+                    <a href="schedule_management_personal_planning_center.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Schedule</a>
+                    <a href="#map" class="nav-link text-text-primary hover:text-primary transition-micro">Map</a>
+                    <a href="social_hub_community_showcase.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Social</a>
+                    <a href="contact_feedback_community_connection_portal.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-text-primary hover:text-primary transition-micro">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-surface/95 backdrop-blur-md rounded-lg mt-2 p-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="homepage_interactive_campus_event_hub.html" class="text-text-secondary hover:text-primary transition-micro">🏠 Home</a>
+                    <a href="events_discovery_dynamic_event_ecosystem.html" class="text-text-secondary hover:text-primary transition-micro">🎉 Events</a>
+                    <a href="schedule_management_personal_planning_center.html" class="text-text-secondary hover:text-primary transition-micro">📅 Schedule</a>
+                    <a href="#map" class="text-text-primary hover:text-primary transition-micro">🗺️ Map</a>
+                    <a href="social_hub_community_showcase.html" class="text-text-secondary hover:text-primary transition-micro">👥 Social</a>
+                    <a href="contact_feedback_community_connection_portal.html" class="text-text-secondary hover:text-primary transition-micro">📞 Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="map" class="relative pt-20 pb-8 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-background via-background-800 to-surface">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 opacity-10">
+            <!-- Campus Grid Pattern -->
+            <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <defs>
+                    <pattern id="campus-grid" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+                        <path d="M 10 0 L 0 0 0 10" fill="none" stroke="url(#grid-gradient)" stroke-width="0.5"/>
+                    </pattern>
+                    <linearGradient id="grid-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#00FFFF" stop-opacity="0.3"/>
+                        <stop offset="100%" stop-color="#FF1493" stop-opacity="0.1"/>
+                    </linearGradient>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#campus-grid)"/>
+            </svg>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center max-w-5xl mx-auto mb-8">
+            <h1 class="font-montserrat font-black text-4xl sm:text-6xl lg:text-7xl mb-6 leading-tight">
+                <span class="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                    Campus Universe
+                </span>
+                <br />
+                <span class="text-text-primary">Navigator 🗺️</span>
+            </h1>
+            
+            <p class="text-xl sm:text-2xl text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed">
+                Transform campus exploration into an <span class="text-primary font-semibold">urban adventure</span>! 
+                Discover locations, track events, and navigate like a pro with our neon-powered interactive map ✨
+            </p>
+
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto">
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-primary/20">
+                    <div class="text-2xl font-bold text-primary">47</div>
+                    <div class="text-sm text-text-secondary">Buildings</div>
+                </div>
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-secondary/20">
+                    <div class="text-2xl font-bold text-secondary">156</div>
+                    <div class="text-sm text-text-secondary">Event Venues</div>
+                </div>
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-accent/20">
+                    <div class="text-2xl font-bold text-accent">23</div>
+                    <div class="text-sm text-text-secondary">Active Events</div>
+                </div>
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-warning/20">
+                    <div class="text-2xl font-bold text-warning">98%</div>
+                    <div class="text-sm text-text-secondary">Accuracy</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Controls Section -->
+    <section class="py-8 px-4 sm:px-6 lg:px-8 bg-surface/30">
+        <div class="max-w-7xl mx-auto">
+            <!-- Search and Filter Bar -->
+            <div class="bg-surface/50 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 mb-8">
+                <div class="flex flex-col lg:flex-row gap-4 items-center">
+                    <!-- Search Input -->
+                    <div class="relative flex-1 w-full lg:w-auto">
+                        <input type="text" id="location-search" placeholder="Search buildings, venues, or events..." class="w-full bg-background/50 border border-primary/30 rounded-full px-6 py-3 pl-12 text-text-primary placeholder-text-secondary focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-smooth" />
+                        <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+
+                    <!-- Filter Buttons -->
+                    <div class="flex flex-wrap gap-2">
+                        <button class="filter-btn active bg-primary text-background px-4 py-2 rounded-full font-nunito font-semibold text-sm hover:shadow-neon transition-smooth">
+                            All Locations 🎯
+                        </button>
+                        <button class="filter-btn bg-surface border border-secondary text-text-primary px-4 py-2 rounded-full font-nunito font-semibold text-sm hover:bg-secondary hover:text-background transition-smooth">
+                            Events 🎉
+                        </button>
+                        <button class="filter-btn bg-surface border border-accent text-text-primary px-4 py-2 rounded-full font-nunito font-semibold text-sm hover:bg-accent hover:text-background transition-smooth">
+                            Academic 📚
+                        </button>
+                        <button class="filter-btn bg-surface border border-warning text-text-primary px-4 py-2 rounded-full font-nunito font-semibold text-sm hover:bg-warning hover:text-background transition-smooth">
+                            Dining 🍕
+                        </button>
+                        <button class="filter-btn bg-surface border border-error text-text-primary px-4 py-2 rounded-full font-nunito font-semibold text-sm hover:bg-error hover:text-background transition-smooth">
+                            Recreation ⚽
+                        </button>
+                    </div>
+
+                    <!-- View Toggle -->
+                    <div class="flex items-center gap-2 bg-background/50 rounded-full p-1">
+                        <button id="map-view-btn" class="view-toggle active bg-primary text-background px-4 py-2 rounded-full text-sm font-semibold transition-smooth">
+                            Map View
+                        </button>
+                        <button id="list-view-btn" class="view-toggle text-text-secondary px-4 py-2 rounded-full text-sm font-semibold hover:text-primary transition-smooth">
+                            List View
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Container -->
+            <div id="map-container" class="relative">
+                <!-- Interactive Map -->
+                <div class="bg-surface/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-primary/20 h-96 lg:h-[600px] relative">
+                    <!-- Map Placeholder with Campus Layout -->
+                    <div class="w-full h-full bg-gradient-to-br from-background-800 to-surface-700 relative overflow-hidden">
+                        <!-- Campus Buildings Visualization -->
+                        <svg class="w-full h-full" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid meet">
+                            <!-- Campus Roads -->
+                            <path d="M0,300 Q200,280 400,300 T800,300" stroke="url(#road-gradient)" stroke-width="8" fill="none" opacity="0.6"/>
+                            <path d="M400,0 Q380,200 400,300 T400,600" stroke="url(#road-gradient)" stroke-width="6" fill="none" opacity="0.4"/>
+                            
+                            <!-- Building Blocks -->
+                            <!-- Main Library -->
+                            <rect x="150" y="200" width="80" height="60" rx="8" fill="url(#building-gradient-1)" stroke="#00FFFF" stroke-width="2" opacity="0.8"/>
+                            <text x="190" y="235" text-anchor="middle" fill="#FFFFFF" font-size="10" font-family="Inter">Library</text>
+                            
+                            <!-- Engineering Hall -->
+                            <rect x="300" y="150" width="100" height="80" rx="8" fill="url(#building-gradient-2)" stroke="#FF1493" stroke-width="2" opacity="0.8"/>
+                            <text x="350" y="195" text-anchor="middle" fill="#FFFFFF" font-size="10" font-family="Inter">Engineering</text>
+                            
+                            <!-- Student Center -->
+                            <rect x="500" y="180" width="90" height="70" rx="8" fill="url(#building-gradient-3)" stroke="#32CD32" stroke-width="2" opacity="0.8"/>
+                            <text x="545" y="220" text-anchor="middle" fill="#FFFFFF" font-size="10" font-family="Inter">Student Center</text>
+                            
+                            <!-- Sports Complex -->
+                            <rect x="200" y="350" width="120" height="90" rx="8" fill="url(#building-gradient-4)" stroke="#FFD700" stroke-width="2" opacity="0.8"/>
+                            <text x="260" y="400" text-anchor="middle" fill="#FFFFFF" font-size="10" font-family="Inter">Sports Complex</text>
+                            
+                            <!-- Amphitheater -->
+                            <circle cx="600" cy="400" r="40" fill="url(#building-gradient-5)" stroke="#FF6B6B" stroke-width="2" opacity="0.8"/>
+                            <text x="600" y="405" text-anchor="middle" fill="#FFFFFF" font-size="10" font-family="Inter">Amphitheater</text>
+                            
+                            <!-- Event Markers -->
+                            <!-- Tech Summit Marker -->
+                            <circle cx="350" cy="190" r="8" fill="#00FFFF" opacity="0.9">
+                                <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+                            <text x="350" y="175" text-anchor="middle" fill="#00FFFF" font-size="8" font-weight="bold">Tech Summit</text>
+                            
+                            <!-- Music Festival Marker -->
+                            <circle cx="600" cy="400" r="8" fill="#FF1493" opacity="0.9">
+                                <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+                            <text x="600" y="385" text-anchor="middle" fill="#FF1493" font-size="8" font-weight="bold">Music Fest</text>
+                            
+                            <!-- Study Marathon Marker -->
+                            <circle cx="190" cy="230" r="8" fill="#32CD32" opacity="0.9">
+                                <animate attributeName="r" values="8;12;8" dur="2s" repeatCount="indefinite"/>
+                            </circle>
+                            <text x="190" y="215" text-anchor="middle" fill="#32CD32" font-size="8" font-weight="bold">Study Marathon</text>
+                            
+                            <defs>
+                                <linearGradient id="road-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#00FFFF" stop-opacity="0.3"/>
+                                    <stop offset="50%" stop-color="#FF1493" stop-opacity="0.2"/>
+                                    <stop offset="100%" stop-color="#32CD32" stop-opacity="0.3"/>
+                                </linearGradient>
+                                <linearGradient id="building-gradient-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#00FFFF" stop-opacity="0.3"/>
+                                    <stop offset="100%" stop-color="#006666" stop-opacity="0.6"/>
+                                </linearGradient>
+                                <linearGradient id="building-gradient-2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#FF1493" stop-opacity="0.3"/>
+                                    <stop offset="100%" stop-color="#66083B" stop-opacity="0.6"/>
+                                </linearGradient>
+                                <linearGradient id="building-gradient-3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#32CD32" stop-opacity="0.3"/>
+                                    <stop offset="100%" stop-color="#145214" stop-opacity="0.6"/>
+                                </linearGradient>
+                                <linearGradient id="building-gradient-4" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#FFD700" stop-opacity="0.3"/>
+                                    <stop offset="100%" stop-color="#665600" stop-opacity="0.6"/>
+                                </linearGradient>
+                                <linearGradient id="building-gradient-5" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#FF6B6B" stop-opacity="0.3"/>
+                                    <stop offset="100%" stop-color="#662A2A" stop-opacity="0.6"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        
+                        <!-- Map Controls Overlay -->
+                        <div class="absolute top-4 right-4 flex flex-col gap-2">
+                            <button class="bg-surface/80 backdrop-blur-sm border border-primary/30 text-primary p-3 rounded-lg hover:bg-primary hover:text-background transition-smooth">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                                </svg>
+                            </button>
+                            <button class="bg-surface/80 backdrop-blur-sm border border-primary/30 text-primary p-3 rounded-lg hover:bg-primary hover:text-background transition-smooth">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"/>
+                                </svg>
+                            </button>
+                            <button class="bg-surface/80 backdrop-blur-sm border border-secondary/30 text-secondary p-3 rounded-lg hover:bg-secondary hover:text-background transition-smooth">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Legend -->
+                        <div class="absolute bottom-4 left-4 bg-surface/90 backdrop-blur-sm rounded-lg p-4 border border-primary/20">
+                            <h4 class="font-nunito font-bold text-text-primary mb-3 text-sm">Legend</h4>
+                            <div class="space-y-2 text-xs">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-3 h-3 bg-primary rounded-full"></div>
+                                    <span class="text-text-secondary">Active Events</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <div class="w-3 h-3 bg-secondary rounded-full"></div>
+                                    <span class="text-text-secondary">Academic Buildings</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <div class="w-3 h-3 bg-accent rounded-full"></div>
+                                    <span class="text-text-secondary">Recreation Areas</span>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <div class="w-3 h-3 bg-warning rounded-full"></div>
+                                    <span class="text-text-secondary">Dining & Services</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Location Details Panel -->
+                <div id="location-details" class="hidden lg:block absolute top-0 right-0 w-80 h-full bg-surface/95 backdrop-blur-md border-l border-primary/20 rounded-r-2xl overflow-hidden">
+                    <div class="p-6 h-full overflow-y-auto">
+                        <div class="mb-6">
+                            <h3 class="font-montserrat font-bold text-xl text-text-primary mb-2">Engineering Hall</h3>
+                            <p class="text-text-secondary text-sm mb-4">Main engineering and computer science building with state-of-the-art labs and lecture halls.</p>
+                            
+                            <!-- Location Image -->
+                            <div class="relative h-32 rounded-lg overflow-hidden mb-4">
+                                <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Engineering Hall" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent"></div>
+                            </div>
+
+                            <!-- Quick Info -->
+                            <div class="grid grid-cols-2 gap-4 mb-4">
+                                <div class="bg-background/50 rounded-lg p-3 text-center">
+                                    <div class="text-primary font-bold text-lg">4</div>
+                                    <div class="text-text-secondary text-xs">Floors</div>
+                                </div>
+                                <div class="bg-background/50 rounded-lg p-3 text-center">
+                                    <div class="text-secondary font-bold text-lg">24/7</div>
+                                    <div class="text-text-secondary text-xs">Access</div>
+                                </div>
+                            </div>
+
+                            <!-- Current Events -->
+                            <div class="mb-4">
+                                <h4 class="font-nunito font-bold text-text-primary mb-3">Current Events</h4>
+                                <div class="space-y-2">
+                                    <div class="bg-primary/10 border border-primary/30 rounded-lg p-3">
+                                        <div class="flex items-center justify-between mb-1">
+                                            <span class="font-semibold text-primary text-sm">Tech Innovation Summit</span>
+                                            <span class="text-text-secondary text-xs">Now</span>
+                                        </div>
+                                        <p class="text-text-secondary text-xs">Room 201 • 247 attending</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Amenities -->
+                            <div class="mb-4">
+                                <h4 class="font-nunito font-bold text-text-primary mb-3">Amenities</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs">WiFi</span>
+                                    <span class="bg-warning/20 text-warning px-2 py-1 rounded-full text-xs">Accessible</span>
+                                    <span class="bg-secondary/20 text-secondary px-2 py-1 rounded-full text-xs">Parking</span>
+                                    <span class="bg-primary/20 text-primary px-2 py-1 rounded-full text-xs">Food Court</span>
+                                </div>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="space-y-2">
+                                <button class="w-full bg-gradient-to-r from-primary to-secondary text-background font-nunito font-bold py-3 rounded-full hover:shadow-neon transition-smooth">
+                                    Get Directions 🧭
+                                </button>
+                                <button class="w-full border border-primary text-primary font-nunito font-semibold py-3 rounded-full hover:bg-primary hover:text-background transition-smooth">
+                                    View Events Here
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- List View Container (Hidden by default) -->
+            <div id="list-container" class="hidden">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Location Cards -->
+                    <div class="location-card bg-surface/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-primary/20 hover:border-primary/40 transition-smooth transform hover:scale-105">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.pixabay.com/photo/2016/06/02/02/33/library-1432573_1280.jpg" alt="Main Library" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                            <div class="absolute top-4 left-4 bg-primary/20 backdrop-blur-sm text-primary px-3 py-1 rounded-full text-sm font-semibold">
+                                📚 Academic
+                            </div>
+                            <div class="absolute top-4 right-4 bg-background/80 backdrop-blur-sm text-text-primary px-3 py-1 rounded-full text-sm">
+                                2 events
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-montserrat font-bold text-xl mb-2 text-text-primary">Main Library</h3>
+                            <p class="text-text-secondary mb-4 text-sm">Central hub for academic resources, study spaces, and research facilities with 24/7 access.</p>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-2 text-text-secondary text-sm">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Central Campus
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span class="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs">24/7</span>
+                                    <span class="bg-warning/20 text-warning px-2 py-1 rounded-full text-xs">WiFi</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-gradient-to-r from-primary to-secondary text-background font-nunito font-semibold py-2 rounded-full hover:shadow-neon transition-smooth">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="location-card bg-surface/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-secondary/20 hover:border-secondary/40 transition-smooth transform hover:scale-105">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Student Center" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                            <div class="absolute top-4 left-4 bg-secondary/20 backdrop-blur-sm text-secondary px-3 py-1 rounded-full text-sm font-semibold">
+                                🎉 Social
+                            </div>
+                            <div class="absolute top-4 right-4 bg-background/80 backdrop-blur-sm text-text-primary px-3 py-1 rounded-full text-sm">
+                                5 events
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-montserrat font-bold text-xl mb-2 text-text-primary">Student Center</h3>
+                            <p class="text-text-secondary mb-4 text-sm">Heart of campus social life with dining, entertainment, and student organization spaces.</p>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-2 text-text-secondary text-sm">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    East Campus
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span class="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs">Food</span>
+                                    <span class="bg-primary/20 text-primary px-2 py-1 rounded-full text-xs">Events</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-gradient-to-r from-secondary to-accent text-background font-nunito font-semibold py-2 rounded-full hover:shadow-neon-pink transition-smooth">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="location-card bg-surface/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-accent/20 hover:border-accent/40 transition-smooth transform hover:scale-105">
+                        <div class="relative h-48 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Sports Complex" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/11/29/13/14/basketball-1869573_1280.jpg'; this.onerror=null;" />
+                            <div class="absolute top-4 left-4 bg-accent/20 backdrop-blur-sm text-accent px-3 py-1 rounded-full text-sm font-semibold">
+                                ⚽ Recreation
+                            </div>
+                            <div class="absolute top-4 right-4 bg-background/80 backdrop-blur-sm text-text-primary px-3 py-1 rounded-full text-sm">
+                                3 events
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="font-montserrat font-bold text-xl mb-2 text-text-primary">Sports Complex</h3>
+                            <p class="text-text-secondary mb-4 text-sm">State-of-the-art fitness facilities, courts, and fields for all your athletic adventures.</p>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-2 text-text-secondary text-sm">
+                                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                    </svg>
+                                    South Campus
+                                </div>
+                                <div class="flex items-center gap-1">
+                                    <span class="bg-warning/20 text-warning px-2 py-1 rounded-full text-xs">Gym</span>
+                                    <span class="bg-secondary/20 text-secondary px-2 py-1 rounded-full text-xs">Pool</span>
+                                </div>
+                            </div>
+                            <button class="w-full bg-gradient-to-r from-accent to-warning text-background font-nunito font-semibold py-2 rounded-full hover:shadow-neon-green transition-smooth">
+                                View Details
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Navigation Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-surface/30 to-background">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="font-montserrat font-black text-3xl sm:text-4xl mb-4">
+                    <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        Quick Campus Navigation 🚀
+                    </span>
+                </h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                    Jump to popular destinations or discover new spots across your campus universe!
+                </p>
+            </div>
+
+            <!-- Popular Locations Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mb-12">
+                <button class="quick-nav-btn bg-surface/50 backdrop-blur-sm border border-primary/20 rounded-xl p-4 text-center hover:border-primary/40 hover:bg-primary/10 transition-smooth group">
+                    <div class="text-2xl mb-2 group-hover:scale-110 transition-smooth">📚</div>
+                    <div class="text-text-primary font-nunito font-semibold text-sm">Library</div>
+                </button>
+                <button class="quick-nav-btn bg-surface/50 backdrop-blur-sm border border-secondary/20 rounded-xl p-4 text-center hover:border-secondary/40 hover:bg-secondary/10 transition-smooth group">
+                    <div class="text-2xl mb-2 group-hover:scale-110 transition-smooth">🍕</div>
+                    <div class="text-text-primary font-nunito font-semibold text-sm">Dining</div>
+                </button>
+                <button class="quick-nav-btn bg-surface/50 backdrop-blur-sm border border-accent/20 rounded-xl p-4 text-center hover:border-accent/40 hover:bg-accent/10 transition-smooth group">
+                    <div class="text-2xl mb-2 group-hover:scale-110 transition-smooth">⚽</div>
+                    <div class="text-text-primary font-nunito font-semibold text-sm">Sports</div>
+                </button>
+                <button class="quick-nav-btn bg-surface/50 backdrop-blur-sm border border-warning/20 rounded-xl p-4 text-center hover:border-warning/40 hover:bg-warning/10 transition-smooth group">
+                    <div class="text-2xl mb-2 group-hover:scale-110 transition-smooth">🅿️</div>
+                    <div class="text-text-primary font-nunito font-semibold text-sm">Parking</div>
+                </button>
+                <button class="quick-nav-btn bg-surface/50 backdrop-blur-sm border border-error/20 rounded-xl p-4 text-center hover:border-error/40 hover:bg-error/10 transition-smooth group">
+                    <div class="text-2xl mb-2 group-hover:scale-110 transition-smooth">🏥</div>
+                    <div class="text-text-primary font-nunito font-semibold text-sm">Health</div>
+                </button>
+                <button class="quick-nav-btn bg-surface/50 backdrop-blur-sm border border-primary/20 rounded-xl p-4 text-center hover:border-primary/40 hover:bg-primary/10 transition-smooth group">
+                    <div class="text-2xl mb-2 group-hover:scale-110 transition-smooth">🏠</div>
+                    <div class="text-text-primary font-nunito font-semibold text-sm">Dorms</div>
+                </button>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="events_discovery_dynamic_event_ecosystem.html" class="bg-gradient-to-r from-primary to-secondary text-background font-nunito font-bold px-8 py-4 rounded-full hover:shadow-neon transition-smooth transform hover:scale-105">
+                    Explore Campus Events 🎉
+                </a>
+                <a href="schedule_management_personal_planning_center.html" class="border-2 border-accent text-accent font-nunito font-bold px-8 py-4 rounded-full hover:bg-accent hover:text-background transition-smooth">
+                    Plan Your Route 📅
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-primary/20 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 mr-3" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="32" height="32" rx="8" fill="url(#footer-logo-gradient)"/>
+                            <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white"/>
+                            <defs>
+                                <linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                    <stop offset="0%" stop-color="#00FFFF"/>
+                                    <stop offset="100%" stop-color="#FF1493"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="font-montserrat font-bold text-xl text-primary">TheCampusConnect</span>
+                    </div>
+                    <p class="text-text-secondary mb-4 max-w-md">
+                        Navigate your campus universe with style! Discover locations, track events, and explore like never before ✨
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-secondary transition-micro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-micro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-nunito font-bold text-text-primary mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="events_discovery_dynamic_event_ecosystem.html" class="text-text-secondary hover:text-primary transition-micro">Events</a></li>
+                        <li><a href="schedule_management_personal_planning_center.html" class="text-text-secondary hover:text-primary transition-micro">Schedule</a></li>
+                        <li><a href="#map" class="text-text-secondary hover:text-primary transition-micro">Campus Map</a></li>
+                        <li><a href="social_hub_community_showcase.html" class="text-text-secondary hover:text-primary transition-micro">Social Hub</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="font-nunito font-bold text-text-primary mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="contact_feedback_community_connection_portal.html" class="text-text-secondary hover:text-primary transition-micro">Contact Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-surface-600 mt-8 pt-8 text-center">
+                <p class="text-text-secondary">
+                    © 2025 TheCampusConnect. All Rights Reserved. Navigate your campus universe with style! 🗺️✨
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // View Toggle Functionality
+        const mapViewBtn = document.getElementById('map-view-btn');
+        const listViewBtn = document.getElementById('list-view-btn');
+        const mapContainer = document.getElementById('map-container');
+        const listContainer = document.getElementById('list-container');
+
+        mapViewBtn.addEventListener('click', () => {
+            // Show map view
+            mapContainer.classList.remove('hidden');
+            listContainer.classList.add('hidden');
+            
+            // Update button states
+            mapViewBtn.classList.add('active', 'bg-primary', 'text-background');
+            mapViewBtn.classList.remove('text-text-secondary');
+            listViewBtn.classList.remove('active', 'bg-primary', 'text-background');
+            listViewBtn.classList.add('text-text-secondary');
+        });
+
+        listViewBtn.addEventListener('click', () => {
+            // Show list view
+            listContainer.classList.remove('hidden');
+            mapContainer.classList.add('hidden');
+            
+            // Update button states
+            listViewBtn.classList.add('active', 'bg-primary', 'text-background');
+            listViewBtn.classList.remove('text-text-secondary');
+            mapViewBtn.classList.remove('active', 'bg-primary', 'text-background');
+            mapViewBtn.classList.add('text-text-secondary');
+        });
+
+        // Filter Buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('active', 'bg-primary', 'text-background');
+                    b.classList.add('bg-surface', 'border', 'text-text-primary');
+                });
+                
+                // Add active class to clicked button
+                btn.classList.add('active', 'bg-primary', 'text-background');
+                btn.classList.remove('bg-surface', 'border', 'text-text-primary');
+            });
+        });
+
+        // Search Functionality
+        const searchInput = document.getElementById('location-search');
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            // Filter locations based on search term
+            console.log('Searching for:', searchTerm);
+        });
+
+        // Quick Navigation Buttons
+        document.querySelectorAll('.quick-nav-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Simulate navigation to specific location
+                const location = btn.querySelector('div:last-child').textContent;
+                console.log('Navigating to:', location);
+                
+                // Add visual feedback
+                btn.classList.add('scale-95');
+                setTimeout(() => {
+                    btn.classList.remove('scale-95');
+                }, 150);
+            });
+        });
+
+        // Navigation Background on Scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-background/95');
+                nav.classList.remove('bg-background/80');
+            } else {
+                nav.classList.add('bg-background/80');
+                nav.classList.remove('bg-background/95');
+            }
+        });
+
+        // Smooth Scrolling for Navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Location Card Interactions
+        document.querySelectorAll('.location-card').forEach(card => {
+            card.addEventListener('click', () => {
+                // Show location details
+                const locationName = card.querySelector('h3').textContent;
+                console.log('Viewing details for:', locationName);
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all location cards
+        document.querySelectorAll('.location-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Map interaction simulation
+        document.addEventListener('DOMContentLoaded', () => {
+            // Simulate real-time updates
+            setInterval(() => {
+                const eventCounters = document.querySelectorAll('[data-event-count]');
+                eventCounters.forEach(counter => {
+                    const currentCount = parseInt(counter.textContent);
+                    const variation = Math.random() > 0.5 ? 1 : -1;
+                    const newCount = Math.max(0, currentCount + variation);
+                    counter.textContent = newCount;
+                });
+            }, 30000); // Update every 30 seconds
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Campus Map - TheCampusConnect Interactive Navigation Hub</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Navigate your campus like never before with TheCampusConnect interactive map - real-time locations, AR navigation, and comprehensive wayfinding for your ultimate campus experience!" />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fthecampusc2880back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background text-text-primary font-inter overflow-x-hidden">
+    <!-- Sticky Navigation -->
+    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/20 transition-smooth">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="w-8 h-8 mr-3" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
+                        <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white"/>
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                <stop offset="0%" stop-color="#00FFFF"/>
+                                <stop offset="100%" stop-color="#FF1493"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="font-montserrat font-bold text-xl text-primary">TheCampusConnect</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage_interactive_campus_event_hub.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Home</a>
+                    <a href="events_discovery_dynamic_event_ecosystem.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Events</a>
+                    <a href="schedule_management_personal_planning_center.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Schedule</a>
+                    <a href="#map" class="nav-link text-text-primary hover:text-primary transition-micro">Map</a>
+                    <a href="social_hub_community_showcase.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Social</a>
+                    <a href="contact_feedback_community_connection_portal.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-text-primary hover:text-primary transition-micro">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-surface/95 backdrop-blur-md rounded-lg mt-2 p-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="homepage_interactive_campus_event_hub.html" class="text-text-secondary hover:text-primary transition-micro">🏠 Home</a>
+                    <a href="events_discovery_dynamic_event_ecosystem.html" class="text-text-secondary hover:text-primary transition-micro">🎉 Events</a>
+                    <a href="schedule_management_personal_planning_center.html" class="text-text-secondary hover:text-primary transition-micro">📅 Schedule</a>
+                    <a href="#map" class="text-text-primary hover:text-primary transition-micro">🗺️ Map</a>
+                    <a href="social_hub_community_showcase.html" class="text-text-secondary hover:text-primary transition-micro">👥 Social</a>
+                    <a href="contact_feedback_community_connection_portal.html" class="text-text-secondary hover:text-primary transition-micro">📞 Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Map Hero Section -->
+    <section id="map" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-background via-background-800 to-surface">
+            <!-- Cityscape Silhouettes -->
+            <div class="absolute bottom-0 left-0 right-0 h-64 opacity-20">
+                <svg viewBox="0 0 1200 300" class="w-full h-full">
+                    <polygon points="0,300 0,200 100,200 100,150 200,150 200,100 300,100 300,180 400,180 400,120 500,120 500,160 600,160 600,80 700,80 700,140 800,140 800,90 900,90 900,170 1000,170 1000,110 1100,110 1100,190 1200,190 1200,300" fill="url(#cityscape-gradient)"/>
+                    <defs>
+                        <linearGradient id="cityscape-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00FFFF" stop-opacity="0.3"/>
+                            <stop offset="50%" stop-color="#FF1493" stop-opacity="0.2"/>
+                            <stop offset="100%" stop-color="#32CD32" stop-opacity="0.1"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Floating Particles -->
+            <div class="absolute inset-0">
+                <div class="floating-particle w-2 h-2 bg-primary rounded-full absolute top-1/4 left-1/4 opacity-60"></div>
+                <div class="floating-particle w-3 h-3 bg-secondary rounded-full absolute top-1/3 right-1/3 opacity-40"></div>
+                <div class="floating-particle w-1 h-1 bg-accent rounded-full absolute bottom-1/3 left-1/2 opacity-80"></div>
+                <div class="floating-particle w-2 h-2 bg-warning rounded-full absolute top-1/2 right-1/4 opacity-50"></div>
+            </div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+            <h1 class="font-montserrat font-black text-4xl sm:text-6xl lg:text-7xl mb-6 leading-tight">
+                <span class="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                    Interactive Campus
+                </span>
+                <br />
+                <span class="text-text-primary">Navigation Hub 🗺️</span>
+            </h1>
+            
+            <p class="text-xl sm:text-2xl text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed">
+                Navigate your campus like a <span class="text-primary font-semibold">digital nomad</span>! 
+                Real-time locations, AR navigation, and smart wayfinding at your fingertips! 🚀
+            </p>
+
+            <!-- Navigation Features -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                <div class="flex items-center gap-3 bg-surface/50 backdrop-blur-sm rounded-full px-6 py-3 border border-accent/30">
+                    <div class="w-3 h-3 bg-accent rounded-full animate-pulse"></div>
+                    <span class="text-accent font-semibold">Live GPS Tracking</span>
+                </div>
+                <div class="flex items-center gap-3 bg-surface/50 backdrop-blur-sm rounded-full px-6 py-3 border border-primary/30">
+                    <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="text-primary font-semibold">AR Directions</span>
+                </div>
+            </div>
+
+            <!-- Map Stats -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto">
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-primary/20">
+                    <div class="text-2xl font-bold text-primary">50+</div>
+                    <div class="text-sm text-text-secondary">Buildings</div>
+                </div>
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-secondary/20">
+                    <div class="text-2xl font-bold text-secondary">200+</div>
+                    <div class="text-sm text-text-secondary">Locations</div>
+                </div>
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-accent/20">
+                    <div class="text-2xl font-bold text-accent">24/7</div>
+                    <div class="text-sm text-text-secondary">Available</div>
+                </div>
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-warning/20">
+                    <div class="text-2xl font-bold text-warning">< 1min</div>
+                    <div class="text-sm text-text-secondary">Navigation</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-surface to-background">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <h2 class="font-montserrat font-black text-4xl sm:text-5xl mb-6">
+                    <span class="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
+                        Explore Your Campus 🏫
+                    </span>
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Click, explore, and navigate! Your interactive campus map with live updates and smart features.
+                </p>
+            </div>
+
+            <!-- Map Container -->
+            <div class="bg-surface/30 backdrop-blur-sm rounded-2xl overflow-hidden border border-primary/20">
+                <!-- Map Controls -->
+                <div class="flex flex-wrap items-center justify-between gap-4 p-6 border-b border-surface-600">
+                    <!-- Search Bar -->
+                    <div class="flex-1 min-w-64">
+                        <div class="relative">
+                            <svg class="w-5 h-5 text-text-secondary absolute left-3 top-1/2 transform -translate-y-1/2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+                            </svg>
+                            <input type="text" id="map-search" placeholder="Search buildings, rooms, or services..." class="w-full bg-surface border border-primary/30 rounded-full pl-10 pr-4 py-3 text-text-primary placeholder-text-secondary focus:border-primary focus:ring-2 focus:ring-primary/20 transition-smooth" />
+                        </div>
+                    </div>
+
+                    <!-- Filter Buttons -->
+                    <div class="flex flex-wrap gap-2">
+                        <button class="filter-btn active bg-primary text-background px-4 py-2 rounded-full font-nunito font-semibold text-sm hover:shadow-neon transition-smooth" data-filter="all">
+                            All 🎯
+                        </button>
+                        <button class="filter-btn bg-surface border border-secondary text-text-primary px-4 py-2 rounded-full font-nunito font-semibold text-sm hover:bg-secondary hover:text-background transition-smooth" data-filter="academic">
+                            Academic 📚
+                        </button>
+                        <button class="filter-btn bg-surface border border-accent text-text-primary px-4 py-2 rounded-full font-nunito font-semibold text-sm hover:bg-accent hover:text-background transition-smooth" data-filter="dining">
+                            Dining 🍕
+                        </button>
+                        <button class="filter-btn bg-surface border border-warning text-text-primary px-4 py-2 rounded-full font-nunito font-semibold text-sm hover:bg-warning hover:text-background transition-smooth" data-filter="services">
+                            Services 🏥
+                        </button>
+                        <button class="filter-btn bg-surface border border-error text-text-primary px-4 py-2 rounded-full font-nunito font-semibold text-sm hover:bg-error hover:text-background transition-smooth" data-filter="parking">
+                            Parking 🚗
+                        </button>
+                    </div>
+
+                    <!-- Map View Toggle -->
+                    <div class="flex gap-2">
+                        <button id="satellite-view" class="bg-surface border border-primary/30 text-text-primary px-4 py-2 rounded-full font-nunito font-semibold text-sm hover:bg-primary hover:text-background transition-smooth">
+                            📡 Satellite
+                        </button>
+                        <button id="ar-view" class="bg-gradient-to-r from-accent to-warning text-background px-4 py-2 rounded-full font-nunito font-semibold text-sm hover:shadow-neon-green transition-smooth">
+                            🥽 AR View
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Interactive Map Display -->
+                <div class="relative h-96 md:h-[500px] bg-gradient-to-br from-surface-800 to-background">
+                    <!-- Campus Map SVG -->
+                    <div class="absolute inset-0 p-8">
+                        <svg viewBox="0 0 800 600" class="w-full h-full">
+                            <!-- Campus Boundaries -->
+                            <rect x="50" y="50" width="700" height="500" fill="none" stroke="url(#campus-border)" stroke-width="3" rx="20"/>
+                            
+                            <!-- Campus Roads -->
+                            <path d="M50 200 L750 200" stroke="#444" stroke-width="8" opacity="0.7"/>
+                            <path d="M50 400 L750 400" stroke="#444" stroke-width="8" opacity="0.7"/>
+                            <path d="M200 50 L200 550" stroke="#444" stroke-width="6" opacity="0.7"/>
+                            <path d="M400 50 L400 550" stroke="#444" stroke-width="10" opacity="0.7"/>
+                            <path d="M600 50 L600 550" stroke="#444" stroke-width="6" opacity="0.7"/>
+
+                            <!-- Buildings -->
+                            <!-- Academic Buildings -->
+                            <g class="building-group" data-category="academic">
+                                <rect x="80" y="80" width="80" height="60" fill="url(#building-academic)" rx="5" class="building academic-building" data-name="Engineering Hall" data-occupancy="75%"/>
+                                <text x="120" y="105" fill="white" font-size="10" text-anchor="middle" class="pointer-events-none">ENG</text>
+                                <text x="120" y="115" fill="#00FFFF" font-size="8" text-anchor="middle" class="pointer-events-none">75%</text>
+                            </g>
+
+                            <g class="building-group" data-category="academic">
+                                <rect x="220" y="80" width="90" height="70" fill="url(#building-academic)" rx="5" class="building academic-building" data-name="Science Complex" data-occupancy="82%"/>
+                                <text x="265" y="110" fill="white" font-size="10" text-anchor="middle" class="pointer-events-none">SCI</text>
+                                <text x="265" y="120" fill="#00FFFF" font-size="8" text-anchor="middle" class="pointer-events-none">82%</text>
+                            </g>
+
+                            <g class="building-group" data-category="academic">
+                                <rect x="620" y="80" width="80" height="60" fill="url(#building-academic)" rx="5" class="building academic-building" data-name="Business School" data-occupancy="68%"/>
+                                <text x="660" y="105" fill="white" font-size="10" text-anchor="middle" class="pointer-events-none">BUS</text>
+                                <text x="660" y="115" fill="#00FFFF" font-size="8" text-anchor="middle" class="pointer-events-none">68%</text>
+                            </g>
+
+                            <!-- Dining Buildings -->
+                            <g class="building-group" data-category="dining">
+                                <rect x="80" y="250" width="70" height="50" fill="url(#building-dining)" rx="5" class="building dining-building" data-name="Main Cafeteria" data-occupancy="45%"/>
+                                <text x="115" y="270" fill="white" font-size="9" text-anchor="middle" class="pointer-events-none">CAFE</text>
+                                <text x="115" y="280" fill="#FF1493" font-size="8" text-anchor="middle" class="pointer-events-none">45%</text>
+                            </g>
+
+                            <g class="building-group" data-category="dining">
+                                <rect x="420" y="220" width="60" height="40" fill="url(#building-dining)" rx="5" class="building dining-building" data-name="Student Center" data-occupancy="62%"/>
+                                <text x="450" y="240" fill="white" font-size="9" text-anchor="middle" class="pointer-events-none">SC</text>
+                                <text x="450" y="250" fill="#FF1493" font-size="8" text-anchor="middle" class="pointer-events-none">62%</text>
+                            </g>
+
+                            <!-- Services Buildings -->
+                            <g class="building-group" data-category="services">
+                                <rect x="620" y="250" width="80" height="50" fill="url(#building-services)" rx="5" class="building services-building" data-name="Health Center" data-occupancy="30%"/>
+                                <text x="660" y="270" fill="white" font-size="9" text-anchor="middle" class="pointer-events-none">HEALTH</text>
+                                <text x="660" y="280" fill="#32CD32" font-size="8" text-anchor="middle" class="pointer-events-none">30%</text>
+                            </g>
+
+                            <g class="building-group" data-category="services">
+                                <rect x="220" y="450" width="80" height="60" fill="url(#building-services)" rx="5" class="building services-building" data-name="Central Library" data-occupancy="85%"/>
+                                <text x="260" y="475" fill="white" font-size="9" text-anchor="middle" class="pointer-events-none">LIBRARY</text>
+                                <text x="260" y="485" fill="#32CD32" font-size="8" text-anchor="middle" class="pointer-events-none">85%</text>
+                            </g>
+
+                            <!-- Parking Areas -->
+                            <g class="building-group" data-category="parking">
+                                <rect x="80" y="450" width="60" height="40" fill="url(#building-parking)" rx="3" class="building parking-building" data-name="North Parking" data-occupancy="90%"/>
+                                <text x="110" y="470" fill="white" font-size="8" text-anchor="middle" class="pointer-events-none">PARK N</text>
+                                <text x="110" y="480" fill="#FFD700" font-size="8" text-anchor="middle" class="pointer-events-none">90%</text>
+                            </g>
+
+                            <g class="building-group" data-category="parking">
+                                <rect x="620" y="450" width="60" height="40" fill="url(#building-parking)" rx="3" class="building parking-building" data-name="South Parking" data-occupancy="65%"/>
+                                <text x="650" y="470" fill="white" font-size="8" text-anchor="middle" class="pointer-events-none">PARK S</text>
+                                <text x="650" y="480" fill="#FFD700" font-size="8" text-anchor="middle" class="pointer-events-none">65%</text>
+                            </g>
+
+                            <!-- Shuttle Route -->
+                            <path d="M100 300 Q200 320 300 300 Q400 280 500 300 Q600 320 700 300" stroke="url(#shuttle-route)" stroke-width="4" fill="none" stroke-dasharray="10,5" class="shuttle-route">
+                                <animate attributeName="stroke-dashoffset" values="0;-15" dur="2s" repeatCount="indefinite"/>
+                            </path>
+
+                            <!-- Shuttle Position -->
+                            <circle cx="350" cy="295" r="8" fill="#00FFFF" class="shuttle-indicator animate-pulse"/>
+                            <text x="350" y="285" fill="#00FFFF" font-size="10" text-anchor="middle" class="pointer-events-none">🚐</text>
+
+                            <!-- Your Location -->
+                            <circle cx="400" cy="300" r="12" fill="url(#location-marker)" class="your-location animate-pulse"/>
+                            <text x="400" y="305" fill="white" font-size="12" text-anchor="middle" class="pointer-events-none">📍</text>
+
+                            <!-- Gradients and Patterns -->
+                            <defs>
+                                <linearGradient id="campus-border" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#00FFFF"/>
+                                    <stop offset="50%" stop-color="#FF1493"/>
+                                    <stop offset="100%" stop-color="#32CD32"/>
+                                </linearGradient>
+                                
+                                <linearGradient id="building-academic" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#00FFFF" stop-opacity="0.8"/>
+                                    <stop offset="100%" stop-color="#0099CC" stop-opacity="0.8"/>
+                                </linearGradient>
+                                
+                                <linearGradient id="building-dining" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#FF1493" stop-opacity="0.8"/>
+                                    <stop offset="100%" stop-color="#CC1076" stop-opacity="0.8"/>
+                                </linearGradient>
+                                
+                                <linearGradient id="building-services" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#32CD32" stop-opacity="0.8"/>
+                                    <stop offset="100%" stop-color="#28A428" stop-opacity="0.8"/>
+                                </linearGradient>
+                                
+                                <linearGradient id="building-parking" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#FFD700" stop-opacity="0.8"/>
+                                    <stop offset="100%" stop-color="#CCAC00" stop-opacity="0.8"/>
+                                </linearGradient>
+                                
+                                <linearGradient id="shuttle-route" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#00FFFF"/>
+                                    <stop offset="50%" stop-color="#FF1493"/>
+                                    <stop offset="100%" stop-color="#32CD32"/>
+                                </linearGradient>
+                                
+                                <radialGradient id="location-marker" cx="50%" cy="50%" r="50%">
+                                    <stop offset="0%" stop-color="#FF1493"/>
+                                    <stop offset="100%" stop-color="#CC1076"/>
+                                </radialGradient>
+                            </defs>
+                        </svg>
+                    </div>
+
+                    <!-- Map Legend -->
+                    <div class="absolute top-4 right-4 bg-surface/90 backdrop-blur-sm rounded-xl p-4 border border-primary/20">
+                        <h4 class="font-nunito font-bold text-text-primary mb-3 text-sm">Legend</h4>
+                        <div class="space-y-2 text-xs">
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 bg-primary rounded-sm"></div>
+                                <span class="text-text-secondary">Academic</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 bg-secondary rounded-sm"></div>
+                                <span class="text-text-secondary">Dining</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 bg-accent rounded-sm"></div>
+                                <span class="text-text-secondary">Services</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 bg-warning rounded-sm"></div>
+                                <span class="text-text-secondary">Parking</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+                                <span class="text-text-secondary">Shuttle</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 bg-secondary rounded-full animate-pulse"></div>
+                                <span class="text-text-secondary">You Are Here</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Location Info Panel -->
+                    <div id="location-info" class="absolute bottom-4 left-4 right-4 bg-surface/95 backdrop-blur-sm rounded-xl p-4 border border-primary/20 hidden">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <h4 id="location-name" class="font-nunito font-bold text-text-primary text-lg mb-1">Select a location</h4>
+                                <div id="location-details" class="text-text-secondary text-sm mb-3">
+                                    Click on any building to see details and get directions
+                                </div>
+                                <div class="flex items-center gap-4 text-sm">
+                                    <span id="location-occupancy" class="flex items-center gap-1">
+                                        <div class="w-2 h-2 bg-accent rounded-full"></div>
+                                        Occupancy: --
+                                    </span>
+                                    <span id="location-distance" class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Distance: --
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex gap-2">
+                                <button id="get-directions" class="bg-primary text-background px-4 py-2 rounded-full text-sm font-semibold hover:shadow-neon transition-smooth">
+                                    Directions
+                                </button>
+                                <button id="close-location-info" class="text-text-secondary hover:text-text-primary">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Services Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="font-montserrat font-black text-4xl sm:text-5xl mb-6">
+                    <span class="bg-gradient-to-r from-accent to-warning bg-clip-text text-transparent">
+                        Campus Services 🏢
+                    </span>
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Everything you need is just a tap away. Find services, check availability, and get there fast!
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Academic Services -->
+                <div class="bg-gradient-to-br from-surface to-surface-700 rounded-2xl p-8 border border-primary/30 hover:border-primary/60 transition-smooth transform hover:scale-105 hover:shadow-neon">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-background" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.84L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-montserrat font-bold text-2xl mb-4 text-center text-text-primary">Academic Support 📚</h3>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">Central Library</span>
+                            <div class="flex items-center gap-1">
+                                <div class="w-2 h-2 bg-error rounded-full"></div>
+                                <span class="text-error text-sm font-semibold">85% Full</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">Writing Center</span>
+                            <div class="flex items-center gap-1">
+                                <div class="w-2 h-2 bg-accent rounded-full"></div>
+                                <span class="text-accent text-sm font-semibold">Available</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">Computer Labs</span>
+                            <div class="flex items-center gap-1">
+                                <div class="w-2 h-2 bg-warning rounded-full"></div>
+                                <span class="text-warning text-sm font-semibold">60% Full</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="w-full bg-gradient-to-r from-primary to-secondary text-background font-nunito font-bold py-3 rounded-full hover:shadow-neon transition-smooth">
+                        View All Academic
+                    </button>
+                </div>
+
+                <!-- Dining Services -->
+                <div class="bg-gradient-to-br from-surface to-surface-700 rounded-2xl p-8 border border-secondary/30 hover:border-secondary/60 transition-smooth transform hover:scale-105 hover:shadow-neon-pink">
+                    <div class="w-16 h-16 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-background" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6 5v1H4.5a1.5 1.5 0 00-1.5 1.5v4a1.5 1.5 0 001.5 1.5H6v1a1 1 0 102 0v-1h.5a1.5 1.5 0 001.5-1.5v-4A1.5 1.5 0 008.5 6H8V5a1 1 0 10-2 0zm0 2.5a.5.5 0 01.5-.5h1a.5.5 0 01.5.5v3a.5.5 0 01-.5.5h-1a.5.5 0 01-.5-.5v-3z" clip-rule="evenodd"/>
+                            <path d="M12.5 6a2.5 2.5 0 00-2.5 2.5v6A1.5 1.5 0 0011.5 16H13v1a1 1 0 102 0v-1h.5a1.5 1.5 0 001.5-1.5v-6A2.5 2.5 0 0014.5 6h-2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-montserrat font-bold text-2xl mb-4 text-center text-text-primary">Dining Options 🍕</h3>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">Main Cafeteria</span>
+                            <div class="flex items-center gap-1">
+                                <div class="w-2 h-2 bg-accent rounded-full"></div>
+                                <span class="text-accent text-sm font-semibold">45% Full</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">Coffee Corner</span>
+                            <div class="flex items-center gap-1">
+                                <div class="w-2 h-2 bg-warning rounded-full"></div>
+                                <span class="text-warning text-sm font-semibold">Wait: 5min</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">Food Trucks</span>
+                            <div class="flex items-center gap-1">
+                                <div class="w-2 h-2 bg-accent rounded-full"></div>
+                                <span class="text-accent text-sm font-semibold">3 Available</span>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="w-full bg-gradient-to-r from-secondary to-accent text-background font-nunito font-bold py-3 rounded-full hover:shadow-neon-pink transition-smooth">
+                        View Dining Menu
+                    </button>
+                </div>
+
+                <!-- Health & Safety -->
+                <div class="bg-gradient-to-br from-surface to-surface-700 rounded-2xl p-8 border border-accent/30 hover:border-accent/60 transition-smooth transform hover:scale-105 hover:shadow-neon-green">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent to-warning rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <svg class="w-8 h-8 text-background" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-montserrat font-bold text-2xl mb-4 text-center text-text-primary">Health & Safety 🏥</h3>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">Health Center</span>
+                            <div class="flex items-center gap-1">
+                                <div class="w-2 h-2 bg-accent rounded-full"></div>
+                                <span class="text-accent text-sm font-semibold">Open Now</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">Campus Security</span>
+                            <div class="flex items-center gap-1">
+                                <div class="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+                                <span class="text-accent text-sm font-semibold">24/7 Active</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">Emergency Call</span>
+                            <button class="text-error text-sm font-semibold hover:underline">
+                                📞 Quick Dial
+                            </button>
+                        </div>
+                    </div>
+                    <button class="w-full bg-gradient-to-r from-accent to-warning text-background font-nunito font-bold py-3 rounded-full hover:shadow-neon-green transition-smooth">
+                        Emergency Info
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transportation Hub Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-surface to-background">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="font-montserrat font-black text-4xl sm:text-5xl mb-6">
+                    <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        Transportation Hub 🚐
+                    </span>
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Get around campus and beyond with live tracking, schedules, and smart routing!
+                </p>
+            </div>
+
+            <!-- Transportation Options -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Campus Shuttle -->
+                <div class="bg-surface/30 backdrop-blur-sm rounded-2xl p-8 border border-primary/20">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-background" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4zm-6-2a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-nunito font-bold text-xl text-text-primary">Campus Shuttle 🚐</h3>
+                            <p class="text-text-secondary">Live tracking & real-time arrivals</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-surface/50 rounded-xl p-4 border border-primary/20">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-semibold text-primary">Main Route</span>
+                                <div class="flex items-center gap-1">
+                                    <div class="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+                                    <span class="text-accent text-sm">Active</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-text-secondary">Next arrival</span>
+                                <span class="text-warning font-semibold">3 minutes</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-surface/50 rounded-xl p-4 border border-secondary/20">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-semibold text-secondary">Express Route</span>
+                                <div class="flex items-center gap-1">
+                                    <div class="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
+                                    <span class="text-accent text-sm">Active</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-text-secondary">Next arrival</span>
+                                <span class="text-warning font-semibold">8 minutes</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="w-full mt-6 bg-gradient-to-r from-primary to-secondary text-background font-nunito font-bold py-3 rounded-full hover:shadow-neon transition-smooth">
+                        Track Live Location 📍
+                    </button>
+                </div>
+
+                <!-- Parking Information -->
+                <div class="bg-surface/30 backdrop-blur-sm rounded-2xl p-8 border border-warning/20">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-warning to-accent rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-background" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zM3 15a1 1 0 011-1h1a1 1 0 011 1v1a1 1 0 01-1 1H4a1 1 0 01-1-1v-1zm7-12a2 2 0 012-2h3a2 2 0 012 2v11a3 3 0 11-6 0V3zm2 14a1 1 0 001-1v-1a1 1 0 00-1-1h-1a1 1 0 00-1 1v1a1 1 0 001 1h1z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-nunito font-bold text-xl text-text-primary">Smart Parking 🚗</h3>
+                            <p class="text-text-secondary">Real-time availability & reservations</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="bg-surface/50 rounded-xl p-4 border border-error/20">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-semibold text-text-primary">North Parking</span>
+                                <span class="text-error font-semibold text-sm">90% Full</span>
+                            </div>
+                            <div class="w-full bg-surface-700 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-warning to-error h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-surface/50 rounded-xl p-4 border border-warning/20">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="font-semibold text-text-primary">South Parking</span>
+                                <span class="text-accent font-semibold text-sm">65% Full</span>
+                            </div>
+                            <div class="w-full bg-surface-700 rounded-full h-2">
+                                <div class="bg-gradient-to-r from-accent to-warning h-2 rounded-full" style="width: 65%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="w-full mt-6 bg-gradient-to-r from-warning to-accent text-background font-nunito font-bold py-3 rounded-full hover:shadow-neon-green transition-smooth">
+                        Find Best Spot 🎯
+                    </button>
+                </div>
+            </div>
+
+            <!-- Weather Integration -->
+            <div class="bg-gradient-to-br from-surface/50 to-surface-700/50 backdrop-blur-sm rounded-2xl p-8 border border-accent/20">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                    <div class="text-center">
+                        <div class="text-6xl mb-4">⛅</div>
+                        <h3 class="font-nunito font-bold text-xl text-text-primary mb-2">Current Weather</h3>
+                        <div class="text-3xl font-bold text-primary mb-1">72°F</div>
+                        <p class="text-text-secondary">Partly Cloudy</p>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">Walking comfort</span>
+                            <span class="text-accent font-semibold">Perfect! 👌</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">Rain chance</span>
+                            <span class="text-text-secondary">10%</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">UV index</span>
+                            <span class="text-warning font-semibold">Moderate</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">Wind</span>
+                            <span class="text-text-secondary">5 mph E</span>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center">
+                        <h4 class="font-nunito font-bold text-lg text-text-primary mb-4">Navigation Tip</h4>
+                        <div class="bg-accent/20 text-accent border border-accent/30 rounded-xl p-4">
+                            <p class="text-sm">Great weather for walking! 🚶‍♀️ Consider taking scenic routes through the campus gardens.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-primary/20 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 mr-3" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="32" height="32" rx="8" fill="url(#footer-logo-gradient)"/>
+                            <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white"/>
+                            <defs>
+                                <linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                    <stop offset="0%" stop-color="#00FFFF"/>
+                                    <stop offset="100%" stop-color="#FF1493"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="font-montserrat font-bold text-xl text-primary">TheCampusConnect</span>
+                    </div>
+                    <p class="text-text-secondary mb-4 max-w-md">
+                        Navigate your campus with confidence! Your intelligent wayfinding companion for the ultimate campus experience. ✨
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-secondary transition-micro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-micro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-nunito font-bold text-text-primary mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="events_discovery_dynamic_event_ecosystem.html" class="text-text-secondary hover:text-primary transition-micro">Events</a></li>
+                        <li><a href="schedule_management_personal_planning_center.html" class="text-text-secondary hover:text-primary transition-micro">Schedule</a></li>
+                        <li><a href="homepage_interactive_campus_event_hub.html" class="text-text-secondary hover:text-primary transition-micro">Home</a></li>
+                        <li><a href="social_hub_community_showcase.html" class="text-text-secondary hover:text-primary transition-micro">Social Hub</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="font-nunito font-bold text-text-primary mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="contact_feedback_community_connection_portal.html" class="text-text-secondary hover:text-primary transition-micro">Contact Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-surface-600 mt-8 pt-8 text-center">
+                <p class="text-text-secondary">
+                    © 2025 TheCampusConnect. All Rights Reserved. Made with 💙 for amazing students everywhere.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Map Search Functionality
+        const mapSearch = document.getElementById('map-search');
+        const locationInfo = document.getElementById('location-info');
+        const locationName = document.getElementById('location-name');
+        const locationDetails = document.getElementById('location-details');
+        const locationOccupancy = document.getElementById('location-occupancy');
+        const locationDistance = document.getElementById('location-distance');
+        const closeLocationInfo = document.getElementById('close-location-info');
+        const getDirections = document.getElementById('get-directions');
+
+        // Building data
+        const buildings = {
+            'Engineering Hall': {
+                name: 'Engineering Hall',
+                category: 'academic',
+                details: 'State-of-the-art engineering facilities with computer labs, maker spaces, and modern classrooms.',
+                occupancy: '75%',
+                distance: '0.3 miles',
+                color: '#00FFFF'
+            },
+            'Science Complex': {
+                name: 'Science Complex',
+                category: 'academic',
+                details: 'Multi-building complex with laboratories, lecture halls, and research facilities.',
+                occupancy: '82%',
+                distance: '0.5 miles',
+                color: '#00FFFF'
+            },
+            'Business School': {
+                name: 'Business School',
+                category: 'academic',
+                details: 'Modern business education center with case study rooms and presentation facilities.',
+                occupancy: '68%',
+                distance: '0.7 miles',
+                color: '#00FFFF'
+            },
+            'Main Cafeteria': {
+                name: 'Main Cafeteria',
+                category: 'dining',
+                details: 'All-you-can-eat dining hall with international cuisine and dietary options.',
+                occupancy: '45%',
+                distance: '0.2 miles',
+                color: '#FF1493'
+            },
+            'Student Center': {
+                name: 'Student Center',
+                category: 'dining',
+                details: 'Food court with multiple vendors, seating areas, and student services.',
+                occupancy: '62%',
+                distance: '0.4 miles',
+                color: '#FF1493'
+            },
+            'Health Center': {
+                name: 'Health Center',
+                category: 'services',
+                details: 'Full-service health clinic with medical staff, pharmacy, and wellness programs.',
+                occupancy: '30%',
+                distance: '0.6 miles',
+                color: '#32CD32'
+            },
+            'Central Library': {
+                name: 'Central Library',
+                category: 'services',
+                details: 'Five-floor library with study spaces, computer labs, and extensive digital resources.',
+                occupancy: '85%',
+                distance: '0.3 miles',
+                color: '#32CD32'
+            },
+            'North Parking': {
+                name: 'North Parking',
+                category: 'parking',
+                details: 'Large parking structure with covered spaces and electric vehicle charging.',
+                occupancy: '90%',
+                distance: '0.4 miles',
+                color: '#FFD700'
+            },
+            'South Parking': {
+                name: 'South Parking',
+                category: 'parking',
+                details: 'Open parking lot with shuttle service and bike racks.',
+                occupancy: '65%',
+                distance: '0.8 miles',
+                color: '#FFD700'
+            }
+        };
+
+        // Map Filter Functionality
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const buildingGroups = document.querySelectorAll('.building-group');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(b => {
+                    b.classList.remove('active', 'bg-primary', 'text-background');
+                    b.classList.add('bg-surface', 'border', 'text-text-primary');
+                });
+                
+                // Add active class to clicked button
+                btn.classList.add('active', 'bg-primary', 'text-background');
+                btn.classList.remove('bg-surface', 'border', 'text-text-primary');
+                
+                // Filter buildings
+                const filter = btn.dataset.filter;
+                buildingGroups.forEach(group => {
+                    if (filter === 'all' || group.dataset.category === filter) {
+                        group.style.display = 'block';
+                    } else {
+                        group.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Building Click Handlers
+        const buildingElements = document.querySelectorAll('.building');
+        buildingElements.forEach(building => {
+            building.addEventListener('click', (e) => {
+                const buildingName = building.dataset.name;
+                const buildingData = buildings[buildingName];
+                
+                if (buildingData) {
+                    showLocationInfo(buildingData);
+                }
+                
+                // Highlight selected building
+                buildingElements.forEach(b => b.style.stroke = 'none');
+                building.style.stroke = '#FFFFFF';
+                building.style.strokeWidth = '2';
+            });
+        });
+
+        // Search functionality
+        mapSearch.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            if (searchTerm.length > 2) {
+                const matches = Object.keys(buildings).filter(name => 
+                    name.toLowerCase().includes(searchTerm)
+                );
+                
+                if (matches.length > 0) {
+                    const buildingData = buildings[matches[0]];
+                    showLocationInfo(buildingData);
+                }
+            }
+        });
+
+        function showLocationInfo(building) {
+            locationName.textContent = building.name;
+            locationDetails.textContent = building.details;
+            locationOccupancy.innerHTML = `
+                <div class="w-2 h-2 rounded-full" style="background-color: ${building.color}"></div>
+                Occupancy: ${building.occupancy}
+            `;
+            locationDistance.textContent = `Distance: ${building.distance}`;
+            
+            locationInfo.classList.remove('hidden');
+        }
+
+        closeLocationInfo.addEventListener('click', () => {
+            locationInfo.classList.add('hidden');
+            // Remove building highlight
+            buildingElements.forEach(b => b.style.stroke = 'none');
+        });
+
+        getDirections.addEventListener('click', () => {
+            // Simulate getting directions
+            const directions = document.createElement('div');
+            directions.className = 'bg-primary/20 text-primary border border-primary/30 rounded-xl p-4 mt-4';
+            directions.innerHTML = `
+                <div class="flex items-center gap-2 mb-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                    <span class="font-semibold">Route Generated!</span>
+                </div>
+                <p class="text-sm">Head north on Main Campus Drive, turn left at the Student Center. Your destination will be on the right. Estimated walk time: 5 minutes.</p>
+            `;
+            
+            locationInfo.appendChild(directions);
+            
+            // Remove after 5 seconds
+            setTimeout(() => {
+                directions.remove();
+            }, 8000);
+        });
+
+        // AR View Toggle
+        const arView = document.getElementById('ar-view');
+        arView.addEventListener('click', () => {
+            // Simulate AR view activation
+            const arModal = document.createElement('div');
+            arModal.className = 'fixed inset-0 bg-background/90 backdrop-blur-sm flex items-center justify-center z-50';
+            arModal.innerHTML = `
+                <div class="bg-surface rounded-2xl p-8 border border-primary/20 text-center max-w-md mx-4">
+                    <div class="text-6xl mb-4">🥽</div>
+                    <h3 class="font-nunito font-bold text-2xl text-text-primary mb-4">AR Navigation Ready!</h3>
+                    <p class="text-text-secondary mb-6">Point your camera around campus to see interactive directions and location information overlaid on your view.</p>
+                    <div class="flex gap-4">
+                        <button class="flex-1 bg-primary text-background py-3 rounded-full font-semibold hover:shadow-neon transition-smooth" onclick="this.parentElement.parentElement.parentElement.remove()">
+                            Enable Camera
+                        </button>
+                        <button class="flex-1 bg-surface border border-text-secondary text-text-primary py-3 rounded-full font-semibold hover:bg-text-secondary hover:text-background transition-smooth" onclick="this.parentElement.parentElement.parentElement.remove()">
+                            Maybe Later
+                        </button>
+                    </div>
+                </div>
+            `;
+            document.body.appendChild(arModal);
+        });
+
+        // Satellite View Toggle
+        const satelliteView = document.getElementById('satellite-view');
+        satelliteView.addEventListener('click', () => {
+            // Toggle between map views
+            if (satelliteView.textContent.includes('Satellite')) {
+                satelliteView.textContent = '🗺️ Map View';
+                // Simulate satellite view
+                document.querySelector('svg').style.filter = 'sepia(1) contrast(1.5)';
+            } else {
+                satelliteView.textContent = '📡 Satellite';
+                document.querySelector('svg').style.filter = 'none';
+            }
+        });
+
+        // Floating Animation for Particles
+        document.querySelectorAll('.floating-particle').forEach((particle, index) => {
+            particle.style.animation = `float ${3 + index}s ease-in-out infinite`;
+        });
+
+        // Add CSS for floating animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-20px); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Navigation Background on Scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-background/95');
+                nav.classList.remove('bg-background/80');
+            } else {
+                nav.classList.add('bg-background/80');
+                nav.classList.remove('bg-background/95');
+            }
+        });
+
+        // GPS Location (if supported)
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition((position) => {
+                console.log('User location:', position.coords.latitude, position.coords.longitude);
+                // Update "Your Location" marker based on actual position
+            }, (error) => {
+                console.log('Location access denied or unavailable');
+            });
+        }
+
+        // Mock real-time updates for occupancy and shuttle tracking
+        setInterval(() => {
+            // Update occupancy percentages randomly
+            const occupancyElements = document.querySelectorAll('text[fill="#00FFFF"], text[fill="#FF1493"], text[fill="#32CD32"], text[fill="#FFD700"]');
+            occupancyElements.forEach(element => {
+                if (element.textContent.includes('%')) {
+                    const currentValue = parseInt(element.textContent);
+                    const newValue = Math.max(0, Math.min(100, currentValue + Math.floor(Math.random() * 11) - 5));
+                    element.textContent = `${newValue}%`;
+                }
+            });
+
+            // Update shuttle position
+            const shuttle = document.querySelector('.shuttle-indicator');
+            if (shuttle) {
+                const currentX = parseFloat(shuttle.getAttribute('cx'));
+                const newX = currentX + (Math.random() - 0.5) * 20;
+                if (newX >= 100 && newX <= 700) {
+                    shuttle.setAttribute('cx', newX);
+                }
+            }
+        }, 10000); // Update every 10 seconds
+    </script>
+</body>
+</html>

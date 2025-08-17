@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact & Feedback - TheCampusConnect</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Connect with TheCampusConnect - your feedback shapes our campus community. Get support, submit events, and join the conversation that amplifies student life." />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fthecampusc2880back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background text-text-primary font-inter overflow-x-hidden">
+    <!-- Sticky Navigation -->
+    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/20 transition-smooth">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="w-8 h-8 mr-3" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
+                        <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white"/>
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                <stop offset="0%" stop-color="#00FFFF"/>
+                                <stop offset="100%" stop-color="#FF1493"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="font-montserrat font-bold text-xl text-primary">TheCampusConnect</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage_interactive_campus_event_hub.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Home</a>
+                    <a href="events_discovery_dynamic_event_ecosystem.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Events</a>
+                    <a href="schedule_management_personal_planning_center.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Schedule</a>
+                    <a href="campus_map_interactive_location_hub.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Map</a>
+                    <a href="social_hub_community_showcase.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Social</a>
+                    <a href="#contact" class="nav-link text-text-primary hover:text-primary transition-micro">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-text-primary hover:text-primary transition-micro">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-surface/95 backdrop-blur-md rounded-lg mt-2 p-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="homepage_interactive_campus_event_hub.html" class="text-text-secondary hover:text-primary transition-micro">🏠 Home</a>
+                    <a href="events_discovery_dynamic_event_ecosystem.html" class="text-text-secondary hover:text-primary transition-micro">🎉 Events</a>
+                    <a href="schedule_management_personal_planning_center.html" class="text-text-secondary hover:text-primary transition-micro">📅 Schedule</a>
+                    <a href="campus_map_interactive_location_hub.html" class="text-text-secondary hover:text-primary transition-micro">🗺️ Map</a>
+                    <a href="social_hub_community_showcase.html" class="text-text-secondary hover:text-primary transition-micro">👥 Social</a>
+                    <a href="#contact" class="text-text-primary hover:text-primary transition-micro">📞 Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="contact" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-background via-background-800 to-surface">
+            <!-- Cityscape Silhouettes -->
+            <div class="absolute bottom-0 left-0 right-0 h-64 opacity-20">
+                <svg viewBox="0 0 1200 300" class="w-full h-full">
+                    <polygon points="0,300 0,200 100,200 100,150 200,150 200,100 300,100 300,180 400,180 400,120 500,120 500,160 600,160 600,80 700,80 700,140 800,140 800,90 900,90 900,170 1000,170 1000,110 1100,110 1100,190 1200,190 1200,300" fill="url(#cityscape-gradient)"/>
+                    <defs>
+                        <linearGradient id="cityscape-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00FFFF" stop-opacity="0.3"/>
+                            <stop offset="50%" stop-color="#FF1493" stop-opacity="0.2"/>
+                            <stop offset="100%" stop-color="#32CD32" stop-opacity="0.1"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Floating Particles -->
+            <div class="absolute inset-0">
+                <div class="floating-particle w-2 h-2 bg-primary rounded-full absolute top-1/4 left-1/4 opacity-60"></div>
+                <div class="floating-particle w-3 h-3 bg-secondary rounded-full absolute top-1/3 right-1/3 opacity-40"></div>
+                <div class="floating-particle w-1 h-1 bg-accent rounded-full absolute bottom-1/3 left-1/2 opacity-80"></div>
+                <div class="floating-particle w-2 h-2 bg-warning rounded-full absolute top-1/2 right-1/4 opacity-50"></div>
+            </div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+            <h1 class="font-montserrat font-black text-4xl sm:text-6xl lg:text-7xl mb-6 leading-tight">
+                <span class="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                    Let's Connect
+                </span>
+                <br />
+                <span class="text-text-primary">& Create Magic ✨</span>
+            </h1>
+            
+            <p class="text-xl sm:text-2xl text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed">
+                Your voice shapes our <span class="text-primary font-semibold">campus universe</span>! 
+                Share feedback, submit events, or just say hello - we're here to amplify your experience! 🚀
+            </p>
+
+            <!-- Support Status -->
+            <div class="flex items-center justify-center gap-2 mb-8">
+                <div class="w-3 h-3 bg-accent rounded-full animate-pulse"></div>
+                <span class="text-accent font-nunito font-semibold">Support Team Online - Average response: 2 hours</span>
+            </div>
+
+            <!-- Quick Contact Options -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto">
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-primary/20 hover:border-primary/40 transition-smooth cursor-pointer" onclick="scrollToSection('general-contact')">
+                    <div class="text-2xl mb-2">💬</div>
+                    <div class="text-sm font-nunito font-semibold text-text-primary">General</div>
+                    <div class="text-xs text-text-secondary">Questions</div>
+                </div>
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-secondary/20 hover:border-secondary/40 transition-smooth cursor-pointer" onclick="scrollToSection('event-submission')">
+                    <div class="text-2xl mb-2">🎉</div>
+                    <div class="text-sm font-nunito font-semibold text-text-primary">Submit</div>
+                    <div class="text-xs text-text-secondary">Events</div>
+                </div>
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-accent/20 hover:border-accent/40 transition-smooth cursor-pointer" onclick="scrollToSection('tech-support')">
+                    <div class="text-2xl mb-2">🔧</div>
+                    <div class="text-sm font-nunito font-semibold text-text-primary">Tech</div>
+                    <div class="text-xs text-text-secondary">Support</div>
+                </div>
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-warning/20 hover:border-warning/40 transition-smooth cursor-pointer" onclick="scrollToSection('partnerships')">
+                    <div class="text-2xl mb-2">🤝</div>
+                    <div class="text-sm font-nunito font-semibold text-text-primary">Partner</div>
+                    <div class="text-xs text-text-secondary">With Us</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section id="contact-form" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-surface to-background">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <!-- Contact Form -->
+                <div class="bg-surface/30 backdrop-blur-sm rounded-2xl p-8 border border-primary/20">
+                    <h2 class="font-montserrat font-black text-3xl mb-6">
+                        <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                            Drop Us a Line 📝
+                        </span>
+                    </h2>
+                    
+                    <form id="contact-form" class="space-y-6">
+                        <!-- Contact Type Selection -->
+                        <div class="space-y-3">
+                            <label class="block text-text-primary font-nunito font-semibold mb-3">What's on your mind? 🤔</label>
+                            <div class="grid grid-cols-2 gap-3">
+                                <label class="contact-type-option cursor-pointer">
+                                    <input type="radio" name="contact_type" value="general" class="hidden" checked />
+                                    <div class="bg-surface border-2 border-primary/30 rounded-lg p-4 text-center hover:border-primary/60 transition-smooth">
+                                        <div class="text-2xl mb-2">💬</div>
+                                        <div class="text-sm font-nunito font-semibold text-text-primary">General Inquiry</div>
+                                    </div>
+                                </label>
+                                <label class="contact-type-option cursor-pointer">
+                                    <input type="radio" name="contact_type" value="event" class="hidden" />
+                                    <div class="bg-surface border-2 border-secondary/30 rounded-lg p-4 text-center hover:border-secondary/60 transition-smooth">
+                                        <div class="text-2xl mb-2">🎉</div>
+                                        <div class="text-sm font-nunito font-semibold text-text-primary">Event Submission</div>
+                                    </div>
+                                </label>
+                                <label class="contact-type-option cursor-pointer">
+                                    <input type="radio" name="contact_type" value="support" class="hidden" />
+                                    <div class="bg-surface border-2 border-accent/30 rounded-lg p-4 text-center hover:border-accent/60 transition-smooth">
+                                        <div class="text-2xl mb-2">🔧</div>
+                                        <div class="text-sm font-nunito font-semibold text-text-primary">Tech Support</div>
+                                    </div>
+                                </label>
+                                <label class="contact-type-option cursor-pointer">
+                                    <input type="radio" name="contact_type" value="partnership" class="hidden" />
+                                    <div class="bg-surface border-2 border-warning/30 rounded-lg p-4 text-center hover:border-warning/60 transition-smooth">
+                                        <div class="text-2xl mb-2">🤝</div>
+                                        <div class="text-sm font-nunito font-semibold text-text-primary">Partnership</div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Name Field -->
+                        <div class="relative">
+                            <input type="text" id="name" name="name" required class="w-full bg-background/50 border-2 border-primary/30 rounded-lg px-4 py-3 text-text-primary placeholder-transparent focus:border-primary focus:outline-none transition-smooth peer" />
+                            <label for="name" class="absolute left-4 -top-2.5 bg-surface px-2 text-sm text-primary font-nunito font-semibold transition-smooth peer-placeholder-shown:text-base peer-placeholder-shown:text-text-secondary peer-placeholder-shown:top-3 peer-focus:-top-2.5 peer-focus:text-primary peer-focus:text-sm">
+                                Your awesome name ✨
+                            </label>
+                        </div>
+
+                        <!-- Email Field -->
+                        <div class="relative">
+                            <input type="email" id="email" name="email" required class="w-full bg-background/50 border-2 border-primary/30 rounded-lg px-4 py-3 text-text-primary placeholder-transparent focus:border-primary focus:outline-none transition-smooth peer" />
+                            <label for="email" class="absolute left-4 -top-2.5 bg-surface px-2 text-sm text-primary font-nunito font-semibold transition-smooth peer-placeholder-shown:text-base peer-placeholder-shown:text-text-secondary peer-placeholder-shown:top-3 peer-focus:-top-2.5 peer-focus:text-primary peer-focus:text-sm">
+                                Email address 📧
+                            </label>
+                        </div>
+
+                        <!-- Subject Field -->
+                        <div class="relative">
+                            <input type="text" id="subject" name="subject" required class="w-full bg-background/50 border-2 border-primary/30 rounded-lg px-4 py-3 text-text-primary placeholder-transparent focus:border-primary focus:outline-none transition-smooth peer" />
+                            <label for="subject" class="absolute left-4 -top-2.5 bg-surface px-2 text-sm text-primary font-nunito font-semibold transition-smooth peer-placeholder-shown:text-base peer-placeholder-shown:text-text-secondary peer-placeholder-shown:top-3 peer-focus:-top-2.5 peer-focus:text-primary peer-focus:text-sm">
+                                What's this about? 🎯
+                            </label>
+                        </div>
+
+                        <!-- Message Field -->
+                        <div class="relative">
+                            <textarea id="message" name="message" rows="5" required class="w-full bg-background/50 border-2 border-primary/30 rounded-lg px-4 py-3 text-text-primary placeholder-transparent focus:border-primary focus:outline-none transition-smooth peer resize-none"></textarea>
+                            <label for="message" class="absolute left-4 -top-2.5 bg-surface px-2 text-sm text-primary font-nunito font-semibold transition-smooth peer-placeholder-shown:text-base peer-placeholder-shown:text-text-secondary peer-placeholder-shown:top-3 peer-focus:-top-2.5 peer-focus:text-primary peer-focus:text-sm">
+                                Tell us everything! 💭
+                            </label>
+                        </div>
+
+                        <!-- Priority Level -->
+                        <div class="space-y-3">
+                            <label class="block text-text-primary font-nunito font-semibold">How urgent is this? ⚡</label>
+                            <div class="flex gap-3">
+                                <label class="flex items-center cursor-pointer">
+                                    <input type="radio" name="priority" value="low" class="hidden peer" checked />
+                                    <div class="w-4 h-4 border-2 border-accent rounded-full peer-checked:bg-accent peer-checked:border-accent transition-smooth mr-2"></div>
+                                    <span class="text-text-secondary peer-checked:text-accent">Chill 😌</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer">
+                                    <input type="radio" name="priority" value="medium" class="hidden peer" />
+                                    <div class="w-4 h-4 border-2 border-warning rounded-full peer-checked:bg-warning peer-checked:border-warning transition-smooth mr-2"></div>
+                                    <span class="text-text-secondary peer-checked:text-warning">Normal 📋</span>
+                                </label>
+                                <label class="flex items-center cursor-pointer">
+                                    <input type="radio" name="priority" value="high" class="hidden peer" />
+                                    <div class="w-4 h-4 border-2 border-error rounded-full peer-checked:bg-error peer-checked:border-error transition-smooth mr-2"></div>
+                                    <span class="text-text-secondary peer-checked:text-error">Urgent 🚨</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="w-full bg-gradient-to-r from-primary to-secondary text-background font-nunito font-bold px-8 py-4 rounded-full hover:shadow-neon transition-smooth transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed">
+                            <span class="submit-text">Send Message 🚀</span>
+                            <span class="loading-text hidden">Sending... ✨</span>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Contact Information & Illustration -->
+                <div class="space-y-8">
+                    <!-- Contact Methods -->
+                    <div class="bg-surface/30 backdrop-blur-sm rounded-2xl p-8 border border-secondary/20">
+                        <h3 class="font-montserrat font-bold text-2xl mb-6 text-text-primary">Other Ways to Reach Us 📞</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-background" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-nunito font-bold text-text-primary mb-1">Email Support</h4>
+                                    <p class="text-text-secondary text-sm mb-2">For detailed inquiries and documentation</p>
+                                    <a href="mailto:hello@thecampusconnect.edu" class="text-primary hover:text-secondary transition-micro">hello@thecampusconnect.edu</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-accent to-warning rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-background" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-nunito font-bold text-text-primary mb-1">Campus Hotline</h4>
+                                    <p class="text-text-secondary text-sm mb-2">Quick questions and urgent support</p>
+                                    <a href="tel:+1-555-CAMPUS" class="text-accent hover:text-warning transition-micro">+1 (555) CAMPUS-1</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-4">
+                                <div class="w-12 h-12 bg-gradient-to-br from-secondary to-primary rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-6 h-6 text-background" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-nunito font-bold text-text-primary mb-1">Office Hours</h4>
+                                    <p class="text-text-secondary text-sm mb-2">Student Union Building, Room 204</p>
+                                    <p class="text-secondary">Mon-Fri: 9AM-5PM</p>
+                                    <p class="text-text-secondary text-sm">Weekends: By appointment</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Response Time Indicator -->
+                    <div class="bg-surface/30 backdrop-blur-sm rounded-2xl p-6 border border-accent/20">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-3 h-3 bg-accent rounded-full animate-pulse"></div>
+                            <h4 class="font-nunito font-bold text-text-primary">Response Times ⏱️</h4>
+                        </div>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">General Inquiries</span>
+                                <span class="text-accent font-semibold">2-4 hours</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Event Submissions</span>
+                                <span class="text-warning font-semibold">24 hours</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Tech Support</span>
+                                <span class="text-primary font-semibold">1-2 hours</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Partnerships</span>
+                                <span class="text-secondary font-semibold">2-3 days</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Campus Resources -->
+                    <div class="bg-surface/30 backdrop-blur-sm rounded-2xl p-6 border border-warning/20">
+                        <h4 class="font-nunito font-bold text-text-primary mb-4">Quick Campus Links 🔗</h4>
+                        <div class="grid grid-cols-2 gap-3">
+                            <a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro text-sm">Student Services</a>
+                            <a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro text-sm">Academic Support</a>
+                            <a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro text-sm">IT Help Desk</a>
+                            <a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro text-sm">Emergency Contacts</a>
+                            <a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro text-sm">Campus Safety</a>
+                            <a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro text-sm">Health Center</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-montserrat font-black text-4xl sm:text-5xl mb-6">
+                    <span class="bg-gradient-to-r from-accent to-warning bg-clip-text text-transparent">
+                        Frequently Asked Questions 🤔
+                    </span>
+                </h2>
+                <p class="text-xl text-text-secondary">
+                    Got questions? We've got answers! Here are the most common things students ask us.
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item bg-surface/30 backdrop-blur-sm rounded-2xl border border-primary/20 overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 flex items-center justify-between hover:bg-surface/20 transition-smooth">
+                        <span class="font-nunito font-bold text-text-primary">How do I submit an event to TheCampusConnect? 🎉</span>
+                        <svg class="faq-icon w-6 h-6 text-primary transition-smooth" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6">
+                        <p class="text-text-secondary">
+                            Super easy! Just use our contact form above and select "Event Submission" as your contact type. 
+                            Include all the juicy details - event name, date, time, location, description, and any special requirements. 
+                            Our team reviews submissions within 24 hours and will get back to you with next steps! ✨
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-item bg-surface/30 backdrop-blur-sm rounded-2xl border border-secondary/20 overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 flex items-center justify-between hover:bg-surface/20 transition-smooth">
+                        <span class="font-nunito font-bold text-text-primary">Is TheCampusConnect free to use? 💰</span>
+                        <svg class="faq-icon w-6 h-6 text-secondary transition-smooth" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6">
+                        <p class="text-text-secondary">
+                            Absolutely! TheCampusConnect is completely free for all students, faculty, and registered student organizations. 
+                            We believe in making campus life accessible to everyone. Some premium features for large organizations 
+                            may have optional fees, but the core platform is always free! 🎯
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-item bg-surface/30 backdrop-blur-sm rounded-2xl border border-accent/20 overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 flex items-center justify-between hover:bg-surface/20 transition-smooth">
+                        <span class="font-nunito font-bold text-text-primary">How do I sync events with my personal calendar? 📅</span>
+                        <svg class="faq-icon w-6 h-6 text-accent transition-smooth" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6">
+                        <p class="text-text-secondary">
+                            Great question! When you register for events, you'll see an "Add to Calendar" button that works with 
+                            Google Calendar, Apple Calendar, Outlook, and more. You can also export your entire TheCampusConnect 
+                            schedule as an .ics file. Check out our Schedule page for more sync options! 🔄
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-item bg-surface/30 backdrop-blur-sm rounded-2xl border border-warning/20 overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 flex items-center justify-between hover:bg-surface/20 transition-smooth">
+                        <span class="font-nunito font-bold text-text-primary">Can I get notifications for events I'm interested in? 🔔</span>
+                        <svg class="faq-icon w-6 h-6 text-warning transition-smooth" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6">
+                        <p class="text-text-secondary">
+                            Yes! We offer email notifications, browser push notifications, and SMS alerts (where available). 
+                            You can customize your notification preferences to get updates about new events in your favorite categories, 
+                            reminders before events start, and last-minute changes. Never miss out on the fun! 📱
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-item bg-surface/30 backdrop-blur-sm rounded-2xl border border-error/20 overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 flex items-center justify-between hover:bg-surface/20 transition-smooth">
+                        <span class="font-nunito font-bold text-text-primary">What if I need help with technical issues? 🔧</span>
+                        <svg class="faq-icon w-6 h-6 text-error transition-smooth" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-6">
+                        <p class="text-text-secondary">
+                            Our tech support team is amazing! Use the contact form and select "Tech Support" for the fastest response 
+                            (usually 1-2 hours). You can also call our campus hotline or visit our office during business hours. 
+                            We're here to make sure your TheCampusConnect experience is smooth and awesome! 💪
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section id="social-connect" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-surface to-background">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="font-montserrat font-black text-4xl sm:text-5xl mb-6">
+                <span class="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
+                    Follow the Vibe 📱
+                </span>
+            </h2>
+            <p class="text-xl text-text-secondary mb-12">
+                Stay connected with TheCampusConnect across all platforms! Get the latest updates, behind-the-scenes content, and community highlights.
+            </p>
+
+            <!-- Social Media Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <a href="javascript:void(0)" class="social-card bg-surface/50 backdrop-blur-sm rounded-2xl p-6 border border-primary/20 hover:border-primary/60 transition-smooth transform hover:scale-105 hover:shadow-neon">
+                    <div class="text-4xl mb-3">📘</div>
+                    <h4 class="font-nunito font-bold text-text-primary mb-2">Facebook</h4>
+                    <p class="text-text-secondary text-sm">Daily updates & community posts</p>
+                </a>
+
+                <a href="javascript:void(0)" class="social-card bg-surface/50 backdrop-blur-sm rounded-2xl p-6 border border-secondary/20 hover:border-secondary/60 transition-smooth transform hover:scale-105 hover:shadow-neon-pink">
+                    <div class="text-4xl mb-3">📸</div>
+                    <h4 class="font-nunito font-bold text-text-primary mb-2">Instagram</h4>
+                    <p class="text-text-secondary text-sm">Event photos & campus life</p>
+                </a>
+
+                <a href="javascript:void(0)" class="social-card bg-surface/50 backdrop-blur-sm rounded-2xl p-6 border border-accent/20 hover:border-accent/60 transition-smooth transform hover:scale-105 hover:shadow-neon-green">
+                    <div class="text-4xl mb-3">🐦</div>
+                    <h4 class="font-nunito font-bold text-text-primary mb-2">Twitter</h4>
+                    <p class="text-text-secondary text-sm">Real-time event updates</p>
+                </a>
+
+                <a href="javascript:void(0)" class="social-card bg-surface/50 backdrop-blur-sm rounded-2xl p-6 border border-warning/20 hover:border-warning/60 transition-smooth transform hover:scale-105">
+                    <div class="text-4xl mb-3">🎵</div>
+                    <h4 class="font-nunito font-bold text-text-primary mb-2">TikTok</h4>
+                    <p class="text-text-secondary text-sm">Fun campus moments</p>
+                </a>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="bg-surface/30 backdrop-blur-sm rounded-2xl p-8 border border-primary/20">
+                <h3 class="font-montserrat font-bold text-2xl mb-4 text-text-primary">Stay in the Loop! 📬</h3>
+                <p class="text-text-secondary mb-6">Get weekly campus highlights and exclusive event previews delivered to your inbox.</p>
+                
+                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="your.email@university.edu" class="flex-1 bg-background/50 border-2 border-primary/30 rounded-lg px-4 py-3 text-text-primary placeholder-text-secondary focus:border-primary focus:outline-none transition-smooth" />
+                    <button type="submit" class="bg-gradient-to-r from-primary to-secondary text-background font-nunito font-bold px-6 py-3 rounded-lg hover:shadow-neon transition-smooth">
+                        Subscribe ✨
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-primary/20 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 mr-3" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="32" height="32" rx="8" fill="url(#footer-logo-gradient)"/>
+                            <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white"/>
+                            <defs>
+                                <linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                    <stop offset="0%" stop-color="#00FFFF"/>
+                                    <stop offset="100%" stop-color="#FF1493"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="font-montserrat font-bold text-xl text-primary">TheCampusConnect</span>
+                    </div>
+                    <p class="text-text-secondary mb-4 max-w-md">
+                        Transforming campus life into cinematic adventures. Connect, create, and celebrate your university experience! ✨
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-secondary transition-micro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-micro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-nunito font-bold text-text-primary mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="events_discovery_dynamic_event_ecosystem.html" class="text-text-secondary hover:text-primary transition-micro">Events</a></li>
+                        <li><a href="schedule_management_personal_planning_center.html" class="text-text-secondary hover:text-primary transition-micro">Schedule</a></li>
+                        <li><a href="campus_map_interactive_location_hub.html" class="text-text-secondary hover:text-primary transition-micro">Campus Map</a></li>
+                        <li><a href="social_hub_community_showcase.html" class="text-text-secondary hover:text-primary transition-micro">Social Hub</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="font-nunito font-bold text-text-primary mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#contact" class="text-text-secondary hover:text-primary transition-micro">Contact Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-surface-600 mt-8 pt-8 text-center">
+                <p class="text-text-secondary">
+                    © 2025 TheCampusConnect. All Rights Reserved. Made with 💙 for amazing students everywhere.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="success-modal" class="fixed inset-0 bg-background/80 backdrop-blur-sm z-50 flex items-center justify-center hidden">
+        <div class="bg-surface rounded-2xl p-8 max-w-md mx-4 border border-primary/20 text-center">
+            <div class="text-6xl mb-4">🎉</div>
+            <h3 class="font-montserrat font-bold text-2xl text-text-primary mb-4">Message Sent Successfully!</h3>
+            <p class="text-text-secondary mb-6">
+                Thanks for reaching out! We've received your message and will get back to you soon. 
+                Keep an eye on your inbox! ✨
+            </p>
+            <button onclick="closeSuccessModal()" class="bg-gradient-to-r from-primary to-secondary text-background font-nunito font-bold px-6 py-3 rounded-full hover:shadow-neon transition-smooth">
+                Awesome! 🚀
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Navigation Background on Scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-background/95');
+                nav.classList.remove('bg-background/80');
+            } else {
+                nav.classList.add('bg-background/80');
+                nav.classList.remove('bg-background/95');
+            }
+        });
+
+        // Contact Type Selection
+        document.querySelectorAll('input[name="contact_type"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                // Remove active state from all options
+                document.querySelectorAll('.contact-type-option div').forEach(div => {
+                    div.classList.remove('border-primary', 'border-secondary', 'border-accent', 'border-warning');
+                    div.classList.add('border-primary/30');
+                });
+                
+                // Add active state to selected option
+                const selectedDiv = this.parentElement.querySelector('div');
+                selectedDiv.classList.remove('border-primary/30');
+                
+                switch(this.value) {
+                    case 'general':
+                        selectedDiv.classList.add('border-primary');
+                        break;
+                    case 'event':
+                        selectedDiv.classList.add('border-secondary');
+                        break;
+                    case 'support':
+                        selectedDiv.classList.add('border-accent');
+                        break;
+                    case 'partnership':
+                        selectedDiv.classList.add('border-warning');
+                        break;
+                }
+            });
+        });
+
+        // Form Submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const submitText = submitBtn.querySelector('.submit-text');
+            const loadingText = submitBtn.querySelector('.loading-text');
+            
+            // Show loading state
+            submitText.classList.add('hidden');
+            loadingText.classList.remove('hidden');
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                // Reset form
+                this.reset();
+                
+                // Reset button state
+                submitText.classList.remove('hidden');
+                loadingText.classList.add('hidden');
+                submitBtn.disabled = false;
+                
+                // Reset contact type selection
+                document.querySelectorAll('.contact-type-option div').forEach(div => {
+                    div.classList.remove('border-primary', 'border-secondary', 'border-accent', 'border-warning');
+                    div.classList.add('border-primary/30');
+                });
+                document.querySelector('.contact-type-option div').classList.remove('border-primary/30');
+                document.querySelector('.contact-type-option div').classList.add('border-primary');
+                
+                // Show success modal
+                document.getElementById('success-modal').classList.remove('hidden');
+            }, 2000);
+        });
+
+        // FAQ Toggle
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                const icon = question.querySelector('.faq-icon');
+                
+                // Toggle answer visibility
+                answer.classList.toggle('hidden');
+                
+                // Rotate icon
+                if (answer.classList.contains('hidden')) {
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+        // Success Modal
+        function closeSuccessModal() {
+            document.getElementById('success-modal').classList.add('hidden');
+        }
+
+        // Scroll to Section
+        function scrollToSection(sectionId) {
+            const element = document.getElementById(sectionId);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Floating Animation for Particles
+        document.querySelectorAll('.floating-particle').forEach((particle, index) => {
+            particle.style.animation = `float ${3 + index}s ease-in-out infinite`;
+        });
+
+        // Add CSS for floating animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-20px); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Form Field Animation
+        document.querySelectorAll('input, textarea').forEach(field => {
+            field.addEventListener('focus', function() {
+                this.parentElement.classList.add('focused');
+            });
+            
+            field.addEventListener('blur', function() {
+                if (!this.value) {
+                    this.parentElement.classList.remove('focused');
+                }
+            });
+        });
+
+        // Social Card Hover Effects
+        document.querySelectorAll('.social-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05) translateY(-5px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1) translateY(0)';
+            });
+        });
+
+        // Smooth Scrolling for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

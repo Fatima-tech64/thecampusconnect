@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Social Hub - Community Showcase | TheCampusConnect</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Discover vibrant student communities, connect with clubs, and explore authentic campus life through TheCampusConnect's Social Constellation - where every student finds their tribe." />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fthecampusc2880back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background text-text-primary font-inter overflow-x-hidden">
+    <!-- Sticky Navigation -->
+    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/20 transition-smooth">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="w-8 h-8 mr-3" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
+                        <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white"/>
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                <stop offset="0%" stop-color="#00FFFF"/>
+                                <stop offset="100%" stop-color="#FF1493"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="font-montserrat font-bold text-xl text-primary">TheCampusConnect</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage_interactive_campus_event_hub.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Home</a>
+                    <a href="events_discovery_dynamic_event_ecosystem.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Events</a>
+                    <a href="schedule_management_personal_planning_center.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Schedule</a>
+                    <a href="campus_map_interactive_location_hub.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Map</a>
+                    <a href="#social" class="nav-link text-text-primary hover:text-primary transition-micro">Social</a>
+                    <a href="contact_feedback_community_connection_portal.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-text-primary hover:text-primary transition-micro">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-surface/95 backdrop-blur-md rounded-lg mt-2 p-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="homepage_interactive_campus_event_hub.html" class="text-text-secondary hover:text-primary transition-micro">🏠 Home</a>
+                    <a href="events_discovery_dynamic_event_ecosystem.html" class="text-text-secondary hover:text-primary transition-micro">🎉 Events</a>
+                    <a href="schedule_management_personal_planning_center.html" class="text-text-secondary hover:text-primary transition-micro">📅 Schedule</a>
+                    <a href="campus_map_interactive_location_hub.html" class="text-text-secondary hover:text-primary transition-micro">🗺️ Map</a>
+                    <a href="#social" class="text-text-primary hover:text-primary transition-micro">👥 Social</a>
+                    <a href="contact_feedback_community_connection_portal.html" class="text-text-secondary hover:text-primary transition-micro">📞 Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="social" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-background via-background-800 to-surface">
+            <!-- Social Network Pattern -->
+            <div class="absolute inset-0 opacity-10">
+                <svg viewBox="0 0 1200 800" class="w-full h-full">
+                    <!-- Connection Lines -->
+                    <g stroke="url(#connection-gradient)" stroke-width="1" fill="none">
+                        <line x1="100" y1="200" x2="300" y2="150"/>
+                        <line x1="300" y1="150" x2="500" y2="250"/>
+                        <line x1="500" y1="250" x2="700" y2="180"/>
+                        <line x1="700" y1="180" x2="900" y2="220"/>
+                        <line x1="200" y1="400" x2="400" y2="350"/>
+                        <line x1="400" y1="350" x2="600" y2="450"/>
+                        <line x1="600" y1="450" x2="800" y2="380"/>
+                        <line x1="150" y1="600" x2="350" y2="550"/>
+                        <line x1="350" y1="550" x2="550" y2="650"/>
+                        <line x1="550" y1="650" x2="750" y2="580"/>
+                    </g>
+                    <!-- Network Nodes -->
+                    <g fill="url(#node-gradient)">
+                        <circle cx="100" cy="200" r="8"/>
+                        <circle cx="300" cy="150" r="6"/>
+                        <circle cx="500" cy="250" r="10"/>
+                        <circle cx="700" cy="180" r="7"/>
+                        <circle cx="900" cy="220" r="9"/>
+                        <circle cx="200" cy="400" r="8"/>
+                        <circle cx="400" cy="350" r="6"/>
+                        <circle cx="600" cy="450" r="10"/>
+                        <circle cx="800" cy="380" r="7"/>
+                        <circle cx="150" cy="600" r="8"/>
+                        <circle cx="350" cy="550" r="6"/>
+                        <circle cx="550" cy="650" r="10"/>
+                        <circle cx="750" cy="580" r="7"/>
+                    </g>
+                    <defs>
+                        <linearGradient id="connection-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00FFFF" stop-opacity="0.3"/>
+                            <stop offset="50%" stop-color="#FF1493" stop-opacity="0.2"/>
+                            <stop offset="100%" stop-color="#32CD32" stop-opacity="0.1"/>
+                        </linearGradient>
+                        <radialGradient id="node-gradient">
+                            <stop offset="0%" stop-color="#00FFFF" stop-opacity="0.8"/>
+                            <stop offset="100%" stop-color="#FF1493" stop-opacity="0.4"/>
+                        </radialGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Floating Social Icons -->
+            <div class="absolute inset-0">
+                <div class="floating-particle w-8 h-8 bg-primary/20 rounded-full absolute top-1/4 left-1/4 opacity-60 flex items-center justify-center">
+                    <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </div>
+                <div class="floating-particle w-6 h-6 bg-secondary/20 rounded-full absolute top-1/3 right-1/3 opacity-40 flex items-center justify-center">
+                    <svg class="w-3 h-3 text-secondary" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                    </svg>
+                </div>
+                <div class="floating-particle w-7 h-7 bg-accent/20 rounded-full absolute bottom-1/3 left-1/2 opacity-80 flex items-center justify-center">
+                    <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                    </svg>
+                </div>
+                <div class="floating-particle w-5 h-5 bg-warning/20 rounded-full absolute top-1/2 right-1/4 opacity-50 flex items-center justify-center">
+                    <svg class="w-3 h-3 text-warning" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.0189 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1568 2.4189Z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+            <h1 class="font-montserrat font-black text-4xl sm:text-6xl lg:text-7xl mb-6 leading-tight">
+                <span class="bg-gradient-to-r from-secondary via-primary to-accent bg-clip-text text-transparent">
+                    Social Constellation
+                </span>
+                <br />
+                <span class="text-text-primary">Community Showcase ✨</span>
+            </h1>
+            
+            <p class="text-xl sm:text-2xl text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed">
+                Discover vibrant student communities, connect with amazing clubs, and explore authentic campus life through our <span class="text-secondary font-semibold">social universe</span>! 🌟
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                <button id="explore-clubs-btn" class="bg-gradient-to-r from-secondary to-primary text-background font-nunito font-bold px-8 py-4 rounded-full hover:shadow-neon-pink transition-smooth transform hover:scale-105">
+                    Explore Clubs 🎭
+                </button>
+                <button id="join-community-btn" class="border-2 border-secondary text-secondary font-nunito font-bold px-8 py-4 rounded-full hover:bg-secondary hover:text-background transition-smooth">
+                    Join Community 👥
+                </button>
+            </div>
+
+            <!-- Live Community Stats -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto">
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-secondary/20">
+                    <div class="text-2xl font-bold text-secondary">89</div>
+                    <div class="text-sm text-text-secondary">Active Clubs</div>
+                </div>
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-primary/20">
+                    <div class="text-2xl font-bold text-primary">2.4K</div>
+                    <div class="text-sm text-text-secondary">Members</div>
+                </div>
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-accent/20">
+                    <div class="text-2xl font-bold text-accent">156</div>
+                    <div class="text-sm text-text-secondary">Posts Today</div>
+                </div>
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-warning/20">
+                    <div class="text-2xl font-bold text-warning">4.9</div>
+                    <div class="text-sm text-text-secondary">Community ⭐</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="w-6 h-10 border-2 border-secondary rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-secondary rounded-full mt-2 animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Club Discovery Section -->
+    <section id="club-discovery" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="font-montserrat font-black text-4xl sm:text-5xl mb-6">
+                    <span class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                        Discover Your Tribe 🔍
+                    </span>
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    From tech innovators to creative artists, find your perfect community match and connect with like-minded students! 
+                </p>
+            </div>
+
+            <!-- Filter & Search Bar -->
+            <div class="bg-surface/30 backdrop-blur-sm rounded-2xl p-6 mb-12 border border-primary/20">
+                <div class="flex flex-col lg:flex-row gap-4 items-center">
+                    <!-- Search Input -->
+                    <div class="relative flex-1 w-full lg:w-auto">
+                        <input type="text" id="club-search" placeholder="Search clubs, interests, activities..." class="w-full bg-background/50 border border-primary/30 rounded-full px-6 py-3 pl-12 text-text-primary placeholder-text-secondary focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-smooth" />
+                        <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+
+                    <!-- Filter Buttons -->
+                    <div class="flex flex-wrap gap-3">
+                        <button class="filter-btn active bg-primary text-background px-4 py-2 rounded-full font-nunito font-semibold hover:shadow-neon transition-smooth text-sm">
+                            All 🎯
+                        </button>
+                        <button class="filter-btn bg-surface border border-secondary text-text-primary px-4 py-2 rounded-full font-nunito font-semibold hover:bg-secondary hover:text-background transition-smooth text-sm">
+                            Academic 📚
+                        </button>
+                        <button class="filter-btn bg-surface border border-accent text-text-primary px-4 py-2 rounded-full font-nunito font-semibold hover:bg-accent hover:text-background transition-smooth text-sm">
+                            Creative 🎨
+                        </button>
+                        <button class="filter-btn bg-surface border border-warning text-text-primary px-4 py-2 rounded-full font-nunito font-semibold hover:bg-warning hover:text-background transition-smooth text-sm">
+                            Sports ⚽
+                        </button>
+                        <button class="filter-btn bg-surface border border-error text-text-primary px-4 py-2 rounded-full font-nunito font-semibold hover:bg-error hover:text-background transition-smooth text-sm">
+                            Social 🎉
+                        </button>
+                    </div>
+
+                    <!-- Reset Filter -->
+                    <button id="reset-filters" class="bg-background/50 border border-text-secondary/30 text-text-secondary px-4 py-2 rounded-full font-nunito font-semibold hover:bg-text-secondary hover:text-background transition-smooth text-sm">
+                        Reset ↻
+                    </button>
+                </div>
+            </div>
+
+            <!-- Club Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="clubs-grid">
+                <!-- Featured Club Card -->
+                <div class="club-card bg-gradient-to-br from-surface to-surface-700 rounded-2xl overflow-hidden border border-primary/30 hover:border-primary/60 transition-smooth transform hover:scale-105 hover:shadow-neon">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Tech Innovation Club" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute top-4 left-4 bg-primary text-background px-3 py-1 rounded-full text-sm font-semibold">
+                            FEATURED ⭐
+                        </div>
+                        <div class="absolute top-4 right-4 bg-background/80 backdrop-blur-sm text-text-primary px-3 py-1 rounded-full text-sm">
+                            247 members
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/80 to-transparent p-4">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                                    <span class="text-background font-bold text-xs">TC</span>
+                                </div>
+                                <span class="text-text-primary font-semibold">Tech Innovation Club</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-semibold">Academic</span>
+                            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-sm font-semibold">Innovation</span>
+                        </div>
+                        <p class="text-text-secondary mb-4 line-clamp-2">Leading campus technology initiatives, hosting hackathons, and connecting students with industry professionals. Join us for weekly workshops and innovation challenges! 🚀</p>
+                        
+                        <!-- Social Stats -->
+                        <div class="flex items-center gap-4 mb-4 text-text-secondary text-sm">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                                </svg>
+                                1.2K likes
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                                </svg>
+                                89 posts
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                </svg>
+                                247 members
+                            </span>
+                        </div>
+
+                        <!-- Action Buttons -->
+                        <div class="flex items-center gap-3">
+                            <button class="flex-1 bg-gradient-to-r from-primary to-secondary text-background px-4 py-2 rounded-full text-sm font-semibold hover:shadow-neon-pink transition-smooth">
+                                Join Club 🚀
+                            </button>
+                            <button class="bg-surface border border-primary text-primary px-4 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-background transition-smooth">
+                                Follow 👁️
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Music & Arts Club -->
+                <div class="club-card bg-gradient-to-br from-surface to-surface-700 rounded-2xl overflow-hidden border border-secondary/30 hover:border-secondary/60 transition-smooth transform hover:scale-105 hover:shadow-neon-pink">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.pixabay.com/photo/2016/11/18/15/44/audience-1835431_1280.jpg" alt="Music & Arts Collective" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                        <div class="absolute top-4 right-4 bg-background/80 backdrop-blur-sm text-text-primary px-3 py-1 rounded-full text-sm">
+                            156 members
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/80 to-transparent p-4">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center">
+                                    <span class="text-background font-bold text-xs">MA</span>
+                                </div>
+                                <span class="text-text-primary font-semibold">Music & Arts Collective</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-sm font-semibold">Creative</span>
+                            <span class="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-semibold">Performance</span>
+                        </div>
+                        <p class="text-text-secondary mb-4 line-clamp-2">Express your creativity through music, visual arts, and performance. Weekly jam sessions, art exhibitions, and collaborative projects await! 🎵🎨</p>
+                        
+                        <div class="flex items-center gap-4 mb-4 text-text-secondary text-sm">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                                </svg>
+                                892 likes
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                                </svg>
+                                67 posts
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                </svg>
+                                156 members
+                            </span>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <button class="flex-1 bg-gradient-to-r from-secondary to-accent text-background px-4 py-2 rounded-full text-sm font-semibold hover:shadow-neon-green transition-smooth">
+                                Join Club 🎨
+                            </button>
+                            <button class="bg-surface border border-secondary text-secondary px-4 py-2 rounded-full text-sm font-semibold hover:bg-secondary hover:text-background transition-smooth">
+                                Follow 👁️
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Council -->
+                <div class="club-card bg-gradient-to-br from-surface to-surface-700 rounded-2xl overflow-hidden border border-accent/30 hover:border-accent/60 transition-smooth transform hover:scale-105 hover:shadow-neon-green">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Student Council" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg'; this.onerror=null;" />
+                        <div class="absolute top-4 right-4 bg-background/80 backdrop-blur-sm text-text-primary px-3 py-1 rounded-full text-sm">
+                            89 members
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/80 to-transparent p-4">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-accent to-warning rounded-full flex items-center justify-center">
+                                    <span class="text-background font-bold text-xs">SC</span>
+                                </div>
+                                <span class="text-text-primary font-semibold">Student Council</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-semibold">Leadership</span>
+                            <span class="bg-warning/20 text-warning px-3 py-1 rounded-full text-sm font-semibold">Governance</span>
+                        </div>
+                        <p class="text-text-secondary mb-4 line-clamp-2">Shape campus life and represent student voices! Join us in organizing events, advocating for student rights, and building a better university experience. 🏛️</p>
+                        
+                        <div class="flex items-center gap-4 mb-4 text-text-secondary text-sm">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                                </svg>
+                                654 likes
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                                </svg>
+                                45 posts
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                </svg>
+                                89 members
+                            </span>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <button class="flex-1 bg-gradient-to-r from-accent to-warning text-background px-4 py-2 rounded-full text-sm font-semibold hover:shadow-neon transition-smooth">
+                                Join Council 🏛️
+                            </button>
+                            <button class="bg-surface border border-accent text-accent px-4 py-2 rounded-full text-sm font-semibold hover:bg-accent hover:text-background transition-smooth">
+                                Follow 👁️
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gaming Society -->
+                <div class="club-card bg-gradient-to-br from-surface to-surface-700 rounded-2xl overflow-hidden border border-warning/30 hover:border-warning/60 transition-smooth transform hover:scale-105 hover:shadow-neon">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Gaming Society" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/442576/pexels-photo-442576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute top-4 right-4 bg-background/80 backdrop-blur-sm text-text-primary px-3 py-1 rounded-full text-sm">
+                            312 members
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/80 to-transparent p-4">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-warning to-error rounded-full flex items-center justify-center">
+                                    <span class="text-background font-bold text-xs">GS</span>
+                                </div>
+                                <span class="text-text-primary font-semibold">Gaming Society</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-warning/20 text-warning px-3 py-1 rounded-full text-sm font-semibold">Gaming</span>
+                            <span class="bg-error/20 text-error px-3 py-1 rounded-full text-sm font-semibold">Esports</span>
+                        </div>
+                        <p class="text-text-secondary mb-4 line-clamp-2">Level up your gaming experience! Join tournaments, LAN parties, and connect with fellow gamers. From casual to competitive - all skill levels welcome! 🎮</p>
+                        
+                        <div class="flex items-center gap-4 mb-4 text-text-secondary text-sm">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                                </svg>
+                                1.5K likes
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                                </svg>
+                                134 posts
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                </svg>
+                                312 members
+                            </span>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <button class="flex-1 bg-gradient-to-r from-warning to-error text-background px-4 py-2 rounded-full text-sm font-semibold hover:shadow-neon transition-smooth">
+                                Join Squad 🎮
+                            </button>
+                            <button class="bg-surface border border-warning text-warning px-4 py-2 rounded-full text-sm font-semibold hover:bg-warning hover:text-background transition-smooth">
+                                Follow 👁️
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Environmental Club -->
+                <div class="club-card bg-gradient-to-br from-surface to-surface-700 rounded-2xl overflow-hidden border border-accent/30 hover:border-accent/60 transition-smooth transform hover:scale-105 hover:shadow-neon-green">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.pixabay.com/photo/2016/11/29/05/45/astronomy-1867616_1280.jpg" alt="Environmental Action Club" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                        <div class="absolute top-4 right-4 bg-background/80 backdrop-blur-sm text-text-primary px-3 py-1 rounded-full text-sm">
+                            78 members
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/80 to-transparent p-4">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-accent to-primary rounded-full flex items-center justify-center">
+                                    <span class="text-background font-bold text-xs">EA</span>
+                                </div>
+                                <span class="text-text-primary font-semibold">Environmental Action</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-semibold">Environment</span>
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-semibold">Sustainability</span>
+                        </div>
+                        <p class="text-text-secondary mb-4 line-clamp-2">Make a positive impact on our planet! Join campus cleanup drives, sustainability workshops, and environmental advocacy initiatives. Together we can create change! 🌱</p>
+                        
+                        <div class="flex items-center gap-4 mb-4 text-text-secondary text-sm">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                                </svg>
+                                423 likes
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                                </svg>
+                                32 posts
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                </svg>
+                                78 members
+                            </span>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <button class="flex-1 bg-gradient-to-r from-accent to-primary text-background px-4 py-2 rounded-full text-sm font-semibold hover:shadow-neon-green transition-smooth">
+                                Join Movement 🌱
+                            </button>
+                            <button class="bg-surface border border-accent text-accent px-4 py-2 rounded-full text-sm font-semibold hover:bg-accent hover:text-background transition-smooth">
+                                Follow 👁️
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Debate Society -->
+                <div class="club-card bg-gradient-to-br from-surface to-surface-700 rounded-2xl overflow-hidden border border-error/30 hover:border-error/60 transition-smooth transform hover:scale-105 hover:shadow-neon">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Debate Society" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2016/02/19/11/19/office-1209640_1280.jpg'; this.onerror=null;" />
+                        <div class="absolute top-4 right-4 bg-background/80 backdrop-blur-sm text-text-primary px-3 py-1 rounded-full text-sm">
+                            124 members
+                        </div>
+                        <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-background/80 to-transparent p-4">
+                            <div class="flex items-center gap-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-error to-secondary rounded-full flex items-center justify-center">
+                                    <span class="text-background font-bold text-xs">DS</span>
+                                </div>
+                                <span class="text-text-primary font-semibold">Debate Society</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-error/20 text-error px-3 py-1 rounded-full text-sm font-semibold">Academic</span>
+                            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-sm font-semibold">Speaking</span>
+                        </div>
+                        <p class="text-text-secondary mb-4 line-clamp-2">Sharpen your critical thinking and public speaking skills! Engage in thought-provoking debates, participate in tournaments, and develop your argumentative prowess. 🗣️</p>
+                        
+                        <div class="flex items-center gap-4 mb-4 text-text-secondary text-sm">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                                </svg>
+                                567 likes
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                                </svg>
+                                78 posts
+                            </span>
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                </svg>
+                                124 members
+                            </span>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <button class="flex-1 bg-gradient-to-r from-error to-secondary text-background px-4 py-2 rounded-full text-sm font-semibold hover:shadow-neon transition-smooth">
+                                Join Debate 🗣️
+                            </button>
+                            <button class="bg-surface border border-error text-error px-4 py-2 rounded-full text-sm font-semibold hover:bg-error hover:text-background transition-smooth">
+                                Follow 👁️
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-12">
+                <button id="load-more-clubs" class="bg-gradient-to-r from-primary via-secondary to-accent text-background font-nunito font-bold px-8 py-4 rounded-full hover:shadow-neon transition-smooth transform hover:scale-105">
+                    Discover More Clubs 🔍
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Feed Section -->
+    <section id="social-feed" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-surface to-background">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="font-montserrat font-black text-4xl sm:text-5xl mb-6">
+                    <span class="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
+                        Live Campus Buzz 📱
+                    </span>
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Stay connected with real-time updates from your favorite clubs and discover what's happening across campus right now! 
+                </p>
+            </div>
+
+            <!-- Feed Controls -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-between items-center mb-12">
+                <div class="flex flex-wrap gap-3">
+                    <button class="feed-filter active bg-primary text-background px-4 py-2 rounded-full font-nunito font-semibold hover:shadow-neon transition-smooth text-sm">
+                        All Posts 📱
+                    </button>
+                    <button class="feed-filter bg-surface border border-secondary text-text-primary px-4 py-2 rounded-full font-nunito font-semibold hover:bg-secondary hover:text-background transition-smooth text-sm">
+                        Following 👥
+                    </button>
+                    <button class="feed-filter bg-surface border border-accent text-text-primary px-4 py-2 rounded-full font-nunito font-semibold hover:bg-accent hover:text-background transition-smooth text-sm">
+                        Trending 🔥
+                    </button>
+                    <button class="feed-filter bg-surface border border-warning text-text-primary px-4 py-2 rounded-full font-nunito font-semibold hover:bg-warning hover:text-background transition-smooth text-sm">
+                        Events 🎉
+                    </button>
+                </div>
+
+                <button id="refresh-feed" class="bg-background/50 border border-primary text-primary px-4 py-2 rounded-full font-nunito font-semibold hover:bg-primary hover:text-background transition-smooth text-sm flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                    </svg>
+                    Refresh
+                </button>
+            </div>
+
+            <!-- Social Feed Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="social-feed-grid">
+                <!-- Tech Club Post -->
+                <div class="social-post bg-surface/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-primary/20 hover:border-primary/40 transition-smooth">
+                    <div class="p-4 border-b border-surface-600">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                                <span class="text-background font-bold text-sm">TC</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-nunito font-bold text-text-primary">Tech Innovation Club</h4>
+                                <p class="text-text-secondary text-sm flex items-center gap-1">
+                                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                    </svg>
+                                    2 hours ago
+                                </p>
+                            </div>
+                            <button class="text-text-secondary hover:text-primary transition-micro">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="AI Workshop Success" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute top-4 right-4 bg-primary/80 backdrop-blur-sm text-background px-2 py-1 rounded-full text-xs font-semibold">
+                            LIVE 🔴
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-text-primary mb-3">Amazing turnout at today's AI workshop! 🤖 Over 100 students learned about machine learning fundamentals. Who's ready for next week's hackathon? #TechLife #Innovation #AI</p>
+                        
+                        <!-- Engagement Stats -->
+                        <div class="flex items-center gap-6 mb-4 text-text-secondary text-sm">
+                            <button class="flex items-center gap-1 hover:text-secondary transition-micro">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                                </svg>
+                                127 likes
+                            </button>
+                            <button class="flex items-center gap-1 hover:text-primary transition-micro">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                                </svg>
+                                23 comments
+                            </button>
+                            <button class="flex items-center gap-1 hover:text-accent transition-micro">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+                                </svg>
+                                Share
+                            </button>
+                        </div>
+
+                        <!-- Quick Actions -->
+                        <div class="flex items-center gap-2">
+                            <button class="flex-1 bg-primary/20 text-primary px-3 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-background transition-smooth">
+                                Join Workshop 🚀
+                            </button>
+                            <button class="bg-surface border border-primary text-primary px-3 py-2 rounded-full text-sm font-semibold hover:bg-primary hover:text-background transition-smooth">
+                                Follow
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Music Club Post -->
+                <div class="social-post bg-surface/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-secondary/20 hover:border-secondary/40 transition-smooth">
+                    <div class="p-4 border-b border-surface-600">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center">
+                                <span class="text-background font-bold text-sm">MC</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-nunito font-bold text-text-primary">Music & Arts Collective</h4>
+                                <p class="text-text-secondary text-sm flex items-center gap-1">
+                                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                    </svg>
+                                    5 hours ago
+                                </p>
+                            </div>
+                            <button class="text-text-secondary hover:text-secondary transition-micro">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.pixabay.com/photo/2016/11/18/15/44/audience-1835431_1280.jpg" alt="Winter Festival Rehearsal" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                    </div>
+                    <div class="p-4">
+                        <p class="text-text-primary mb-3">Rehearsals for Winter Music Festival are absolutely 🔥! Can't wait to share the stage with these incredibly talented artists. December 22nd is going to be EPIC! 🎵✨ #MusicLife #WinterFest #CampusVibes</p>
+                        
+                        <div class="flex items-center gap-6 mb-4 text-text-secondary text-sm">
+                            <button class="flex items-center gap-1 hover:text-secondary transition-micro">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                                </svg>
+                                89 likes
+                            </button>
+                            <button class="flex items-center gap-1 hover:text-primary transition-micro">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                                </svg>
+                                15 comments
+                            </button>
+                            <button class="flex items-center gap-1 hover:text-accent transition-micro">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+                                </svg>
+                                Share
+                            </button>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <button class="flex-1 bg-secondary/20 text-secondary px-3 py-2 rounded-full text-sm font-semibold hover:bg-secondary hover:text-background transition-smooth">
+                                Get Tickets 🎵
+                            </button>
+                            <button class="bg-surface border border-secondary text-secondary px-3 py-2 rounded-full text-sm font-semibold hover:bg-secondary hover:text-background transition-smooth">
+                                Follow
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Council Post -->
+                <div class="social-post bg-surface/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-accent/20 hover:border-accent/40 transition-smooth">
+                    <div class="p-4 border-b border-surface-600">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-gradient-to-br from-accent to-warning rounded-full flex items-center justify-center">
+                                <span class="text-background font-bold text-sm">SC</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-nunito font-bold text-text-primary">Student Council</h4>
+                                <p class="text-text-secondary text-sm flex items-center gap-1">
+                                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                    </svg>
+                                    1 day ago
+                                </p>
+                            </div>
+                            <button class="text-text-secondary hover:text-accent transition-micro">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Student Council Meeting" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg'; this.onerror=null;" />
+                    </div>
+                    <div class="p-4">
+                        <p class="text-text-primary mb-3">Planning some incredible events for next semester! 🎯 Your voice matters - join our next meeting this Friday at 6 PM in the Student Center. Let's make campus life even more amazing! 📢 #StudentVoice #CampusLife</p>
+                        
+                        <div class="flex items-center gap-6 mb-4 text-text-secondary text-sm">
+                            <button class="flex items-center gap-1 hover:text-secondary transition-micro">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                                </svg>
+                                156 likes
+                            </button>
+                            <button class="flex items-center gap-1 hover:text-primary transition-micro">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                                </svg>
+                                34 comments
+                            </button>
+                            <button class="flex items-center gap-1 hover:text-accent transition-micro">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+                                </svg>
+                                Share
+                            </button>
+                        </div>
+
+                        <div class="flex items-center gap-2">
+                            <button class="flex-1 bg-accent/20 text-accent px-3 py-2 rounded-full text-sm font-semibold hover:bg-accent hover:text-background transition-smooth">
+                                Join Meeting 🏛️
+                            </button>
+                            <button class="bg-surface border border-accent text-accent px-3 py-2 rounded-full text-sm font-semibold hover:bg-accent hover:text-background transition-smooth">
+                                Follow
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Posts -->
+            <div class="text-center mt-12">
+                <button id="load-more-posts" class="bg-gradient-to-r from-secondary to-primary text-background font-nunito font-bold px-8 py-4 rounded-full hover:shadow-neon-pink transition-smooth transform hover:scale-105">
+                    Load More Posts 📱
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Highlights Section -->
+    <section id="community-highlights" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="font-montserrat font-black text-4xl sm:text-5xl mb-6">
+                    <span class="bg-gradient-to-r from-warning to-error bg-clip-text text-transparent">
+                        Community Highlights 🌟
+                    </span>
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Celebrating the amazing achievements and moments that make our campus community extraordinary! 
+                </p>
+            </div>
+
+            <!-- Highlights Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Achievement Highlight -->
+                <div class="highlight-card bg-gradient-to-br from-surface to-surface-700 rounded-2xl p-6 border border-warning/30 hover:border-warning/60 transition-smooth transform hover:scale-105 hover:shadow-neon">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-warning to-error rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-background" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-nunito font-bold text-lg text-text-primary">Achievement Unlocked! 🏆</h3>
+                            <p class="text-text-secondary text-sm">Community Recognition</p>
+                        </div>
+                    </div>
+                    <p class="text-text-primary mb-4">Tech Innovation Club wins first place at the Regional Hackathon! Their AI-powered campus navigation app impressed judges and will be implemented university-wide. 🚀</p>
+                    <div class="flex items-center gap-2 text-text-secondary text-sm">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                        </svg>
+                        3 days ago
+                    </div>
+                </div>
+
+                <!-- Event Success -->
+                <div class="highlight-card bg-gradient-to-br from-surface to-surface-700 rounded-2xl p-6 border border-primary/30 hover:border-primary/60 transition-smooth transform hover:scale-105 hover:shadow-neon">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-background" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-nunito font-bold text-lg text-text-primary">Record Attendance! 📈</h3>
+                            <p class="text-text-secondary text-sm">Event Success</p>
+                        </div>
+                    </div>
+                    <p class="text-text-primary mb-4">Cultural Night 2025 broke all records with 800+ attendees! Students from 25+ countries showcased their heritage through food, music, and performances. Unity in diversity! 🌍</p>
+                    <div class="flex items-center gap-2 text-text-secondary text-sm">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                        </svg>
+                        1 week ago
+                    </div>
+                </div>
+
+                <!-- Community Impact -->
+                <div class="highlight-card bg-gradient-to-br from-surface to-surface-700 rounded-2xl p-6 border border-accent/30 hover:border-accent/60 transition-smooth transform hover:scale-105 hover:shadow-neon-green">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-accent to-primary rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-background" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-nunito font-bold text-lg text-text-primary">Community Impact! 💚</h3>
+                            <p class="text-text-secondary text-sm">Social Good</p>
+                        </div>
+                    </div>
+                    <p class="text-text-primary mb-4">Environmental Action Club's campus cleanup initiative removed 500+ pounds of waste and planted 100 trees. Making our campus greener, one step at a time! 🌱</p>
+                    <div class="flex items-center gap-2 text-text-secondary text-sm">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                        </svg>
+                        2 weeks ago
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call to Action -->
+            <div class="text-center mt-16">
+                <div class="bg-surface/30 backdrop-blur-sm rounded-2xl p-8 border border-primary/20">
+                    <h3 class="font-montserrat font-bold text-2xl text-text-primary mb-4">Ready to Make Your Mark? ✨</h3>
+                    <p class="text-text-secondary mb-6 max-w-2xl mx-auto">Join our vibrant community and be part of the next success story. Whether you're looking to lead, create, or simply connect - there's a place for you here!</p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <button class="bg-gradient-to-r from-primary to-secondary text-background font-nunito font-bold px-8 py-4 rounded-full hover:shadow-neon-pink transition-smooth transform hover:scale-105">
+                            Start Your Journey 🚀
+                        </button>
+                        <a href="contact_feedback_community_connection_portal.html" class="border-2 border-primary text-primary font-nunito font-bold px-8 py-4 rounded-full hover:bg-primary hover:text-background transition-smooth">
+                            Get Involved 🤝
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-primary/20 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 mr-3" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="32" height="32" rx="8" fill="url(#footer-logo-gradient)"/>
+                            <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white"/>
+                            <defs>
+                                <linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                    <stop offset="0%" stop-color="#00FFFF"/>
+                                    <stop offset="100%" stop-color="#FF1493"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="font-montserrat font-bold text-xl text-primary">TheCampusConnect</span>
+                    </div>
+                    <p class="text-text-secondary mb-4 max-w-md">
+                        Connecting campus communities through vibrant social experiences. Discover, engage, and celebrate your university journey! ✨
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-secondary transition-micro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-micro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419-.0189 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1568 2.4189Z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-nunito font-bold text-text-primary mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="homepage_interactive_campus_event_hub.html" class="text-text-secondary hover:text-primary transition-micro">Home</a></li>
+                        <li><a href="events_discovery_dynamic_event_ecosystem.html" class="text-text-secondary hover:text-primary transition-micro">Events</a></li>
+                        <li><a href="schedule_management_personal_planning_center.html" class="text-text-secondary hover:text-primary transition-micro">Schedule</a></li>
+                        <li><a href="campus_map_interactive_location_hub.html" class="text-text-secondary hover:text-primary transition-micro">Campus Map</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="font-nunito font-bold text-text-primary mb-4">Community</h4>
+                    <ul class="space-y-2">
+                        <li><a href="contact_feedback_community_connection_portal.html" class="text-text-secondary hover:text-primary transition-micro">Contact Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">Join Clubs</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">Community Guidelines</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-surface-600 mt-8 pt-8 text-center">
+                <p class="text-text-secondary">
+                    © 2025 TheCampusConnect. All Rights Reserved. Made with 💙 for amazing campus communities everywhere.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth Scrolling for Navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navigation Background on Scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-background/95');
+                nav.classList.remove('bg-background/80');
+            } else {
+                nav.classList.add('bg-background/80');
+                nav.classList.remove('bg-background/95');
+            }
+        });
+
+        // Filter Buttons for Club Discovery
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('active', 'bg-primary', 'text-background');
+                    b.classList.add('bg-surface', 'border', 'text-text-primary');
+                });
+                
+                // Add active class to clicked button
+                btn.classList.add('active', 'bg-primary', 'text-background');
+                btn.classList.remove('bg-surface', 'border', 'text-text-primary');
+            });
+        });
+
+        // Feed Filter Buttons
+        document.querySelectorAll('.feed-filter').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                document.querySelectorAll('.feed-filter').forEach(b => {
+                    b.classList.remove('active', 'bg-primary', 'text-background');
+                    b.classList.add('bg-surface', 'border', 'text-text-primary');
+                });
+                
+                // Add active class to clicked button
+                btn.classList.add('active', 'bg-primary', 'text-background');
+                btn.classList.remove('bg-surface', 'border', 'text-text-primary');
+            });
+        });
+
+        // Search Functionality
+        const searchInput = document.getElementById('club-search');
+        const clubsGrid = document.getElementById('clubs-grid');
+        const clubCards = clubsGrid.querySelectorAll('.club-card');
+
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            
+            clubCards.forEach(card => {
+                const clubName = card.querySelector('h3').textContent.toLowerCase();
+                const clubDescription = card.querySelector('p').textContent.toLowerCase();
+                
+                if (clubName.includes(searchTerm) || clubDescription.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Reset Filters
+        document.getElementById('reset-filters').addEventListener('click', () => {
+            // Reset search
+            searchInput.value = '';
+            
+            // Show all cards
+            clubCards.forEach(card => {
+                card.style.display = 'block';
+            });
+            
+            // Reset filter buttons
+            document.querySelectorAll('.filter-btn').forEach(b => {
+                b.classList.remove('active', 'bg-primary', 'text-background');
+                b.classList.add('bg-surface', 'border', 'text-text-primary');
+            });
+            
+            // Set "All" as active
+            document.querySelector('.filter-btn').classList.add('active', 'bg-primary', 'text-background');
+            document.querySelector('.filter-btn').classList.remove('bg-surface', 'border', 'text-text-primary');
+        });
+
+        // Floating Animation for Particles
+        document.querySelectorAll('.floating-particle').forEach((particle, index) => {
+            particle.style.animation = `float ${3 + index}s ease-in-out infinite`;
+        });
+
+        // Add CSS for floating animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0%, 100% { transform: translateY(0px) rotate(0deg); }
+                50% { transform: translateY(-20px) rotate(180deg); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Load More Functionality
+        document.getElementById('load-more-clubs').addEventListener('click', () => {
+            // Simulate loading more clubs
+            const button = document.getElementById('load-more-clubs');
+            button.innerHTML = 'Loading... ⏳';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                button.innerHTML = 'Discover More Clubs 🔍';
+                button.disabled = false;
+                // In a real app, you would load more club data here
+            }, 2000);
+        });
+
+        document.getElementById('load-more-posts').addEventListener('click', () => {
+            // Simulate loading more posts
+            const button = document.getElementById('load-more-posts');
+            button.innerHTML = 'Loading... ⏳';
+            button.disabled = true;
+            
+            setTimeout(() => {
+                button.innerHTML = 'Load More Posts 📱';
+                button.disabled = false;
+                // In a real app, you would load more post data here
+            }, 2000);
+        });
+
+        // Refresh Feed
+        document.getElementById('refresh-feed').addEventListener('click', () => {
+            const button = document.getElementById('refresh-feed');
+            const icon = button.querySelector('svg');
+            
+            // Add rotation animation
+            icon.style.animation = 'spin 1s linear infinite';
+            button.innerHTML = button.innerHTML.replace('Refresh', 'Refreshing...');
+            
+            setTimeout(() => {
+                icon.style.animation = '';
+                button.innerHTML = `
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                    </svg>
+                    Refresh
+                `;
+            }, 1500);
+        });
+
+        // Add spin animation
+        const spinStyle = document.createElement('style');
+        spinStyle.textContent = `
+            @keyframes spin {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(spinStyle);
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards
+        document.querySelectorAll('.club-card, .social-post, .highlight-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Hero CTA Buttons
+        document.getElementById('explore-clubs-btn').addEventListener('click', () => {
+            document.getElementById('club-discovery').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+
+        document.getElementById('join-community-btn').addEventListener('click', () => {
+            document.getElementById('community-highlights').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    </script>
+</body>
+</html>

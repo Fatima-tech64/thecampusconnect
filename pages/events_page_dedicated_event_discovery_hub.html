@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events Discovery Hub - TheCampusConnect</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Discover your campus universe with TheCampusConnect's dedicated event discovery hub. Advanced filtering, immersive browsing, and social proof indicators for the ultimate campus adventure." />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fthecampusc2880back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background text-text-primary font-inter overflow-x-hidden">
+    <!-- Sticky Navigation -->
+    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/20 transition-smooth">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="w-8 h-8 mr-3" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
+                        <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white"/>
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                <stop offset="0%" stop-color="#00FFFF"/>
+                                <stop offset="100%" stop-color="#FF1493"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="font-montserrat font-bold text-xl text-primary">TheCampusConnect</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage_interactive_campus_event_hub.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Home</a>
+                    <a href="events_page_dedicated_event_discovery_hub.html" class="nav-link text-primary font-semibold">Events</a>
+                    <a href="schedule_page_personal_campus_planning_center.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Schedule</a>
+                    <a href="campus_map_interactive_location_hub.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Map</a>
+                    <a href="social_hub_community_showcase.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Social</a>
+                    <a href="contact_feedback_community_connection_portal.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-text-primary hover:text-primary transition-micro">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-surface/95 backdrop-blur-md rounded-lg mt-2 p-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="homepage_interactive_campus_event_hub.html" class="text-text-secondary hover:text-primary transition-micro">🏠 Home</a>
+                    <a href="events_page_dedicated_event_discovery_hub.html" class="text-primary font-semibold">🎉 Events</a>
+                    <a href="schedule_page_personal_campus_planning_center.html" class="text-text-secondary hover:text-primary transition-micro">📅 Schedule</a>
+                    <a href="campus_map_interactive_location_hub.html" class="text-text-secondary hover:text-primary transition-micro">🗺️ Map</a>
+                    <a href="social_hub_community_showcase.html" class="text-text-secondary hover:text-primary transition-micro">👥 Social</a>
+                    <a href="contact_feedback_community_connection_portal.html" class="text-text-secondary hover:text-primary transition-micro">📞 Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Cityscape -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Animated Neon Gradient Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-background via-background-800 to-surface">
+            <!-- Animated Cityscape Silhouettes -->
+            <div class="absolute bottom-0 left-0 right-0 h-96 opacity-20 animate-pulse">
+                <svg viewBox="0 0 1200 400" class="w-full h-full">
+                    <polygon points="0,400 0,250 120,250 120,180 200,180 200,120 280,120 280,200 360,200 360,140 440,140 440,180 520,180 520,100 600,100 600,160 680,160 680,80 760,80 760,140 840,140 840,90 920,90 920,170 1000,170 1000,110 1080,110 1080,190 1160,190 1160,230 1200,230 1200,400" fill="url(#hero-cityscape-gradient)"/>
+                    <defs>
+                        <linearGradient id="hero-cityscape-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00FFFF" stop-opacity="0.6"/>
+                            <stop offset="33%" stop-color="#FF1493" stop-opacity="0.4"/>
+                            <stop offset="66%" stop-color="#32CD32" stop-opacity="0.5"/>
+                            <stop offset="100%" stop-color="#FFD700" stop-opacity="0.3"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Enhanced Floating Particles -->
+            <div class="absolute inset-0">
+                <div class="floating-particle w-3 h-3 bg-primary rounded-full absolute top-1/4 left-1/5 opacity-70 animate-bounce"></div>
+                <div class="floating-particle w-4 h-4 bg-secondary rounded-full absolute top-1/3 right-1/4 opacity-50"></div>
+                <div class="floating-particle w-2 h-2 bg-accent rounded-full absolute bottom-1/3 left-1/2 opacity-90"></div>
+                <div class="floating-particle w-3 h-3 bg-warning rounded-full absolute top-1/2 right-1/3 opacity-60"></div>
+                <div class="floating-particle w-2 h-2 bg-error rounded-full absolute bottom-1/4 left-3/4 opacity-80"></div>
+            </div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+            <h1 class="font-montserrat font-black text-5xl sm:text-7xl lg:text-8xl mb-6 leading-tight animate-fade-in">
+                <span class="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                    Discover Your Campus
+                </span>
+                <br />
+                <span class="text-text-primary">Universe ✨</span>
+            </h1>
+            
+            <p class="text-xl sm:text-2xl text-text-secondary mb-8 max-w-4xl mx-auto leading-relaxed">
+                Transform your university experience into a <span class="text-primary font-semibold">cinematic adventure</span>. 
+                Advanced filtering, immersive browsing, and social proof indicators for the ultimate campus discovery! 🌟
+            </p>
+
+            <!-- Enhanced Live Stats -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-3xl mx-auto mb-12">
+                <div class="bg-surface/60 backdrop-blur-sm rounded-xl p-6 border-2 border-primary/30 hover:border-primary/60 transition-smooth transform hover:scale-105">
+                    <div class="text-3xl font-bold text-primary animate-pulse" id="live-events-count">247</div>
+                    <div class="text-sm text-text-secondary">Live Events</div>
+                    <div class="w-full bg-primary/20 h-1 rounded-full mt-2">
+                        <div class="w-3/4 bg-primary h-1 rounded-full animate-pulse"></div>
+                    </div>
+                </div>
+                <div class="bg-surface/60 backdrop-blur-sm rounded-xl p-6 border-2 border-secondary/30 hover:border-secondary/60 transition-smooth transform hover:scale-105">
+                    <div class="text-3xl font-bold text-secondary animate-pulse" id="total-attendees">3.8K</div>
+                    <div class="text-sm text-text-secondary">Real-time Attendees</div>
+                    <div class="w-full bg-secondary/20 h-1 rounded-full mt-2">
+                        <div class="w-4/5 bg-secondary h-1 rounded-full animate-pulse"></div>
+                    </div>
+                </div>
+                <div class="bg-surface/60 backdrop-blur-sm rounded-xl p-6 border-2 border-accent/30 hover:border-accent/60 transition-smooth transform hover:scale-105">
+                    <div class="text-3xl font-bold text-accent animate-pulse" id="active-orgs">92</div>
+                    <div class="text-sm text-text-secondary">Active Organizations</div>
+                    <div class="w-full bg-accent/20 h-1 rounded-full mt-2">
+                        <div class="w-5/6 bg-accent h-1 rounded-full animate-pulse"></div>
+                    </div>
+                </div>
+                <div class="bg-surface/60 backdrop-blur-sm rounded-xl p-6 border-2 border-warning/30 hover:border-warning/60 transition-smooth transform hover:scale-105">
+                    <div class="text-3xl font-bold text-warning">4.9</div>
+                    <div class="text-sm text-text-secondary">Avg. Rating ⭐</div>
+                    <div class="flex gap-1 mt-2 justify-center">
+                        <span class="text-warning text-xs">★★★★★</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Call-to-Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button id="explore-events-btn" class="bg-gradient-to-r from-primary to-secondary text-background font-nunito font-bold px-10 py-4 rounded-full hover:shadow-neon transition-smooth transform hover:scale-110 animate-pulse">
+                    Explore Events Universe 🚀
+                </button>
+                <button id="create-event-btn" class="border-2 border-accent text-accent font-nunito font-bold px-10 py-4 rounded-full hover:bg-accent hover:text-background transition-smooth">
+                    Create Your Event 🌟
+                </button>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="w-8 h-12 border-2 border-primary rounded-full flex justify-center">
+                <div class="w-2 h-4 bg-primary rounded-full mt-2 animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Search & Filter Section -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-surface/40 to-background sticky top-16 z-40 backdrop-blur-md border-b border-primary/10">
+        <div class="max-w-7xl mx-auto">
+            <!-- Enhanced Search Bar with Predictive Text -->
+            <div class="relative mb-8">
+                <div class="relative max-w-3xl mx-auto">
+                    <input type="text" id="event-search" placeholder="🔍 Search events, clubs, locations, or keywords... (AI-powered)" class="w-full bg-surface/80 backdrop-blur-sm border-2 border-primary/30 rounded-full px-8 py-5 pl-16 text-text-primary placeholder-text-secondary focus:border-primary focus:outline-none focus:ring-4 focus:ring-primary/20 transition-smooth text-lg shadow-neon-subtle" />
+                    <svg class="absolute left-6 top-1/2 transform -translate-y-1/2 w-6 h-6 text-primary animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    </svg>
+                    <button class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-gradient-to-r from-primary to-secondary text-background px-8 py-3 rounded-full font-nunito font-bold hover:shadow-neon transition-smooth">
+                        Search
+                    </button>
+                </div>
+                
+                <!-- Search Suggestions Dropdown -->
+                <div id="search-suggestions" class="hidden absolute top-full left-1/2 transform -translate-x-1/2 w-full max-w-3xl bg-surface/95 backdrop-blur-md rounded-2xl border border-primary/30 mt-2 shadow-2xl z-50">
+                    <div class="p-6">
+                        <h4 class="text-text-primary font-nunito font-bold mb-3">Recent Searches 🕐</h4>
+                        <div class="space-y-2">
+                            <div class="flex items-center gap-3 p-2 hover:bg-primary/10 rounded-lg cursor-pointer">
+                                <svg class="w-4 h-4 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span class="text-text-secondary">tech innovation</span>
+                            </div>
+                            <div class="flex items-center gap-3 p-2 hover:bg-primary/10 rounded-lg cursor-pointer">
+                                <svg class="w-4 h-4 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span class="text-text-secondary">music festival</span>
+                            </div>
+                        </div>
+                        
+                        <h4 class="text-text-primary font-nunito font-bold mt-6 mb-3">Trending Now 🔥</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm cursor-pointer hover:bg-primary/30">Finals Week</span>
+                            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-sm cursor-pointer hover:bg-secondary/30">Winter Break</span>
+                            <span class="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm cursor-pointer hover:bg-accent/30">Study Groups</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enhanced Category Clustering -->
+            <div class="flex flex-wrap gap-4 justify-center mb-8">
+                <button class="filter-btn active bg-gradient-to-r from-primary to-secondary text-background px-8 py-3 rounded-full font-nunito font-bold hover:shadow-neon transition-smooth transform hover:scale-105" data-filter="all">
+                    All Events 🎯 
+                    <span class="ml-2 bg-background/20 px-3 py-1 rounded-full text-sm font-bold">247</span>
+                </button>
+                <button class="filter-btn bg-surface/60 border-2 border-secondary/40 text-text-primary px-8 py-3 rounded-full font-nunito font-bold hover:bg-gradient-to-r hover:from-secondary hover:to-accent hover:text-background transition-smooth transform hover:scale-105" data-filter="academic">
+                    Academic 📚 
+                    <span class="ml-2 bg-secondary/20 px-3 py-1 rounded-full text-sm">94</span>
+                </button>
+                <button class="filter-btn bg-surface/60 border-2 border-accent/40 text-text-primary px-8 py-3 rounded-full font-nunito font-bold hover:bg-gradient-to-r hover:from-accent hover:to-warning hover:text-background transition-smooth transform hover:scale-105" data-filter="social">
+                    Social 🎉 
+                    <span class="ml-2 bg-accent/20 px-3 py-1 rounded-full text-sm">78</span>
+                </button>
+                <button class="filter-btn bg-surface/60 border-2 border-warning/40 text-text-primary px-8 py-3 rounded-full font-nunito font-bold hover:bg-gradient-to-r hover:from-warning hover:to-error hover:text-background transition-smooth transform hover:scale-105" data-filter="sports">
+                    Sports ⚽ 
+                    <span class="ml-2 bg-warning/20 px-3 py-1 rounded-full text-sm">45</span>
+                </button>
+                <button class="filter-btn bg-surface/60 border-2 border-error/40 text-text-primary px-8 py-3 rounded-full font-nunito font-bold hover:bg-gradient-to-r hover:from-error hover:to-primary hover:text-background transition-smooth transform hover:scale-105" data-filter="creative">
+                    Creative 🎭 
+                    <span class="ml-2 bg-error/20 px-3 py-1 rounded-full text-sm">30</span>
+                </button>
+            </div>
+
+            <!-- Advanced Filtering Sidebar Toggle -->
+            <div class="text-center">
+                <button id="advanced-filter-toggle" class="bg-surface/60 backdrop-blur-sm border-2 border-primary/30 text-text-primary px-6 py-3 rounded-full font-nunito font-bold hover:border-primary/60 transition-smooth">
+                    Advanced Filters ⚙️
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Filtering Sidebar -->
+    <div id="filter-sidebar" class="fixed top-0 right-0 h-full w-80 bg-surface/95 backdrop-blur-md border-l border-primary/30 transform translate-x-full transition-transform duration-300 z-50 overflow-y-auto">
+        <div class="p-6">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="font-montserrat font-bold text-xl text-text-primary">Advanced Filters</h3>
+                <button id="close-filter-sidebar" class="p-2 text-text-secondary hover:text-primary transition-micro">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Date Range Filter -->
+            <div class="mb-6">
+                <label class="block text-text-primary font-nunito font-bold mb-3">Date Range 📅</label>
+                <div class="space-y-3">
+                    <select class="w-full bg-background/60 border border-primary/30 rounded-lg px-4 py-3 text-text-primary focus:border-primary focus:outline-none transition-smooth">
+                        <option value="all">All Dates</option>
+                        <option value="today">Today</option>
+                        <option value="tomorrow">Tomorrow</option>
+                        <option value="this-week">This Week</option>
+                        <option value="next-week">Next Week</option>
+                        <option value="custom">Custom Range</option>
+                    </select>
+                    <div class="grid grid-cols-2 gap-2">
+                        <input type="date" class="bg-background/60 border border-primary/30 rounded-lg px-3 py-2 text-text-primary focus:border-primary focus:outline-none transition-smooth" />
+                        <input type="date" class="bg-background/60 border border-primary/30 rounded-lg px-3 py-2 text-text-primary focus:border-primary focus:outline-none transition-smooth" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Location-based Sorting -->
+            <div class="mb-6">
+                <label class="block text-text-primary font-nunito font-bold mb-3">Location 📍</label>
+                <select class="w-full bg-background/60 border border-secondary/30 rounded-lg px-4 py-3 text-text-primary focus:border-secondary focus:outline-none transition-smooth">
+                    <option value="all">All Locations</option>
+                    <option value="engineering">Engineering Hall</option>
+                    <option value="library">Central Library</option>
+                    <option value="amphitheater">Campus Amphitheater</option>
+                    <option value="student-center">Student Center</option>
+                    <option value="sports-complex">Sports Complex</option>
+                    <option value="nearby">Near Me (GPS)</option>
+                </select>
+            </div>
+
+            <!-- Event Popularity -->
+            <div class="mb-6">
+                <label class="block text-text-primary font-nunito font-bold mb-3">Popularity 🔥</label>
+                <div class="space-y-2">
+                    <label class="flex items-center">
+                        <input type="radio" name="popularity" value="trending" class="text-primary" />
+                        <span class="ml-2 text-text-secondary">Trending Events</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="popularity" value="high" class="text-secondary" />
+                        <span class="ml-2 text-text-secondary">High Attendance (100+)</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="popularity" value="medium" class="text-accent" />
+                        <span class="ml-2 text-text-secondary">Medium (50-100)</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="radio" name="popularity" value="intimate" class="text-warning" />
+                        <span class="ml-2 text-text-secondary">Intimate Events (50)</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Organizer Ratings -->
+            <div class="mb-6">
+                <label class="block text-text-primary font-nunito font-bold mb-3">Organizer Rating ⭐</label>
+                <div class="space-y-2">
+                    <label class="flex items-center">
+                        <input type="checkbox" class="text-primary" />
+                        <span class="ml-2 text-text-secondary">5 Stars (Excellent)</span>
+                        <span class="ml-auto text-warning">★★★★★</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="text-secondary" />
+                        <span class="ml-2 text-text-secondary">4+ Stars (Great)</span>
+                        <span class="ml-auto text-warning">★★★★☆</span>
+                    </label>
+                    <label class="flex items-center">
+                        <input type="checkbox" class="text-accent" />
+                        <span class="ml-2 text-text-secondary">3+ Stars (Good)</span>
+                        <span class="ml-auto text-warning">★★★☆☆</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Reset Filters -->
+            <div class="mt-8">
+                <button id="reset-all-filters" class="w-full bg-gradient-to-r from-error to-warning text-background font-nunito font-bold py-3 rounded-lg hover:shadow-neon transition-smooth">
+                    Reset All Filters 🔄
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Featured Events Carousel -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="font-montserrat font-black text-4xl sm:text-5xl mb-6">
+                    <span class="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
+                        Trending Campus Activities 🔥
+                    </span>
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Auto-rotating banners highlighting the most popular and trending events on campus
+                </p>
+            </div>
+
+            <!-- Carousel Container -->
+            <div class="relative overflow-hidden rounded-3xl border-2 border-primary/30">
+                <div id="featured-carousel" class="flex transition-transform duration-500 ease-in-out">
+                    <!-- Carousel Slide 1 -->
+                    <div class="min-w-full relative h-96 bg-gradient-to-br from-primary/20 to-secondary/20">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Tech Innovation Summit" class="w-full h-full object-cover opacity-60" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-r from-background/80 to-transparent flex items-center">
+                            <div class="p-12 max-w-2xl">
+                                <span class="bg-primary text-background px-4 py-2 rounded-full text-sm font-bold mb-4 inline-block animate-pulse">TRENDING #1 🚀</span>
+                                <h3 class="font-montserrat font-black text-4xl text-text-primary mb-4">Tech Innovation Summit 2025</h3>
+                                <p class="text-xl text-text-secondary mb-6">Join industry leaders for an inspiring day of tech talks and networking</p>
+                                <div class="flex items-center gap-6 mb-6">
+                                    <div class="flex items-center gap-2 text-text-secondary">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Dec 20, 2025
+                                    </div>
+                                    <div class="flex items-center gap-2 text-text-secondary">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                        </svg>
+                                        <span class="live-counter" data-count="247">247</span> attending
+                                    </div>
+                                </div>
+                                <button class="bg-gradient-to-r from-primary to-secondary text-background font-nunito font-bold px-8 py-4 rounded-full hover:shadow-neon transition-smooth transform hover:scale-105">
+                                    Join Event 🎯
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Slide 2 -->
+                    <div class="min-w-full relative h-96 bg-gradient-to-br from-secondary/20 to-accent/20">
+                        <img src="https://images.pixabay.com/photo/2016/11/23/15/48/audience-1853662_1280.jpg" alt="Winter Music Festival" class="w-full h-full object-cover opacity-60" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-r from-background/80 to-transparent flex items-center">
+                            <div class="p-12 max-w-2xl">
+                                <span class="bg-secondary text-background px-4 py-2 rounded-full text-sm font-bold mb-4 inline-block animate-pulse">TRENDING #2 🎵</span>
+                                <h3 class="font-montserrat font-black text-4xl text-text-primary mb-4">Winter Music Festival</h3>
+                                <p class="text-xl text-text-secondary mb-6">End the semester with amazing live performances and unforgettable vibes</p>
+                                <div class="flex items-center gap-6 mb-6">
+                                    <div class="flex items-center gap-2 text-text-secondary">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Dec 22, 2025
+                                    </div>
+                                    <div class="flex items-center gap-2 text-text-secondary">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                        </svg>
+                                        <span class="live-counter" data-count="156">156</span> attending
+                                    </div>
+                                </div>
+                                <button class="bg-gradient-to-r from-secondary to-accent text-background font-nunito font-bold px-8 py-4 rounded-full hover:shadow-neon-pink transition-smooth transform hover:scale-105">
+                                    Join Festival 🎉
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carousel Slide 3 -->
+                    <div class="min-w-full relative h-96 bg-gradient-to-br from-accent/20 to-warning/20">
+                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Finals Study Marathon" class="w-full h-full object-cover opacity-60" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gradient-to-r from-background/80 to-transparent flex items-center">
+                            <div class="p-12 max-w-2xl">
+                                <span class="bg-accent text-background px-4 py-2 rounded-full text-sm font-bold mb-4 inline-block animate-pulse">TRENDING #3 📚</span>
+                                <h3 class="font-montserrat font-black text-4xl text-text-primary mb-4">Finals Study Marathon</h3>
+                                <p class="text-xl text-text-secondary mb-6">24-hour study session with snacks, coffee, and peer support</p>
+                                <div class="flex items-center gap-6 mb-6">
+                                    <div class="flex items-center gap-2 text-text-secondary">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Dec 18, 2025
+                                    </div>
+                                    <div class="flex items-center gap-2 text-text-secondary">
+                                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                        </svg>
+                                        <span class="live-counter" data-count="89">89</span> attending
+                                    </div>
+                                </div>
+                                <button class="bg-gradient-to-r from-accent to-warning text-background font-nunito font-bold px-8 py-4 rounded-full hover:shadow-neon-green transition-smooth transform hover:scale-105">
+                                    Join Study Session 📖
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button id="carousel-prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-background/60 backdrop-blur-sm border border-primary/30 text-text-primary p-3 rounded-full hover:bg-primary hover:text-background transition-smooth">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                    </svg>
+                </button>
+                <button id="carousel-next" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-background/60 backdrop-blur-sm border border-primary/30 text-text-primary p-3 rounded-full hover:bg-primary hover:text-background transition-smooth">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                </button>
+
+                <!-- Carousel Indicators -->
+                <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+                    <button class="carousel-indicator active w-3 h-3 bg-primary rounded-full opacity-60" data-slide="0"></button>
+                    <button class="carousel-indicator w-3 h-3 bg-text-secondary rounded-full opacity-60" data-slide="1"></button>
+                    <button class="carousel-indicator w-3 h-3 bg-text-secondary rounded-full opacity-60" data-slide="2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Masonry Event Grid with Infinite Scroll -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-surface to-background">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex items-center justify-between mb-12">
+                <div>
+                    <h2 class="font-montserrat font-bold text-3xl text-text-primary mb-2">All Events 🌟</h2>
+                    <p class="text-text-secondary">Showing <span id="events-count" class="text-primary font-semibold">247</span> amazing events</p>
+                </div>
+                
+                <div class="flex items-center gap-4">
+                    <span class="text-text-secondary text-sm hidden sm:block">Sort by:</span>
+                    <select id="sort-events" class="bg-surface/60 border border-primary/30 rounded-lg px-4 py-2 text-text-primary focus:border-primary focus:outline-none transition-smooth">
+                        <option value="trending">🔥 Trending</option>
+                        <option value="date">📅 Date</option>
+                        <option value="popularity">👥 Popularity</option>
+                        <option value="rating">⭐ Rating</option>
+                        <option value="location">📍 Location</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Masonry Grid -->
+            <div id="events-masonry-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 auto-rows-max">
+                <!-- Event Card with Enhanced Features -->
+                <div class="event-card bg-gradient-to-br from-surface/80 to-surface/60 backdrop-blur-sm rounded-2xl overflow-hidden border border-primary/30 hover:border-primary/60 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" data-category="academic">
+                    <div class="relative h-56 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Tech Innovation Summit" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute top-4 left-4 bg-primary text-background px-3 py-1 rounded-full text-sm font-bold animate-pulse">
+                            FEATURED ⭐
+                        </div>
+                        <div class="absolute top-4 right-4 bg-background/80 backdrop-blur-sm text-text-primary px-3 py-1 rounded-full text-sm">
+                            <span class="live-counter font-bold text-primary" data-count="247">247</span> attending
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <div class="bg-background/80 backdrop-blur-sm rounded-lg p-3">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center gap-2 text-text-primary text-sm">
+                                        <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Dec 20, 9:00 AM
+                                    </div>
+                                    <div class="flex items-center gap-1 text-warning">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                        </svg>
+                                        <span class="text-sm font-semibold">4.9</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-sm font-semibold">Academic</span>
+                            <span class="bg-primary/20 text-primary px-2 py-1 rounded-full text-xs font-bold">🔥 HOT</span>
+                        </div>
+                        <h3 class="font-montserrat font-bold text-xl mb-3 text-text-primary">Tech Innovation Summit 2025 🚀</h3>
+                        <p class="text-text-secondary mb-4 line-clamp-3">Join industry leaders and fellow students for an inspiring day of tech talks, networking, and innovation showcases. This isn't just another conference - it's where the future gets built!</p>
+                        
+                        <!-- Social Proof Indicators -->
+                        <div class="flex items-center gap-4 mb-4 text-sm text-text-secondary">
+                            <div class="flex items-center gap-1">
+                                <svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                </svg>
+                                <span>12 friends going</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                                </svg>
+                                <span>34 comments</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center gap-2 text-text-secondary text-sm">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                </svg>
+                                Engineering Hall
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <span class="text-xs text-text-secondary">Hosted by</span>
+                                <span class="text-primary text-sm font-semibold">Tech Club</span>
+                            </div>
+                        </div>
+
+                        <!-- Quick Action Buttons -->
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-gradient-to-r from-primary to-secondary text-background font-nunito font-bold py-3 rounded-xl hover:shadow-neon transition-smooth transform hover:scale-105">
+                                Register 🎯
+                            </button>
+                            <button class="px-4 py-3 border-2 border-primary/30 text-primary rounded-xl hover:bg-primary hover:text-background transition-smooth">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+                                </svg>
+                            </button>
+                            <button class="px-4 py-3 border-2 border-secondary/30 text-secondary rounded-xl hover:bg-secondary hover:text-background transition-smooth">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Event Cards with Varying Heights -->
+                <div class="event-card bg-gradient-to-br from-surface/80 to-surface/60 backdrop-blur-sm rounded-2xl overflow-hidden border border-secondary/30 hover:border-secondary/60 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" data-category="social">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.pixabay.com/photo/2016/11/23/15/48/audience-1853662_1280.jpg" alt="Winter Music Festival" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                        <div class="absolute top-4 right-4 bg-background/80 backdrop-blur-sm text-text-primary px-3 py-1 rounded-full text-sm">
+                            <span class="live-counter font-bold text-secondary" data-count="156">156</span> attending
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-semibold">Social</span>
+                            <span class="bg-secondary/20 text-secondary px-2 py-1 rounded-full text-xs font-bold">🎵 MUSIC</span>
+                        </div>
+                        <h3 class="font-montserrat font-bold text-xl mb-3 text-text-primary">Winter Music Festival 🎵</h3>
+                        <p class="text-text-secondary mb-4 line-clamp-2">End the semester with amazing live performances from student bands.</p>
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-gradient-to-r from-secondary to-accent text-background font-nunito font-bold py-3 rounded-xl hover:shadow-neon-pink transition-smooth">
+                                Join Festival 🎉
+                            </button>
+                            <button class="px-4 py-3 border-2 border-secondary/30 text-secondary rounded-xl hover:bg-secondary hover:text-background transition-smooth">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card bg-gradient-to-br from-surface/80 to-surface/60 backdrop-blur-sm rounded-2xl overflow-hidden border border-accent/30 hover:border-accent/60 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl" data-category="academic">
+                    <div class="relative h-52 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Study Marathon" class="w-full h-full object-cover transition-transform duration-300 hover:scale-110" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg'; this.onerror=null;" />
+                        <div class="absolute top-4 right-4 bg-background/80 backdrop-blur-sm text-text-primary px-3 py-1 rounded-full text-sm">
+                            <span class="live-counter font-bold text-accent" data-count="89">89</span> attending
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-warning/20 text-warning px-3 py-1 rounded-full text-sm font-semibold">Academic</span>
+                            <span class="bg-accent/20 text-accent px-2 py-1 rounded-full text-xs font-bold">📚 STUDY</span>
+                        </div>
+                        <h3 class="font-montserrat font-bold text-xl mb-3 text-text-primary">Finals Study Marathon 📖</h3>
+                        <p class="text-text-secondary mb-4 line-clamp-3">24-hour study session with snacks, coffee, and peer support. Let's ace those finals together!</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-text-secondary">
+                            <div class="flex items-center gap-1">
+                                <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                </svg>
+                                <span>8 friends going</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-2">
+                            <button class="flex-1 bg-gradient-to-r from-accent to-warning text-background font-nunito font-bold py-3 rounded-xl hover:shadow-neon-green transition-smooth">
+                                Join Study Session 📚
+                            </button>
+                            <button class="px-4 py-3 border-2 border-accent/30 text-accent rounded-xl hover:bg-accent hover:text-background transition-smooth">
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skeleton Loading for Infinite Scroll -->
+            <div id="skeleton-loading" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mt-6">
+                <div class="bg-surface/30 rounded-2xl overflow-hidden animate-pulse">
+                    <div class="h-48 bg-surface/50"></div>
+                    <div class="p-6">
+                        <div class="h-4 bg-surface/50 rounded mb-3"></div>
+                        <div class="h-6 bg-surface/50 rounded mb-3"></div>
+                        <div class="h-3 bg-surface/50 rounded mb-2"></div>
+                        <div class="h-3 bg-surface/50 rounded mb-4"></div>
+                        <div class="h-10 bg-surface/50 rounded"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Trigger -->
+            <div id="load-more-trigger" class="text-center mt-12">
+                <button id="load-more-btn" class="bg-gradient-to-r from-primary via-secondary to-accent text-background font-nunito font-bold px-10 py-4 rounded-full hover:shadow-neon transition-smooth transform hover:scale-105">
+                    Load More Epic Events 🚀
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Action Button for Mobile -->
+    <div id="mobile-fab" class="fixed bottom-6 right-6 z-50 md:hidden">
+        <button id="mobile-filter-btn" class="bg-gradient-to-r from-primary to-secondary text-background p-4 rounded-full shadow-neon hover:shadow-neon-pink transition-smooth transform hover:scale-110">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.207A1 1 0 013 6.5V4z"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-surface/80 backdrop-blur-md border-t border-primary/20 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 mr-3" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="32" height="32" rx="8" fill="url(#footer-logo-gradient)"/>
+                            <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white"/>
+                            <defs>
+                                <linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                    <stop offset="0%" stop-color="#00FFFF"/>
+                                    <stop offset="100%" stop-color="#FF1493"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="font-montserrat font-bold text-xl text-primary">TheCampusConnect</span>
+                    </div>
+                    <p class="text-text-secondary mb-4 max-w-md">
+                        Discover your campus universe with immersive event discovery, advanced filtering, and social proof indicators! ✨
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-nunito font-bold text-text-primary mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="homepage_interactive_campus_event_hub.html" class="text-text-secondary hover:text-primary transition-micro">Home</a></li>
+                        <li><a href="schedule_page_personal_campus_planning_center.html" class="text-text-secondary hover:text-primary transition-micro">Schedule</a></li>
+                        <li><a href="campus_map_interactive_location_hub.html" class="text-text-secondary hover:text-primary transition-micro">Campus Map</a></li>
+                        <li><a href="social_hub_community_showcase.html" class="text-text-secondary hover:text-primary transition-micro">Social Hub</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-nunito font-bold text-text-primary mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="contact_feedback_community_connection_portal.html" class="text-text-secondary hover:text-primary transition-micro">Contact Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Advanced Filter Sidebar
+        const advancedFilterToggle = document.getElementById('advanced-filter-toggle');
+        const filterSidebar = document.getElementById('filter-sidebar');
+        const closeSidebarBtn = document.getElementById('close-filter-sidebar');
+        const mobileFilterBtn = document.getElementById('mobile-filter-btn');
+
+        [advancedFilterToggle, mobileFilterBtn].forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterSidebar.classList.remove('translate-x-full');
+            });
+        });
+
+        closeSidebarBtn.addEventListener('click', () => {
+            filterSidebar.classList.add('translate-x-full');
+        });
+
+        // Search with Suggestions
+        const searchInput = document.getElementById('event-search');
+        const searchSuggestions = document.getElementById('search-suggestions');
+
+        searchInput.addEventListener('focus', () => {
+            searchSuggestions.classList.remove('hidden');
+        });
+
+        searchInput.addEventListener('blur', (e) => {
+            setTimeout(() => {
+                searchSuggestions.classList.add('hidden');
+            }, 200);
+        });
+
+        // Featured Carousel
+        const carousel = document.getElementById('featured-carousel');
+        const carouselPrev = document.getElementById('carousel-prev');
+        const carouselNext = document.getElementById('carousel-next');
+        const indicators = document.querySelectorAll('.carousel-indicator');
+        let currentSlide = 0;
+        const totalSlides = 3;
+
+        function updateCarousel() {
+            carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+            indicators.forEach((indicator, index) => {
+                if (index === currentSlide) {
+                    indicator.classList.add('active', 'bg-primary');
+                    indicator.classList.remove('bg-text-secondary');
+                } else {
+                    indicator.classList.remove('active', 'bg-primary');
+                    indicator.classList.add('bg-text-secondary');
+                }
+            });
+        }
+
+        carouselNext.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        });
+
+        carouselPrev.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        });
+
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentSlide = index;
+                updateCarousel();
+            });
+        });
+
+        // Auto-rotate carousel
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }, 5000);
+
+        // Filter Functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const eventCards = document.querySelectorAll('.event-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const filter = btn.getAttribute('data-filter');
+                
+                filterBtns.forEach(b => {
+                    b.classList.remove('active', 'bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-background');
+                    b.classList.add('bg-surface/60', 'border-2', 'text-text-primary');
+                });
+                
+                btn.classList.add('active', 'bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-background');
+                btn.classList.remove('bg-surface/60', 'border-2', 'text-text-primary');
+
+                let visibleCount = 0;
+                eventCards.forEach(card => {
+                    const category = card.getAttribute('data-category');
+                    if (filter === 'all' || category === filter) {
+                        card.style.display = 'block';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                document.getElementById('events-count').textContent = visibleCount;
+            });
+        });
+
+        // Live Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.live-counter');
+            counters.forEach(counter => {
+                const current = parseInt(counter.textContent);
+                const change = Math.floor(Math.random() * 5) - 2;
+                const newCount = Math.max(1, current + change);
+                counter.textContent = newCount;
+                counter.setAttribute('data-count', newCount);
+            });
+        }
+
+        setInterval(animateCounters, 8000);
+
+        // Infinite Scroll
+        const loadMoreBtn = document.getElementById('load-more-btn');
+        const skeletonLoading = document.getElementById('skeleton-loading');
+        const masonryGrid = document.getElementById('events-masonry-grid');
+
+        loadMoreBtn.addEventListener('click', () => {
+            loadMoreBtn.style.display = 'none';
+            skeletonLoading.classList.remove('hidden');
+            
+            setTimeout(() => {
+                skeletonLoading.classList.add('hidden');
+                loadMoreBtn.style.display = 'inline-block';
+                loadMoreBtn.textContent = 'Load More Epic Events 🚀';
+            }, 2000);
+        });
+
+        // Floating particles animation
+        document.querySelectorAll('.floating-particle').forEach((particle, index) => {
+            particle.style.animation = `float ${4 + index * 0.5}s ease-in-out infinite`;
+        });
+
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0%, 100% { transform: translateY(0px) rotate(0deg); }
+                33% { transform: translateY(-15px) rotate(5deg); }
+                66% { transform: translateY(-5px) rotate(-3deg); }
+            }
+            @keyframes fade-in {
+                from { opacity: 0; transform: translateY(30px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            .animate-fade-in {
+                animation: fade-in 0.8s ease-out;
+            }
+            .line-clamp-2 {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            .line-clamp-3 {
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+            .shadow-neon {
+                box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            }
+            .shadow-neon-pink {
+                box-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
+            }
+            .shadow-neon-green {
+                box-shadow: 0 0 20px rgba(50, 205, 50, 0.5);
+            }
+            .shadow-neon-subtle {
+                box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Reset filters
+        document.getElementById('reset-all-filters').addEventListener('click', () => {
+            document.querySelectorAll('input, select').forEach(input => {
+                if (input.type === 'checkbox' || input.type === 'radio') {
+                    input.checked = false;
+                } else {
+                    input.value = input.type === 'select-one' ? input.options[0].value : '';
+                }
+            });
+        });
+
+        // Navigation background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-background/95');
+                nav.classList.remove('bg-background/80');
+            } else {
+                nav.classList.add('bg-background/80');
+                nav.classList.remove('bg-background/95');
+            }
+        });
+
+        // Intersection Observer for card animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        eventCards.forEach(card => observer.observe(card));
+    </script>
+</body>
+</html>

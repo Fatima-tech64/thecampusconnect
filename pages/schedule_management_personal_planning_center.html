@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule Management - Personal Planning Center | TheCampusConnect</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Master your campus schedule with TheCampusConnect's interactive planning center. Drag-and-drop events, sync calendars, and optimize your university experience." />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fthecampusc2880back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background text-text-primary font-inter overflow-x-hidden">
+    <!-- Sticky Navigation -->
+    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/20 transition-smooth">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="w-8 h-8 mr-3" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
+                        <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white"/>
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                <stop offset="0%" stop-color="#00FFFF"/>
+                                <stop offset="100%" stop-color="#FF1493"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="font-montserrat font-bold text-xl text-primary">TheCampusConnect</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage_interactive_campus_event_hub.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Home</a>
+                    <a href="events_discovery_dynamic_event_ecosystem.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Events</a>
+                    <a href="schedule_management_personal_planning_center.html" class="nav-link text-text-primary hover:text-primary transition-micro">Schedule</a>
+                    <a href="campus_map_interactive_location_hub.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Map</a>
+                    <a href="social_hub_community_showcase.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Social</a>
+                    <a href="contact_feedback_community_connection_portal.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-text-primary hover:text-primary transition-micro">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-surface/95 backdrop-blur-md rounded-lg mt-2 p-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="homepage_interactive_campus_event_hub.html" class="text-text-secondary hover:text-primary transition-micro">🏠 Home</a>
+                    <a href="events_discovery_dynamic_event_ecosystem.html" class="text-text-secondary hover:text-primary transition-micro">🎉 Events</a>
+                    <a href="schedule_management_personal_planning_center.html" class="text-text-primary hover:text-primary transition-micro">📅 Schedule</a>
+                    <a href="campus_map_interactive_location_hub.html" class="text-text-secondary hover:text-primary transition-micro">🗺️ Map</a>
+                    <a href="social_hub_community_showcase.html" class="text-text-secondary hover:text-primary transition-micro">👥 Social</a>
+                    <a href="contact_feedback_community_connection_portal.html" class="text-text-secondary hover:text-primary transition-micro">📞 Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-background via-background-800 to-surface overflow-hidden">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-32 h-32 bg-primary rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-40 h-40 bg-secondary rounded-full blur-3xl"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-accent rounded-full blur-3xl"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto text-center">
+            <h1 class="font-montserrat font-black text-4xl sm:text-6xl lg:text-7xl mb-6 leading-tight">
+                <span class="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                    Schedule Command
+                </span>
+                <br />
+                <span class="text-text-primary">Center 📅</span>
+            </h1>
+            
+            <p class="text-xl sm:text-2xl text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed">
+                Master your time like a pro! Visualize your week, sync calendars, and never miss another epic campus moment. 
+                <span class="text-accent font-semibold">Your perfect schedule awaits! ⚡</span>
+            </p>
+
+            <!-- Quick Actions -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                <button id="sync-calendar-btn" class="bg-gradient-to-r from-primary to-secondary text-background font-nunito font-bold px-8 py-4 rounded-full hover:shadow-neon transition-smooth transform hover:scale-105">
+                    Sync Calendar 🔄
+                </button>
+                <button id="add-event-btn" class="border-2 border-accent text-accent font-nunito font-bold px-8 py-4 rounded-full hover:bg-accent hover:text-background transition-smooth">
+                    Quick Add Event ➕
+                </button>
+            </div>
+
+            <!-- Schedule Stats -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto">
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-primary/20">
+                    <div class="text-2xl font-bold text-primary">12</div>
+                    <div class="text-sm text-text-secondary">This Week</div>
+                </div>
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-secondary/20">
+                    <div class="text-2xl font-bold text-secondary">5</div>
+                    <div class="text-sm text-text-secondary">Registered</div>
+                </div>
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-accent/20">
+                    <div class="text-2xl font-bold text-accent">3h</div>
+                    <div class="text-sm text-text-secondary">Free Time</div>
+                </div>
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-warning/20">
+                    <div class="text-2xl font-bold text-warning">89%</div>
+                    <div class="text-sm text-text-secondary">Attendance</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Controls -->
+    <section class="py-8 px-4 sm:px-6 lg:px-8 bg-surface/30 backdrop-blur-sm border-y border-primary/10">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
+                <!-- View Controls -->
+                <div class="flex items-center gap-4">
+                    <div class="flex bg-surface rounded-full p-1 border border-primary/20">
+                        <button class="view-btn active bg-primary text-background px-6 py-2 rounded-full font-nunito font-semibold transition-smooth">
+                            Week
+                        </button>
+                        <button class="view-btn text-text-secondary px-6 py-2 rounded-full font-nunito font-semibold hover:text-primary transition-smooth">
+                            Month
+                        </button>
+                        <button class="view-btn text-text-secondary px-6 py-2 rounded-full font-nunito font-semibold hover:text-primary transition-smooth">
+                            Agenda
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Date Navigation -->
+                <div class="flex items-center gap-4">
+                    <button id="prev-week" class="p-2 text-text-secondary hover:text-primary transition-micro">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    <div class="text-center">
+                        <h2 class="font-montserrat font-bold text-xl text-text-primary">December 16-22, 2025</h2>
+                        <p class="text-text-secondary text-sm">Week 51</p>
+                    </div>
+                    <button id="next-week" class="p-2 text-text-secondary hover:text-primary transition-micro">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Filter & Settings -->
+                <div class="flex items-center gap-4">
+                    <button id="filter-btn" class="flex items-center gap-2 bg-surface border border-secondary/30 text-text-primary px-4 py-2 rounded-full hover:border-secondary/60 transition-smooth">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.207A1 1 0 013 6.5V4z"/>
+                        </svg>
+                        Filter
+                    </button>
+                    <button id="settings-btn" class="p-2 text-text-secondary hover:text-accent transition-micro">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weekly Schedule Grid -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface">
+        <div class="max-w-7xl mx-auto">
+            <!-- Schedule Grid Container -->
+            <div class="bg-surface/30 backdrop-blur-sm rounded-2xl border border-primary/20 overflow-hidden">
+                <!-- Time Header -->
+                <div class="grid grid-cols-8 border-b border-surface-600">
+                    <div class="p-4 border-r border-surface-600">
+                        <span class="text-text-secondary text-sm font-nunito font-semibold">Time</span>
+                    </div>
+                    <div class="p-4 border-r border-surface-600 text-center">
+                        <div class="font-nunito font-bold text-text-primary">Mon</div>
+                        <div class="text-text-secondary text-sm">16</div>
+                    </div>
+                    <div class="p-4 border-r border-surface-600 text-center">
+                        <div class="font-nunito font-bold text-text-primary">Tue</div>
+                        <div class="text-text-secondary text-sm">17</div>
+                    </div>
+                    <div class="p-4 border-r border-surface-600 text-center">
+                        <div class="font-nunito font-bold text-text-primary">Wed</div>
+                        <div class="text-text-secondary text-sm">18</div>
+                    </div>
+                    <div class="p-4 border-r border-surface-600 text-center">
+                        <div class="font-nunito font-bold text-text-primary">Thu</div>
+                        <div class="text-text-secondary text-sm">19</div>
+                    </div>
+                    <div class="p-4 border-r border-surface-600 text-center">
+                        <div class="font-nunito font-bold text-text-primary">Fri</div>
+                        <div class="text-text-secondary text-sm">20</div>
+                    </div>
+                    <div class="p-4 border-r border-surface-600 text-center">
+                        <div class="font-nunito font-bold text-text-primary">Sat</div>
+                        <div class="text-text-secondary text-sm">21</div>
+                    </div>
+                    <div class="p-4 text-center">
+                        <div class="font-nunito font-bold text-text-primary">Sun</div>
+                        <div class="text-text-secondary text-sm">22</div>
+                    </div>
+                </div>
+
+                <!-- Time Slots -->
+                <div class="schedule-grid">
+                    <!-- 8:00 AM Row -->
+                    <div class="grid grid-cols-8 border-b border-surface-600/50 min-h-20">
+                        <div class="p-4 border-r border-surface-600/50 flex items-center">
+                            <span class="text-text-secondary text-sm">8:00 AM</span>
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <div class="event-card bg-gradient-to-r from-primary/20 to-primary/10 border-l-4 border-primary rounded-lg p-3 cursor-pointer hover:shadow-neon transition-smooth">
+                                <h4 class="font-nunito font-bold text-sm text-text-primary mb-1">Tech Innovation Summit 🚀</h4>
+                                <p class="text-text-secondary text-xs mb-1">Engineering Hall</p>
+                                <p class="text-primary text-xs">9:00 AM - 5:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-2 relative">
+                            <!-- Empty slot -->
+                        </div>
+                    </div>
+
+                    <!-- 10:00 AM Row -->
+                    <div class="grid grid-cols-8 border-b border-surface-600/50 min-h-20">
+                        <div class="p-4 border-r border-surface-600/50 flex items-center">
+                            <span class="text-text-secondary text-sm">10:00 AM</span>
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <div class="event-card bg-gradient-to-r from-secondary/20 to-secondary/10 border-l-4 border-secondary rounded-lg p-3 cursor-pointer hover:shadow-neon-pink transition-smooth">
+                                <h4 class="font-nunito font-bold text-sm text-text-primary mb-1">Data Structures Lab 💻</h4>
+                                <p class="text-text-secondary text-xs mb-1">CS Building</p>
+                                <p class="text-secondary text-xs">10:00 AM - 12:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <div class="event-card bg-gradient-to-r from-accent/20 to-accent/10 border-l-4 border-accent rounded-lg p-3 cursor-pointer hover:shadow-neon-green transition-smooth">
+                                <h4 class="font-nunito font-bold text-sm text-text-primary mb-1">Finals Study Marathon 📖</h4>
+                                <p class="text-text-secondary text-xs mb-1">Central Library</p>
+                                <p class="text-accent text-xs">All Day</p>
+                            </div>
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Continuing from Friday -->
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-2 relative">
+                            <!-- Empty slot -->
+                        </div>
+                    </div>
+
+                    <!-- 12:00 PM Row -->
+                    <div class="grid grid-cols-8 border-b border-surface-600/50 min-h-20">
+                        <div class="p-4 border-r border-surface-600/50 flex items-center">
+                            <span class="text-text-secondary text-sm">12:00 PM</span>
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <div class="event-card bg-gradient-to-r from-warning/20 to-warning/10 border-l-4 border-warning rounded-lg p-3 cursor-pointer hover:shadow-neon transition-smooth">
+                                <h4 class="font-nunito font-bold text-sm text-text-primary mb-1">Lunch & Learn 🍕</h4>
+                                <p class="text-text-secondary text-xs mb-1">Student Center</p>
+                                <p class="text-warning text-xs">12:00 PM - 1:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Continuing from Wednesday -->
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Continuing from Friday -->
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-2 relative">
+                            <!-- Empty slot -->
+                        </div>
+                    </div>
+
+                    <!-- 2:00 PM Row -->
+                    <div class="grid grid-cols-8 border-b border-surface-600/50 min-h-20">
+                        <div class="p-4 border-r border-surface-600/50 flex items-center">
+                            <span class="text-text-secondary text-sm">2:00 PM</span>
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <div class="event-card bg-gradient-to-r from-error/20 to-error/10 border-l-4 border-error rounded-lg p-3 cursor-pointer hover:shadow-neon transition-smooth">
+                                <h4 class="font-nunito font-bold text-sm text-text-primary mb-1">Basketball Practice 🏀</h4>
+                                <p class="text-text-secondary text-xs mb-1">Sports Complex</p>
+                                <p class="text-error text-xs">2:00 PM - 4:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Continuing from Friday -->
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-2 relative">
+                            <!-- Empty slot -->
+                        </div>
+                    </div>
+
+                    <!-- 7:00 PM Row -->
+                    <div class="grid grid-cols-8 border-b border-surface-600/50 min-h-20">
+                        <div class="p-4 border-r border-surface-600/50 flex items-center">
+                            <span class="text-text-secondary text-sm">7:00 PM</span>
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-2 border-r border-surface-600/50 relative">
+                            <div class="event-card bg-gradient-to-r from-accent/20 to-secondary/10 border-l-4 border-accent rounded-lg p-3 cursor-pointer hover:shadow-neon-green transition-smooth">
+                                <h4 class="font-nunito font-bold text-sm text-text-primary mb-1">Winter Music Festival 🎵</h4>
+                                <p class="text-text-secondary text-xs mb-1">Campus Amphitheater</p>
+                                <p class="text-accent text-xs">7:00 PM - 11:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="p-2 relative">
+                            <!-- Empty slot -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calendar Integration Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-surface to-background">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="font-montserrat font-black text-4xl sm:text-5xl mb-6">
+                    <span class="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
+                        Calendar Sync Hub 🔄
+                    </span>
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Connect your favorite calendar apps and never miss a beat. Smart notifications and conflict detection keep you on track! 
+                </p>
+            </div>
+
+            <!-- Calendar Integration Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Google Calendar -->
+                <div class="bg-surface/50 backdrop-blur-sm rounded-2xl p-8 border border-primary/20 hover:border-primary/40 transition-smooth text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-background" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-nunito font-bold text-xl text-text-primary mb-4">Google Calendar</h3>
+                    <p class="text-text-secondary mb-6">Sync seamlessly with your Google account for unified scheduling.</p>
+                    <button class="bg-gradient-to-r from-primary to-secondary text-background font-nunito font-semibold px-6 py-3 rounded-full hover:shadow-neon transition-smooth w-full">
+                        Connect Google
+                    </button>
+                </div>
+
+                <!-- Apple Calendar -->
+                <div class="bg-surface/50 backdrop-blur-sm rounded-2xl p-8 border border-secondary/20 hover:border-secondary/40 transition-smooth text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-background" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-nunito font-bold text-xl text-text-primary mb-4">Apple Calendar</h3>
+                    <p class="text-text-secondary mb-6">Perfect integration with your iPhone and Mac devices.</p>
+                    <button class="bg-gradient-to-r from-secondary to-accent text-background font-nunito font-semibold px-6 py-3 rounded-full hover:shadow-neon-pink transition-smooth w-full">
+                        Connect Apple
+                    </button>
+                </div>
+
+                <!-- Outlook Calendar -->
+                <div class="bg-surface/50 backdrop-blur-sm rounded-2xl p-8 border border-accent/20 hover:border-accent/40 transition-smooth text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-accent to-warning rounded-full flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-background" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-nunito font-bold text-xl text-text-primary mb-4">Outlook Calendar</h3>
+                    <p class="text-text-secondary mb-6">Enterprise-grade scheduling for professional students.</p>
+                    <button class="bg-gradient-to-r from-accent to-warning text-background font-nunito font-semibold px-6 py-3 rounded-full hover:shadow-neon-green transition-smooth w-full">
+                        Connect Outlook
+                    </button>
+                </div>
+            </div>
+
+            <!-- Smart Features -->
+            <div class="bg-surface/30 backdrop-blur-sm rounded-2xl p-8 border border-primary/20">
+                <h3 class="font-montserrat font-bold text-2xl text-text-primary mb-8 text-center">Smart Schedule Features ⚡</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-nunito font-bold text-text-primary mb-2">Conflict Detection</h4>
+                        <p class="text-text-secondary text-sm">Automatic alerts for scheduling conflicts with smart suggestions.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5v-5zM4 19h6v-6H4v6zM16 8V3h5l-5 5zM4 8h6V2H4v6z"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-nunito font-bold text-text-primary mb-2">Travel Time</h4>
+                        <p class="text-text-secondary text-sm">Campus map integration shows optimal routes between events.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5v-5zM4 19h6v-6H4v6zM16 8V3h5l-5 5zM4 8h6V2H4v6z"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-nunito font-bold text-text-primary mb-2">Smart Reminders</h4>
+                        <p class="text-text-secondary text-sm">Customizable notifications based on your preferences and habits.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-12 h-12 bg-warning/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-6 h-6 text-warning" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-nunito font-bold text-text-primary mb-2">Friend Sync</h4>
+                        <p class="text-text-secondary text-sm">Coordinate schedules with friends for collaborative planning.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Actions Panel -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="font-montserrat font-black text-4xl sm:text-5xl mb-6">
+                    <span class="bg-gradient-to-r from-accent to-warning bg-clip-text text-transparent">
+                        Quick Actions ⚡
+                    </span>
+                </h2>
+                <p class="text-xl text-text-secondary">
+                    Streamline your schedule management with these powerful shortcuts! 
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Add Event Form -->
+                <div class="bg-surface/50 backdrop-blur-sm rounded-2xl p-8 border border-primary/20">
+                    <h3 class="font-nunito font-bold text-xl text-text-primary mb-6 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                        </svg>
+                        Quick Add Event
+                    </h3>
+                    <form class="space-y-4">
+                        <div>
+                            <input type="text" placeholder="Event Title" class="w-full bg-background/50 border border-primary/30 rounded-lg px-4 py-3 text-text-primary placeholder-text-secondary focus:border-primary focus:outline-none transition-smooth" />
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <input type="date" value="2025-12-20" class="bg-background/50 border border-secondary/30 rounded-lg px-4 py-3 text-text-primary focus:border-secondary focus:outline-none transition-smooth" />
+                            <input type="time" value="10:00" class="bg-background/50 border border-accent/30 rounded-lg px-4 py-3 text-text-primary focus:border-accent focus:outline-none transition-smooth" />
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Location" class="w-full bg-background/50 border border-warning/30 rounded-lg px-4 py-3 text-text-primary placeholder-text-secondary focus:border-warning focus:outline-none transition-smooth" />
+                        </div>
+                        <button type="submit" class="w-full bg-gradient-to-r from-primary to-secondary text-background font-nunito font-bold py-3 rounded-lg hover:shadow-neon transition-smooth">
+                            Add to Schedule ➕
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Schedule Sharing -->
+                <div class="bg-surface/50 backdrop-blur-sm rounded-2xl p-8 border border-secondary/20">
+                    <h3 class="font-nunito font-bold text-xl text-text-primary mb-6 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+                        </svg>
+                        Share Schedule
+                    </h3>
+                    <div class="space-y-4">
+                        <p class="text-text-secondary">Share your schedule with friends and study groups!</p>
+                        <div class="flex gap-2">
+                            <input type="email" placeholder="friend@university.edu" class="flex-1 bg-background/50 border border-accent/30 rounded-lg px-4 py-3 text-text-primary placeholder-text-secondary focus:border-accent focus:outline-none transition-smooth" />
+                            <button class="bg-accent text-background px-6 py-3 rounded-lg font-nunito font-semibold hover:shadow-neon-green transition-smooth">
+                                Send
+                            </button>
+                        </div>
+                        <div class="flex gap-4 pt-4">
+                            <button class="flex-1 bg-surface border border-primary/30 text-text-primary py-3 rounded-lg font-nunito font-semibold hover:border-primary/60 transition-smooth">
+                                Copy Link 📋
+                            </button>
+                            <button class="flex-1 bg-surface border border-secondary/30 text-text-primary py-3 rounded-lg font-nunito font-semibold hover:border-secondary/60 transition-smooth">
+                                Export PDF 📄
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-primary/20 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 mr-3" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="32" height="32" rx="8" fill="url(#footer-logo-gradient)"/>
+                            <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white"/>
+                            <defs>
+                                <linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                    <stop offset="0%" stop-color="#00FFFF"/>
+                                    <stop offset="100%" stop-color="#FF1493"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="font-montserrat font-bold text-xl text-primary">TheCampusConnect</span>
+                    </div>
+                    <p class="text-text-secondary mb-4 max-w-md">
+                        Transforming campus life into cinematic adventures. Connect, create, and celebrate your university experience! ✨
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-secondary transition-micro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-micro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-nunito font-bold text-text-primary mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="events_discovery_dynamic_event_ecosystem.html" class="text-text-secondary hover:text-primary transition-micro">Events</a></li>
+                        <li><a href="schedule_management_personal_planning_center.html" class="text-text-secondary hover:text-primary transition-micro">Schedule</a></li>
+                        <li><a href="campus_map_interactive_location_hub.html" class="text-text-secondary hover:text-primary transition-micro">Campus Map</a></li>
+                        <li><a href="social_hub_community_showcase.html" class="text-text-secondary hover:text-primary transition-micro">Social Hub</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="font-nunito font-bold text-text-primary mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="contact_feedback_community_connection_portal.html" class="text-text-secondary hover:text-primary transition-micro">Contact Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-surface-600 mt-8 pt-8 text-center">
+                <p class="text-text-secondary">
+                    © 2025 TheCampusConnect. All Rights Reserved. Made with 💙 for amazing students everywhere.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Navigation Background on Scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-background/95');
+                nav.classList.remove('bg-background/80');
+            } else {
+                nav.classList.add('bg-background/80');
+                nav.classList.remove('bg-background/95');
+            }
+        });
+
+        // View Toggle Buttons
+        document.querySelectorAll('.view-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                document.querySelectorAll('.view-btn').forEach(b => {
+                    b.classList.remove('active', 'bg-primary', 'text-background');
+                    b.classList.add('text-text-secondary');
+                });
+                
+                // Add active class to clicked button
+                btn.classList.add('active', 'bg-primary', 'text-background');
+                btn.classList.remove('text-text-secondary');
+            });
+        });
+
+        // Event Card Interactions
+        document.querySelectorAll('.event-card').forEach(card => {
+            card.addEventListener('click', () => {
+                // Show event details modal (placeholder)
+                alert('Event details would open here!');
+            });
+
+            // Add hover effect
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'scale(1.02)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'scale(1)';
+            });
+        });
+
+        // Calendar Sync Buttons
+        document.querySelectorAll('button[class*="Connect"]').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.innerHTML = 'Connecting...';
+                btn.disabled = true;
+                
+                setTimeout(() => {
+                    btn.innerHTML = 'Connected ✓';
+                    btn.classList.add('bg-success');
+                    btn.classList.remove('bg-gradient-to-r');
+                }, 2000);
+            });
+        });
+
+        // Quick Add Event Form
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = 'Adding...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                submitBtn.innerHTML = 'Added Successfully! ✓';
+                submitBtn.classList.add('bg-success');
+                submitBtn.classList.remove('bg-gradient-to-r');
+                
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.classList.remove('bg-success');
+                    submitBtn.classList.add('bg-gradient-to-r');
+                    e.target.reset();
+                }, 2000);
+            }, 1500);
+        });
+
+        // Week Navigation
+        document.getElementById('prev-week').addEventListener('click', () => {
+            // Placeholder for week navigation
+            console.log('Previous week');
+        });
+
+        document.getElementById('next-week').addEventListener('click', () => {
+            // Placeholder for week navigation
+            console.log('Next week');
+        });
+
+        // Filter Button
+        document.getElementById('filter-btn').addEventListener('click', () => {
+            // Placeholder for filter modal
+            alert('Filter options would open here!');
+        });
+
+        // Settings Button
+        document.getElementById('settings-btn').addEventListener('click', () => {
+            // Placeholder for settings modal
+            alert('Schedule settings would open here!');
+        });
+
+        // Share Schedule Functions
+        document.querySelector('button:contains("Send")').addEventListener('click', () => {
+            alert('Schedule shared successfully!');
+        });
+
+        document.querySelector('button:contains("Copy Link")').addEventListener('click', () => {
+            navigator.clipboard.writeText(window.location.href);
+            alert('Schedule link copied to clipboard!');
+        });
+
+        document.querySelector('button:contains("Export PDF")').addEventListener('click', () => {
+            alert('PDF export would start here!');
+        });
+
+        // Drag and Drop Functionality (Basic Implementation)
+        let draggedElement = null;
+
+        document.querySelectorAll('.event-card').forEach(card => {
+            card.draggable = true;
+            
+            card.addEventListener('dragstart', (e) => {
+                draggedElement = e.target;
+                e.target.style.opacity = '0.5';
+            });
+
+            card.addEventListener('dragend', (e) => {
+                e.target.style.opacity = '1';
+                draggedElement = null;
+            });
+        });
+
+        // Make time slots droppable
+        document.querySelectorAll('.grid > div:not(:first-child)').forEach(slot => {
+            slot.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                slot.style.backgroundColor = 'rgba(0, 255, 255, 0.1)';
+            });
+
+            slot.addEventListener('dragleave', () => {
+                slot.style.backgroundColor = '';
+            });
+
+            slot.addEventListener('drop', (e) => {
+                e.preventDefault();
+                slot.style.backgroundColor = '';
+                
+                if (draggedElement && !slot.querySelector('.event-card')) {
+                    slot.appendChild(draggedElement);
+                }
+            });
+        });
+
+        // Auto-save functionality (placeholder)
+        setInterval(() => {
+            console.log('Auto-saving schedule...');
+        }, 30000); // Auto-save every 30 seconds
+    </script>
+</body>
+</html>

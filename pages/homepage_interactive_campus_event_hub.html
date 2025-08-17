@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TheCampusConnect - Your Campus Universe Awaits</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Transform your campus experience with TheCampusConnect - discover events, connect with communities, and amplify your university life through our neon-lit digital adventure." />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fthecampusc2880back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background text-text-primary font-inter overflow-x-hidden">
+    <!-- Sticky Navigation -->
+    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/20 transition-smooth">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="w-8 h-8 mr-3" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
+                        <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white"/>
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                <stop offset="0%" stop-color="#00FFFF"/>
+                                <stop offset="100%" stop-color="#FF1493"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="font-montserrat font-bold text-xl text-primary">TheCampusConnect</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-text-primary hover:text-primary transition-micro">Home</a>
+                    <a href="events_discovery_dynamic_event_ecosystem.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Events</a>
+                    <a href="schedule_management_personal_planning_center.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Schedule</a>
+                    <a href="campus_map_interactive_location_hub.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Map</a>
+                    <a href="social_hub_community_showcase.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Social</a>
+                    <a href="contact_feedback_community_connection_portal.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-text-primary hover:text-primary transition-micro">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-surface/95 backdrop-blur-md rounded-lg mt-2 p-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="#home" class="text-text-primary hover:text-primary transition-micro">🏠 Home</a>
+                    <a href="events_discovery_dynamic_event_ecosystem.html" class="text-text-secondary hover:text-primary transition-micro">🎉 Events</a>
+                    <a href="schedule_management_personal_planning_center.html" class="text-text-secondary hover:text-primary transition-micro">📅 Schedule</a>
+                    <a href="campus_map_interactive_location_hub.html" class="text-text-secondary hover:text-primary transition-micro">🗺️ Map</a>
+                    <a href="social_hub_community_showcase.html" class="text-text-secondary hover:text-primary transition-micro">👥 Social</a>
+                    <a href="contact_feedback_community_connection_portal.html" class="text-text-secondary hover:text-primary transition-micro">📞 Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-background via-background-800 to-surface">
+            <!-- Cityscape Silhouettes -->
+            <div class="absolute bottom-0 left-0 right-0 h-64 opacity-20">
+                <svg viewBox="0 0 1200 300" class="w-full h-full">
+                    <polygon points="0,300 0,200 100,200 100,150 200,150 200,100 300,100 300,180 400,180 400,120 500,120 500,160 600,160 600,80 700,80 700,140 800,140 800,90 900,90 900,170 1000,170 1000,110 1100,110 1100,190 1200,190 1200,300" fill="url(#cityscape-gradient)"/>
+                    <defs>
+                        <linearGradient id="cityscape-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00FFFF" stop-opacity="0.3"/>
+                            <stop offset="50%" stop-color="#FF1493" stop-opacity="0.2"/>
+                            <stop offset="100%" stop-color="#32CD32" stop-opacity="0.1"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Floating Particles -->
+            <div class="absolute inset-0">
+                <div class="floating-particle w-2 h-2 bg-primary rounded-full absolute top-1/4 left-1/4 opacity-60"></div>
+                <div class="floating-particle w-3 h-3 bg-secondary rounded-full absolute top-1/3 right-1/3 opacity-40"></div>
+                <div class="floating-particle w-1 h-1 bg-accent rounded-full absolute bottom-1/3 left-1/2 opacity-80"></div>
+                <div class="floating-particle w-2 h-2 bg-warning rounded-full absolute top-1/2 right-1/4 opacity-50"></div>
+            </div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
+            <h1 class="font-montserrat font-black text-4xl sm:text-6xl lg:text-7xl mb-6 leading-tight">
+                <span class="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                    Your Campus Universe
+                </span>
+                <br />
+                <span class="text-text-primary">Awaits ✨</span>
+            </h1>
+            
+            <p class="text-xl sm:text-2xl text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed">
+                Transform your university experience into a <span class="text-primary font-semibold">cinematic adventure</span>. 
+                Discover events, connect with communities, and amplify your campus life! 🚀
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                <a href="events_discovery_dynamic_event_ecosystem.html" class="bg-gradient-to-r from-primary to-secondary text-background font-nunito font-bold px-8 py-4 rounded-full hover:shadow-neon transition-smooth transform hover:scale-105">
+                    Explore Events 🎉
+                </a>
+                <a href="schedule_management_personal_planning_center.html" class="border-2 border-primary text-primary font-nunito font-bold px-8 py-4 rounded-full hover:bg-primary hover:text-background transition-smooth">
+                    Plan Your Week 📅
+                </a>
+            </div>
+
+            <!-- Live Stats -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-2xl mx-auto">
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-primary/20">
+                    <div class="text-2xl font-bold text-primary">247</div>
+                    <div class="text-sm text-text-secondary">Active Events</div>
+                </div>
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-secondary/20">
+                    <div class="text-2xl font-bold text-secondary">1.2K</div>
+                    <div class="text-sm text-text-secondary">Students</div>
+                </div>
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-accent/20">
+                    <div class="text-2xl font-bold text-accent">89</div>
+                    <div class="text-sm text-text-secondary">Organizations</div>
+                </div>
+                <div class="bg-surface/50 backdrop-blur-sm rounded-lg p-4 border border-warning/20">
+                    <div class="text-2xl font-bold text-warning">4.8</div>
+                    <div class="text-sm text-text-secondary">Rating ⭐</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Galaxy Section -->
+    <section id="events" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="font-montserrat font-black text-4xl sm:text-5xl mb-6">
+                    <span class="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
+                        Events Galaxy 🌟
+                    </span>
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Discover amazing events happening across campus. From academic workshops to epic parties - your next adventure is just a click away! 
+                </p>
+            </div>
+
+            <!-- Filter Bar -->
+            <div class="flex flex-wrap gap-4 justify-center mb-12">
+                <button class="filter-btn active bg-primary text-background px-6 py-3 rounded-full font-nunito font-semibold hover:shadow-neon transition-smooth">
+                    All Events 🎯
+                </button>
+                <button class="filter-btn bg-surface border border-secondary text-text-primary px-6 py-3 rounded-full font-nunito font-semibold hover:bg-secondary hover:text-background transition-smooth">
+                    Academic 📚
+                </button>
+                <button class="filter-btn bg-surface border border-accent text-text-primary px-6 py-3 rounded-full font-nunito font-semibold hover:bg-accent hover:text-background transition-smooth">
+                    Social 🎉
+                </button>
+                <button class="filter-btn bg-surface border border-warning text-text-primary px-6 py-3 rounded-full font-nunito font-semibold hover:bg-warning hover:text-background transition-smooth">
+                    Sports ⚽
+                </button>
+                <button class="filter-btn bg-surface border border-error text-text-primary px-6 py-3 rounded-full font-nunito font-semibold hover:bg-error hover:text-background transition-smooth">
+                    Cultural 🎭
+                </button>
+            </div>
+
+            <!-- Event Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Featured Event Card -->
+                <div class="event-card bg-gradient-to-br from-surface to-surface-700 rounded-2xl overflow-hidden border border-primary/30 hover:border-primary/60 transition-smooth transform hover:scale-105 hover:shadow-neon">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Tech Innovation Summit" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute top-4 left-4 bg-primary text-background px-3 py-1 rounded-full text-sm font-semibold">
+                            FEATURED ⭐
+                        </div>
+                        <div class="absolute top-4 right-4 bg-background/80 backdrop-blur-sm text-text-primary px-3 py-1 rounded-full text-sm">
+                            247 attending
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-sm font-semibold">Academic</span>
+                            <span class="text-text-secondary text-sm">Dec 20, 2025</span>
+                        </div>
+                        <h3 class="font-montserrat font-bold text-xl mb-3 text-text-primary">Tech Innovation Summit 2025 🚀</h3>
+                        <p class="text-text-secondary mb-4 line-clamp-2">Join industry leaders and fellow students for an inspiring day of tech talks, networking, and innovation showcases.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-text-secondary text-sm">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                </svg>
+                                Engineering Hall
+                            </div>
+                            <a href="events_discovery_dynamic_event_ecosystem.html" class="bg-gradient-to-r from-primary to-secondary text-background px-4 py-2 rounded-full text-sm font-semibold hover:shadow-neon-pink transition-smooth">
+                                Join Event
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Regular Event Cards -->
+                <div class="event-card bg-gradient-to-br from-surface to-surface-700 rounded-2xl overflow-hidden border border-secondary/30 hover:border-secondary/60 transition-smooth transform hover:scale-105 hover:shadow-neon-pink">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.pixabay.com/photo/2016/11/23/15/48/audience-1853662_1280.jpg" alt="Winter Music Festival" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                        <div class="absolute top-4 right-4 bg-background/80 backdrop-blur-sm text-text-primary px-3 py-1 rounded-full text-sm">
+                            156 attending
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-semibold">Cultural</span>
+                            <span class="text-text-secondary text-sm">Dec 22, 2025</span>
+                        </div>
+                        <h3 class="font-montserrat font-bold text-xl mb-3 text-text-primary">Winter Music Festival 🎵</h3>
+                        <p class="text-text-secondary mb-4 line-clamp-2">End the semester with amazing live performances from student bands and special guest artists.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-text-secondary text-sm">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                </svg>
+                                Campus Amphitheater
+                            </div>
+                            <a href="events_discovery_dynamic_event_ecosystem.html" class="bg-gradient-to-r from-secondary to-accent text-background px-4 py-2 rounded-full text-sm font-semibold hover:shadow-neon-green transition-smooth">
+                                Join Event
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="event-card bg-gradient-to-br from-surface to-surface-700 rounded-2xl overflow-hidden border border-accent/30 hover:border-accent/60 transition-smooth transform hover:scale-105 hover:shadow-neon-green">
+                    <div class="relative h-48 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Study Group Marathon" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg'; this.onerror=null;" />
+                        <div class="absolute top-4 right-4 bg-background/80 backdrop-blur-sm text-text-primary px-3 py-1 rounded-full text-sm">
+                            89 attending
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center gap-2 mb-3">
+                            <span class="bg-warning/20 text-warning px-3 py-1 rounded-full text-sm font-semibold">Academic</span>
+                            <span class="text-text-secondary text-sm">Dec 18, 2025</span>
+                        </div>
+                        <h3 class="font-montserrat font-bold text-xl mb-3 text-text-primary">Finals Study Marathon 📖</h3>
+                        <p class="text-text-secondary mb-4 line-clamp-2">24-hour study session with snacks, coffee, and peer support. Let's ace those finals together!</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-2 text-text-secondary text-sm">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                </svg>
+                                Central Library
+                            </div>
+                            <a href="events_discovery_dynamic_event_ecosystem.html" class="bg-gradient-to-r from-accent to-warning text-background px-4 py-2 rounded-full text-sm font-semibold hover:shadow-neon transition-smooth">
+                                Join Event
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- View All Events Button -->
+            <div class="text-center mt-12">
+                <a href="events_discovery_dynamic_event_ecosystem.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-primary via-secondary to-accent text-background font-nunito font-bold px-8 py-4 rounded-full hover:shadow-neon transition-smooth transform hover:scale-105">
+                    Explore All Events 
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Command Center Section -->
+    <section id="schedule" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-surface to-background">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="font-montserrat font-black text-4xl sm:text-5xl mb-6">
+                    <span class="bg-gradient-to-r from-accent to-warning bg-clip-text text-transparent">
+                        Schedule Command Center 📅
+                    </span>
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Master your time like a pro! Visualize your week, sync with your calendar, and never miss another epic campus moment.
+                </p>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                <div class="bg-surface/50 backdrop-blur-sm rounded-xl p-6 border border-primary/20 text-center">
+                    <div class="text-3xl mb-2">📚</div>
+                    <div class="text-2xl font-bold text-primary">12</div>
+                    <div class="text-sm text-text-secondary">This Week</div>
+                </div>
+                <div class="bg-surface/50 backdrop-blur-sm rounded-xl p-6 border border-secondary/20 text-center">
+                    <div class="text-3xl mb-2">🎉</div>
+                    <div class="text-2xl font-bold text-secondary">5</div>
+                    <div class="text-sm text-text-secondary">Registered</div>
+                </div>
+                <div class="bg-surface/50 backdrop-blur-sm rounded-xl p-6 border border-accent/20 text-center">
+                    <div class="text-3xl mb-2">⏰</div>
+                    <div class="text-2xl font-bold text-accent">3h</div>
+                    <div class="text-sm text-text-secondary">Free Time</div>
+                </div>
+                <div class="bg-surface/50 backdrop-blur-sm rounded-xl p-6 border border-warning/20 text-center">
+                    <div class="text-3xl mb-2">🏆</div>
+                    <div class="text-2xl font-bold text-warning">89%</div>
+                    <div class="text-sm text-text-secondary">Attendance</div>
+                </div>
+            </div>
+
+            <!-- Schedule Preview -->
+            <div class="bg-surface/30 backdrop-blur-sm rounded-2xl p-8 border border-primary/20">
+                <div class="flex items-center justify-between mb-8">
+                    <h3 class="font-montserrat font-bold text-2xl text-text-primary">This Week's Highlights ✨</h3>
+                    <a href="schedule_management_personal_planning_center.html" class="bg-primary text-background px-6 py-3 rounded-full font-nunito font-semibold hover:shadow-neon transition-smooth">
+                        Full Schedule
+                    </a>
+                </div>
+
+                <!-- Schedule Cards -->
+                <div class="space-y-4">
+                    <div class="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-xl p-6 border-l-4 border-primary">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h4 class="font-nunito font-bold text-lg text-text-primary mb-2">Tech Innovation Summit 🚀</h4>
+                                <div class="flex items-center gap-4 text-text-secondary text-sm">
+                                    <span class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Dec 20, 2025
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                        </svg>
+                                        9:00 AM - 5:00 PM
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Engineering Hall
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <div class="bg-primary/20 text-primary px-3 py-1 rounded-full text-sm font-semibold mb-2">Registered</div>
+                                <div class="text-text-secondary text-sm">247 attending</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-accent/10 to-warning/10 rounded-xl p-6 border-l-4 border-accent">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h4 class="font-nunito font-bold text-lg text-text-primary mb-2">Winter Music Festival 🎵</h4>
+                                <div class="flex items-center gap-4 text-text-secondary text-sm">
+                                    <span class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Dec 22, 2025
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                        </svg>
+                                        7:00 PM - 11:00 PM
+                                    </span>
+                                    <span class="flex items-center gap-1">
+                                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                        </svg>
+                                        Campus Amphitheater
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <div class="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-semibold mb-2">Registered</div>
+                                <div class="text-text-secondary text-sm">156 attending</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Constellation Section -->
+    <section id="social" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <h2 class="font-montserrat font-black text-4xl sm:text-5xl mb-6">
+                    <span class="bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent">
+                        Social Constellation 👥
+                    </span>
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Connect with amazing communities, discover your tribe, and see what's buzzing across campus social media! 
+                </p>
+            </div>
+
+            <!-- Social Feed Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Instagram-style Social Cards -->
+                <div class="bg-surface/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-primary/20 hover:border-primary/40 transition-smooth">
+                    <div class="p-4 border-b border-surface-600">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                                <span class="text-background font-bold text-sm">TC</span>
+                            </div>
+                            <div>
+                                <h4 class="font-nunito font-bold text-text-primary">Tech Club</h4>
+                                <p class="text-text-secondary text-sm">2 hours ago</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Tech Club Event" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                    </div>
+                    <div class="p-4">
+                        <p class="text-text-primary mb-3">Amazing turnout at today's AI workshop! 🤖 Who's ready for next week's hackathon? #TechLife #Innovation</p>
+                        <div class="flex items-center gap-4 text-text-secondary text-sm">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                                </svg>
+                                127 likes
+                            </span>
+                            <span>23 comments</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-surface/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-accent/20 hover:border-accent/40 transition-smooth">
+                    <div class="p-4 border-b border-surface-600">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-gradient-to-br from-accent to-warning rounded-full flex items-center justify-center">
+                                <span class="text-background font-bold text-sm">MC</span>
+                            </div>
+                            <div>
+                                <h4 class="font-nunito font-bold text-text-primary">Music Club</h4>
+                                <p class="text-text-secondary text-sm">5 hours ago</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.pixabay.com/photo/2016/11/18/15/44/audience-1835431_1280.jpg" alt="Music Club Performance" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                    </div>
+                    <div class="p-4">
+                        <p class="text-text-primary mb-3">Rehearsals for Winter Music Festival are 🔥! Can't wait to share the stage with these talented artists 🎵 #MusicLife #WinterFest</p>
+                        <div class="flex items-center gap-4 text-text-secondary text-sm">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                                </svg>
+                                89 likes
+                            </span>
+                            <span>15 comments</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-surface/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-secondary/20 hover:border-secondary/40 transition-smooth">
+                    <div class="p-4 border-b border-surface-600">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-gradient-to-br from-secondary to-primary rounded-full flex items-center justify-center">
+                                <span class="text-background font-bold text-sm">SC</span>
+                            </div>
+                            <div>
+                                <h4 class="font-nunito font-bold text-text-primary">Student Council</h4>
+                                <p class="text-text-secondary text-sm">1 day ago</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative h-64 overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Student Council Meeting" class="w-full h-full object-cover" loading="lazy" onerror="this.src='https://images.pixabay.com/photo/2015/07/17/22/43/student-849825_1280.jpg'; this.onerror=null;" />
+                    </div>
+                    <div class="p-4">
+                        <p class="text-text-primary mb-3">Planning amazing events for next semester! Your voice matters - join our next meeting 📢 #StudentVoice #CampusLife</p>
+                        <div class="flex items-center gap-4 text-text-secondary text-sm">
+                            <span class="flex items-center gap-1">
+                                <svg class="w-4 h-4 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                                </svg>
+                                156 likes
+                            </span>
+                            <span>34 comments</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Explore Social Button -->
+            <div class="text-center">
+                <a href="social_hub_community_showcase.html" class="inline-flex items-center gap-2 bg-gradient-to-r from-secondary to-primary text-background font-nunito font-bold px-8 py-4 rounded-full hover:shadow-neon-pink transition-smooth transform hover:scale-105">
+                    Explore Social Hub 
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface border-t border-primary/20 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Brand -->
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 mr-3" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="32" height="32" rx="8" fill="url(#footer-logo-gradient)"/>
+                            <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white"/>
+                            <defs>
+                                <linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                    <stop offset="0%" stop-color="#00FFFF"/>
+                                    <stop offset="100%" stop-color="#FF1493"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="font-montserrat font-bold text-xl text-primary">TheCampusConnect</span>
+                    </div>
+                    <p class="text-text-secondary mb-4 max-w-md">
+                        Transforming campus life into cinematic adventures. Connect, create, and celebrate your university experience! ✨
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-secondary transition-micro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-text-secondary hover:text-accent transition-micro">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-nunito font-bold text-text-primary mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="events_discovery_dynamic_event_ecosystem.html" class="text-text-secondary hover:text-primary transition-micro">Events</a></li>
+                        <li><a href="schedule_management_personal_planning_center.html" class="text-text-secondary hover:text-primary transition-micro">Schedule</a></li>
+                        <li><a href="campus_map_interactive_location_hub.html" class="text-text-secondary hover:text-primary transition-micro">Campus Map</a></li>
+                        <li><a href="social_hub_community_showcase.html" class="text-text-secondary hover:text-primary transition-micro">Social Hub</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="font-nunito font-bold text-text-primary mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="contact_feedback_community_connection_portal.html" class="text-text-secondary hover:text-primary transition-micro">Contact Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">Privacy Policy</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-surface-600 mt-8 pt-8 text-center">
+                <p class="text-text-secondary">
+                    © 2025 TheCampusConnect. All Rights Reserved. Made with 💙 for amazing students everywhere.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth Scrolling for Navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navigation Background on Scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-background/95');
+                nav.classList.remove('bg-background/80');
+            } else {
+                nav.classList.add('bg-background/80');
+                nav.classList.remove('bg-background/95');
+            }
+        });
+
+        // Filter Buttons
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(b => {
+                    b.classList.remove('active', 'bg-primary', 'text-background');
+                    b.classList.add('bg-surface', 'border', 'text-text-primary');
+                });
+                
+                // Add active class to clicked button
+                btn.classList.add('active', 'bg-primary', 'text-background');
+                btn.classList.remove('bg-surface', 'border', 'text-text-primary');
+            });
+        });
+
+        // Floating Animation for Particles
+        document.querySelectorAll('.floating-particle').forEach((particle, index) => {
+            particle.style.animation = `float ${3 + index}s ease-in-out infinite`;
+        });
+
+        // Add CSS for floating animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-20px); }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Live Counter Animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('[data-counter]');
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-counter'));
+                const current = parseInt(counter.textContent);
+                const increment = target / 100;
+                
+                if (current < target) {
+                    counter.textContent = Math.ceil(current + increment);
+                    setTimeout(() => animateCounters(), 20);
+                }
+            });
+        }
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all event cards
+        document.querySelectorAll('.event-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
+</body>
+</html>

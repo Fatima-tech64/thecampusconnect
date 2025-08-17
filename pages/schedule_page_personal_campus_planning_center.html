@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Schedule Planning Center - TheCampusConnect</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Master your campus time management with TheCampusConnect's comprehensive Schedule Planning Center. Enhanced calendar integration, collaborative features, and AI-powered recommendations." />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fthecampusc2880back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background text-text-primary font-inter overflow-x-hidden">
+    <!-- Sticky Navigation -->
+    <nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-primary/20 transition-smooth">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="w-8 h-8 mr-3" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="32" height="32" rx="8" fill="url(#logo-gradient)"/>
+                        <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white"/>
+                        <defs>
+                            <linearGradient id="logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                <stop offset="0%" stop-color="#00FFFF"/>
+                                <stop offset="100%" stop-color="#FF1493"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="font-montserrat font-bold text-xl text-primary">TheCampusConnect</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage_interactive_campus_event_hub.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Home</a>
+                    <a href="events_page_dedicated_event_discovery_hub.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Events</a>
+                    <a href="schedule_page_personal_campus_planning_center.html" class="nav-link text-primary font-semibold">Schedule</a>
+                    <a href="campus_map_interactive_location_hub.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Map</a>
+                    <a href="social_hub_community_showcase.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Social</a>
+                    <a href="contact_feedback_community_connection_portal.html" class="nav-link text-text-secondary hover:text-primary transition-micro">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-text-primary hover:text-primary transition-micro">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobile-menu" class="md:hidden hidden bg-surface/95 backdrop-blur-md rounded-lg mt-2 p-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="homepage_interactive_campus_event_hub.html" class="text-text-secondary hover:text-primary transition-micro">🏠 Home</a>
+                    <a href="events_page_dedicated_event_discovery_hub.html" class="text-text-secondary hover:text-primary transition-micro">🎉 Events</a>
+                    <a href="schedule_page_personal_campus_planning_center.html" class="text-primary font-semibold">📅 Schedule</a>
+                    <a href="campus_map_interactive_location_hub.html" class="text-text-secondary hover:text-primary transition-micro">🗺️ Map</a>
+                    <a href="social_hub_community_showcase.html" class="text-text-secondary hover:text-primary transition-micro">👥 Social</a>
+                    <a href="contact_feedback_community_connection_portal.html" class="text-text-secondary hover:text-primary transition-micro">📞 Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-background via-background-800 to-surface">
+            <!-- Enhanced Cityscape with Neon Outlines -->
+            <div class="absolute bottom-0 left-0 right-0 h-80 opacity-25">
+                <svg viewBox="0 0 1200 320" class="w-full h-full">
+                    <polygon points="0,320 0,220 100,220 100,160 180,160 180,120 260,120 260,180 340,180 340,140 420,140 420,170 500,170 500,100 580,100 580,150 660,150 660,90 740,90 740,130 820,130 820,80 900,80 900,160 980,160 980,110 1060,110 1060,180 1140,180 1140,210 1200,210 1200,320" fill="url(#hero-cityscape-gradient)" stroke="url(#neon-outline)" stroke-width="2"/>
+                    <defs>
+                        <linearGradient id="hero-cityscape-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00FFFF" stop-opacity="0.6"/>
+                            <stop offset="25%" stop-color="#FF1493" stop-opacity="0.4"/>
+                            <stop offset="50%" stop-color="#32CD32" stop-opacity="0.5"/>
+                            <stop offset="75%" stop-color="#FFD700" stop-opacity="0.3"/>
+                            <stop offset="100%" stop-color="#9966FF" stop-opacity="0.4"/>
+                        </linearGradient>
+                        <linearGradient id="neon-outline" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#00FFFF" stop-opacity="0.8"/>
+                            <stop offset="50%" stop-color="#FF1493" stop-opacity="0.8"/>
+                            <stop offset="100%" stop-color="#32CD32" stop-opacity="0.8"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Enhanced Floating Particles -->
+            <div class="absolute inset-0">
+                <div class="floating-particle w-4 h-4 bg-primary rounded-full absolute top-1/4 left-1/6 opacity-70"></div>
+                <div class="floating-particle w-3 h-3 bg-secondary rounded-full absolute top-1/3 right-1/5 opacity-60"></div>
+                <div class="floating-particle w-5 h-5 bg-accent rounded-full absolute bottom-1/3 left-1/2 opacity-80"></div>
+                <div class="floating-particle w-2 h-2 bg-warning rounded-full absolute top-1/2 right-1/4 opacity-70"></div>
+                <div class="floating-particle w-3 h-3 bg-error rounded-full absolute bottom-1/4 left-3/4 opacity-60"></div>
+                <div class="floating-particle w-4 h-4 bg-primary rounded-full absolute top-3/4 right-1/6 opacity-75"></div>
+            </div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+            <h1 class="font-montserrat font-black text-5xl sm:text-7xl lg:text-8xl mb-6 leading-tight animate-fade-in">
+                <span class="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                    Personal Campus
+                </span>
+                <br />
+                <span class="text-text-primary">Planning Center 📅</span>
+            </h1>
+            
+            <p class="text-xl sm:text-2xl text-text-secondary mb-8 max-w-4xl mx-auto leading-relaxed">
+                Elevate your time management into a <span class="text-accent font-semibold">comprehensive hub</span> with enhanced calendar integration, 
+                collaborative features, and AI-powered event recommendations! ⚡
+            </p>
+
+            <!-- Enhanced Action Buttons -->
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                <button id="sync-calendar-btn" class="bg-gradient-to-r from-primary to-secondary text-background font-nunito font-bold px-10 py-4 rounded-full hover:shadow-neon transition-smooth transform hover:scale-110 animate-pulse">
+                    Smart Calendar Sync 🔄
+                </button>
+                <button id="ai-recommendations-btn" class="border-2 border-accent text-accent font-nunito font-bold px-10 py-4 rounded-full hover:bg-accent hover:text-background transition-smooth">
+                    AI Recommendations 🤖
+                </button>
+                <button id="voice-add-btn" class="border-2 border-warning text-warning font-nunito font-bold px-10 py-4 rounded-full hover:bg-warning hover:text-background transition-smooth">
+                    Voice Add Event 🎙️
+                </button>
+            </div>
+
+            <!-- Enhanced Schedule Stats -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-4xl mx-auto">
+                <div class="bg-surface/60 backdrop-blur-sm rounded-xl p-6 border-2 border-primary/30 hover:border-primary/60 transition-smooth transform hover:scale-105">
+                    <div class="text-3xl font-bold text-primary animate-pulse">14</div>
+                    <div class="text-sm text-text-secondary">This Week</div>
+                    <div class="w-full bg-primary/20 h-1 rounded-full mt-2">
+                        <div class="w-4/5 bg-primary h-1 rounded-full animate-pulse"></div>
+                    </div>
+                </div>
+                <div class="bg-surface/60 backdrop-blur-sm rounded-xl p-6 border-2 border-secondary/30 hover:border-secondary/60 transition-smooth transform hover:scale-105">
+                    <div class="text-3xl font-bold text-secondary animate-pulse">7</div>
+                    <div class="text-sm text-text-secondary">Registered</div>
+                    <div class="w-full bg-secondary/20 h-1 rounded-full mt-2">
+                        <div class="w-3/4 bg-secondary h-1 rounded-full animate-pulse"></div>
+                    </div>
+                </div>
+                <div class="bg-surface/60 backdrop-blur-sm rounded-xl p-6 border-2 border-accent/30 hover:border-accent/60 transition-smooth transform hover:scale-105">
+                    <div class="text-3xl font-bold text-accent animate-pulse">2.5h</div>
+                    <div class="text-sm text-text-secondary">Free Time Today</div>
+                    <div class="w-full bg-accent/20 h-1 rounded-full mt-2">
+                        <div class="w-1/2 bg-accent h-1 rounded-full animate-pulse"></div>
+                    </div>
+                </div>
+                <div class="bg-surface/60 backdrop-blur-sm rounded-xl p-6 border-2 border-warning/30 hover:border-warning/60 transition-smooth transform hover:scale-105">
+                    <div class="text-3xl font-bold text-warning">94%</div>
+                    <div class="text-sm text-text-secondary">Attendance Rate</div>
+                    <div class="flex gap-1 mt-2 justify-center">
+                        <span class="text-warning text-xs">★★★★★</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="w-8 h-12 border-2 border-primary rounded-full flex justify-center">
+                <div class="w-2 h-4 bg-primary rounded-full mt-2 animate-pulse"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Schedule Controls -->
+    <section class="py-8 px-4 sm:px-6 lg:px-8 bg-surface/40 backdrop-blur-md border-y border-primary/10 sticky top-16 z-40">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
+                <!-- Enhanced View Controls with Smooth Transitions -->
+                <div class="flex items-center gap-4">
+                    <div class="flex bg-surface/80 backdrop-blur-sm rounded-full p-1 border-2 border-primary/20">
+                        <button class="view-btn active bg-gradient-to-r from-primary to-secondary text-background px-8 py-3 rounded-full font-nunito font-bold transition-smooth shadow-neon">
+                            Week View
+                        </button>
+                        <button class="view-btn text-text-secondary px-8 py-3 rounded-full font-nunito font-bold hover:text-primary transition-smooth">
+                            Month View
+                        </button>
+                        <button class="view-btn text-text-secondary px-8 py-3 rounded-full font-nunito font-bold hover:text-primary transition-smooth">
+                            Agenda View
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Enhanced Date Navigation -->
+                <div class="flex items-center gap-6">
+                    <button id="prev-week" class="p-3 bg-surface/60 border border-primary/30 rounded-full text-text-secondary hover:text-primary hover:border-primary/60 transition-smooth">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                    </button>
+                    <div class="text-center bg-surface/60 backdrop-blur-sm px-6 py-3 rounded-xl border border-secondary/30">
+                        <h2 class="font-montserrat font-bold text-xl text-text-primary">December 16-22, 2025</h2>
+                        <p class="text-text-secondary text-sm">Week 51 • 
+                            <span class="text-accent font-semibold" id="sync-status">Synced ✓</span>
+                        </p>
+                    </div>
+                    <button id="next-week" class="p-3 bg-surface/60 border border-primary/30 rounded-full text-text-secondary hover:text-primary hover:border-primary/60 transition-smooth">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Enhanced Filter & Settings -->
+                <div class="flex items-center gap-4">
+                    <button id="filter-btn" class="flex items-center gap-2 bg-surface/60 border-2 border-secondary/30 text-text-primary px-6 py-3 rounded-full font-nunito font-bold hover:border-secondary/60 hover:bg-secondary/10 transition-smooth">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.207A1 1 0 013 6.5V4z"/>
+                        </svg>
+                        Smart Filter
+                    </button>
+                    <button id="share-schedule-btn" class="flex items-center gap-2 bg-accent/20 border-2 border-accent/40 text-accent px-6 py-3 rounded-full font-nunito font-bold hover:bg-accent hover:text-background transition-smooth">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+                        </svg>
+                        Share
+                    </button>
+                    <button id="settings-btn" class="p-3 bg-surface/60 border border-warning/30 text-text-secondary hover:text-warning hover:border-warning/60 transition-smooth rounded-full">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Weekly Schedule Grid with Drag & Drop -->
+    <section class="py-12 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface">
+        <div class="max-w-7xl mx-auto">
+            <!-- Schedule Grid Container with Neon Outlines -->
+            <div class="bg-surface/40 backdrop-blur-sm rounded-3xl border-2 border-primary/20 overflow-hidden shadow-2xl">
+                <!-- Enhanced Time Header -->
+                <div class="grid grid-cols-8 border-b-2 border-surface-600">
+                    <div class="p-6 border-r border-surface-600 bg-gradient-to-br from-surface/60 to-surface/40">
+                        <span class="text-text-primary text-lg font-nunito font-bold">Time Blocks</span>
+                    </div>
+                    <div class="p-4 border-r border-surface-600 text-center bg-gradient-to-br from-primary/10 to-primary/5 hover:from-primary/20 hover:to-primary/10 transition-smooth">
+                        <div class="font-nunito font-black text-text-primary text-lg">Mon</div>
+                        <div class="text-text-secondary text-sm font-semibold">16</div>
+                        <div class="text-primary text-xs mt-1">📅</div>
+                    </div>
+                    <div class="p-4 border-r border-surface-600 text-center bg-gradient-to-br from-secondary/10 to-secondary/5 hover:from-secondary/20 hover:to-secondary/10 transition-smooth">
+                        <div class="font-nunito font-black text-text-primary text-lg">Tue</div>
+                        <div class="text-text-secondary text-sm font-semibold">17</div>
+                        <div class="text-secondary text-xs mt-1">📅</div>
+                    </div>
+                    <div class="p-4 border-r border-surface-600 text-center bg-gradient-to-br from-accent/10 to-accent/5 hover:from-accent/20 hover:to-accent/10 transition-smooth">
+                        <div class="font-nunito font-black text-text-primary text-lg">Wed</div>
+                        <div class="text-text-secondary text-sm font-semibold">18</div>
+                        <div class="text-accent text-xs mt-1">📅</div>
+                    </div>
+                    <div class="p-4 border-r border-surface-600 text-center bg-gradient-to-br from-warning/10 to-warning/5 hover:from-warning/20 hover:to-warning/10 transition-smooth">
+                        <div class="font-nunito font-black text-text-primary text-lg">Thu</div>
+                        <div class="text-text-secondary text-sm font-semibold">19</div>
+                        <div class="text-warning text-xs mt-1">📅</div>
+                    </div>
+                    <div class="p-4 border-r border-surface-600 text-center bg-gradient-to-br from-error/10 to-error/5 hover:from-error/20 hover:to-error/10 transition-smooth">
+                        <div class="font-nunito font-black text-text-primary text-lg">Fri</div>
+                        <div class="text-text-secondary text-sm font-semibold">20</div>
+                        <div class="text-error text-xs mt-1">📅</div>
+                    </div>
+                    <div class="p-4 border-r border-surface-600 text-center bg-gradient-to-br from-primary/10 to-primary/5 hover:from-primary/20 hover:to-primary/10 transition-smooth">
+                        <div class="font-nunito font-black text-text-primary text-lg">Sat</div>
+                        <div class="text-text-secondary text-sm font-semibold">21</div>
+                        <div class="text-primary text-xs mt-1">📅</div>
+                    </div>
+                    <div class="p-4 text-center bg-gradient-to-br from-secondary/10 to-secondary/5 hover:from-secondary/20 hover:to-secondary/10 transition-smooth">
+                        <div class="font-nunito font-black text-text-primary text-lg">Sun</div>
+                        <div class="text-text-secondary text-sm font-semibold">22</div>
+                        <div class="text-secondary text-xs mt-1">📅</div>
+                    </div>
+                </div>
+
+                <!-- Enhanced Time Slots with Neon-Outlined Time Blocks -->
+                <div class="schedule-grid">
+                    <!-- 8:00 AM Row -->
+                    <div class="grid grid-cols-8 border-b border-surface-600/50 min-h-24 hover:bg-surface/5 transition-smooth">
+                        <div class="p-4 border-r border-surface-600/50 flex items-center bg-surface/20">
+                            <span class="text-text-primary text-sm font-nunito font-bold">8:00 AM</span>
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="8:00" data-day="mon">
+                            <!-- Empty slot with drop indicator -->
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="8:00" data-day="tue">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="8:00" data-day="wed">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="8:00" data-day="thu">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="8:00" data-day="fri">
+                            <div class="event-card draggable bg-gradient-to-r from-primary/30 to-primary/20 border-l-4 border-primary rounded-xl p-4 cursor-grab active:cursor-grabbing hover:shadow-neon transition-all duration-300 transform hover:scale-105" draggable="true">
+                                <h4 class="font-nunito font-black text-sm text-text-primary mb-1">Tech Innovation Summit 🚀</h4>
+                                <p class="text-text-secondary text-xs mb-1">Engineering Hall</p>
+                                <p class="text-primary text-xs font-bold">9:00 AM - 5:00 PM</p>
+                                <div class="flex items-center gap-2 mt-2">
+                                    <span class="bg-primary/30 text-primary px-2 py-1 rounded-full text-xs font-bold">Featured</span>
+                                    <span class="text-text-secondary text-xs">247 attending</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="8:00" data-day="sat">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-3 relative drop-zone" data-time="8:00" data-day="sun">
+                            <!-- Empty slot -->
+                        </div>
+                    </div>
+
+                    <!-- 10:00 AM Row -->
+                    <div class="grid grid-cols-8 border-b border-surface-600/50 min-h-24 hover:bg-surface/5 transition-smooth">
+                        <div class="p-4 border-r border-surface-600/50 flex items-center bg-surface/20">
+                            <span class="text-text-primary text-sm font-nunito font-bold">10:00 AM</span>
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="10:00" data-day="mon">
+                            <div class="event-card draggable bg-gradient-to-r from-secondary/30 to-secondary/20 border-l-4 border-secondary rounded-xl p-4 cursor-grab active:cursor-grabbing hover:shadow-neon-pink transition-all duration-300 transform hover:scale-105" draggable="true">
+                                <h4 class="font-nunito font-black text-sm text-text-primary mb-1">Data Structures Lab 💻</h4>
+                                <p class="text-text-secondary text-xs mb-1">CS Building</p>
+                                <p class="text-secondary text-xs font-bold">10:00 AM - 12:00 PM</p>
+                                <div class="flex items-center gap-2 mt-2">
+                                    <span class="bg-secondary/30 text-secondary px-2 py-1 rounded-full text-xs font-bold">Academic</span>
+                                    <div class="flex items-center gap-1 text-text-secondary text-xs">
+                                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                        </svg>
+                                        <span>5 friends</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="10:00" data-day="tue">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="10:00" data-day="wed">
+                            <div class="event-card draggable bg-gradient-to-r from-accent/30 to-accent/20 border-l-4 border-accent rounded-xl p-4 cursor-grab active:cursor-grabbing hover:shadow-neon-green transition-all duration-300 transform hover:scale-105" draggable="true">
+                                <h4 class="font-nunito font-black text-sm text-text-primary mb-1">Finals Study Marathon 📖</h4>
+                                <p class="text-text-secondary text-xs mb-1">Central Library</p>
+                                <p class="text-accent text-xs font-bold">All Day Event</p>
+                                <div class="flex items-center gap-2 mt-2">
+                                    <span class="bg-accent/30 text-accent px-2 py-1 rounded-full text-xs font-bold">Study</span>
+                                    <div class="flex items-center gap-1 text-warning text-xs">
+                                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                        </svg>
+                                        <span>4.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="10:00" data-day="thu">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="10:00" data-day="fri">
+                            <!-- Continuing from Friday - Tech Summit -->
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="10:00" data-day="sat">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-3 relative drop-zone" data-time="10:00" data-day="sun">
+                            <!-- Empty slot -->
+                        </div>
+                    </div>
+
+                    <!-- 12:00 PM Row -->
+                    <div class="grid grid-cols-8 border-b border-surface-600/50 min-h-24 hover:bg-surface/5 transition-smooth">
+                        <div class="p-4 border-r border-surface-600/50 flex items-center bg-surface/20">
+                            <span class="text-text-primary text-sm font-nunito font-bold">12:00 PM</span>
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="12:00" data-day="mon">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="12:00" data-day="tue">
+                            <div class="event-card draggable bg-gradient-to-r from-warning/30 to-warning/20 border-l-4 border-warning rounded-xl p-4 cursor-grab active:cursor-grabbing hover:shadow-neon transition-all duration-300 transform hover:scale-105" draggable="true">
+                                <h4 class="font-nunito font-black text-sm text-text-primary mb-1">Lunch & Learn 🍕</h4>
+                                <p class="text-text-secondary text-xs mb-1">Student Center</p>
+                                <p class="text-warning text-xs font-bold">12:00 PM - 1:00 PM</p>
+                                <div class="flex items-center gap-2 mt-2">
+                                    <span class="bg-warning/30 text-warning px-2 py-1 rounded-full text-xs font-bold">Social</span>
+                                    <span class="text-text-secondary text-xs">Free Food!</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="12:00" data-day="wed">
+                            <!-- Continuing from Wednesday - Study Marathon -->
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="12:00" data-day="thu">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="12:00" data-day="fri">
+                            <!-- Continuing from Friday - Tech Summit -->
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="12:00" data-day="sat">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-3 relative drop-zone" data-time="12:00" data-day="sun">
+                            <!-- Empty slot -->
+                        </div>
+                    </div>
+
+                    <!-- 2:00 PM Row -->
+                    <div class="grid grid-cols-8 border-b border-surface-600/50 min-h-24 hover:bg-surface/5 transition-smooth">
+                        <div class="p-4 border-r border-surface-600/50 flex items-center bg-surface/20">
+                            <span class="text-text-primary text-sm font-nunito font-bold">2:00 PM</span>
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="14:00" data-day="mon">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="14:00" data-day="tue">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="14:00" data-day="wed">
+                            <!-- Continuing from Wednesday - Study Marathon -->
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="14:00" data-day="thu">
+                            <div class="event-card draggable bg-gradient-to-r from-error/30 to-error/20 border-l-4 border-error rounded-xl p-4 cursor-grab active:cursor-grabbing hover:shadow-neon transition-all duration-300 transform hover:scale-105" draggable="true">
+                                <h4 class="font-nunito font-black text-sm text-text-primary mb-1">Basketball Practice 🏀</h4>
+                                <p class="text-text-secondary text-xs mb-1">Sports Complex</p>
+                                <p class="text-error text-xs font-bold">2:00 PM - 4:00 PM</p>
+                                <div class="flex items-center gap-2 mt-2">
+                                    <span class="bg-error/30 text-error px-2 py-1 rounded-full text-xs font-bold">Sports</span>
+                                    <div class="flex items-center gap-1 text-text-secondary text-xs">
+                                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                        </svg>
+                                        <span>Team mates</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="14:00" data-day="fri">
+                            <!-- Continuing from Friday - Tech Summit -->
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="14:00" data-day="sat">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-3 relative drop-zone" data-time="14:00" data-day="sun">
+                            <!-- Empty slot -->
+                        </div>
+                    </div>
+
+                    <!-- 7:00 PM Row -->
+                    <div class="grid grid-cols-8 border-b border-surface-600/50 min-h-24 hover:bg-surface/5 transition-smooth">
+                        <div class="p-4 border-r border-surface-600/50 flex items-center bg-surface/20">
+                            <span class="text-text-primary text-sm font-nunito font-bold">7:00 PM</span>
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="19:00" data-day="mon">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="19:00" data-day="tue">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="19:00" data-day="wed">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="19:00" data-day="thu">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="19:00" data-day="fri">
+                            <!-- Empty slot -->
+                        </div>
+                        <div class="p-3 border-r border-surface-600/50 relative drop-zone" data-time="19:00" data-day="sat">
+                            <div class="event-card draggable bg-gradient-to-r from-accent/30 to-secondary/20 border-l-4 border-accent rounded-xl p-4 cursor-grab active:cursor-grabbing hover:shadow-neon-green transition-all duration-300 transform hover:scale-105" draggable="true">
+                                <h4 class="font-nunito font-black text-sm text-text-primary mb-1">Winter Music Festival 🎵</h4>
+                                <p class="text-text-secondary text-xs mb-1">Campus Amphitheater</p>
+                                <p class="text-accent text-xs font-bold">7:00 PM - 11:00 PM</p>
+                                <div class="flex items-center gap-2 mt-2">
+                                    <span class="bg-accent/30 text-accent px-2 py-1 rounded-full text-xs font-bold">Music</span>
+                                    <div class="flex items-center gap-1 text-text-secondary text-xs">
+                                        <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                        </svg>
+                                        <span>12 friends</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-3 relative drop-zone" data-time="19:00" data-day="sun">
+                            <!-- Empty slot -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conflict Detection Alert -->
+            <div id="conflict-alert" class="hidden mt-6 bg-error/20 border-l-4 border-error rounded-lg p-6">
+                <div class="flex items-center">
+                    <svg class="w-6 h-6 text-error mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+                    </svg>
+                    <div>
+                        <h4 class="text-error font-nunito font-bold text-lg">Schedule Conflict Detected! ⚠️</h4>
+                        <p class="text-text-secondary mt-1">Your events overlap. Would you like smart suggestions to resolve this?</p>
+                        <button class="mt-3 bg-error text-background px-4 py-2 rounded-lg font-nunito font-bold hover:bg-error/80 transition-smooth">
+                            Get Smart Suggestions 🤖
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI-Powered Recommendations Section -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-surface to-background">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="font-montserrat font-black text-4xl sm:text-5xl mb-6">
+                    <span class="bg-gradient-to-r from-secondary to-accent bg-clip-text text-transparent">
+                        AI-Powered Event Recommendations 🤖
+                    </span>
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Based on your academic schedule, interests, and social connections, here are personalized event suggestions!
+                </p>
+            </div>
+
+            <!-- Recommendation Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <div class="bg-surface/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-primary/30 hover:border-primary/60 transition-smooth transform hover:scale-105">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-background" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-nunito font-bold text-lg text-text-primary">Perfect Match</h3>
+                            <p class="text-primary text-sm font-semibold">98% compatibility</p>
+                        </div>
+                    </div>
+                    <h4 class="font-montserrat font-bold text-xl text-text-primary mb-3">Advanced React Workshop 💻</h4>
+                    <p class="text-text-secondary mb-4">Matches your CS curriculum and recent JavaScript projects.</p>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-text-secondary text-sm">Tomorrow, 3:00 PM</span>
+                        <div class="flex items-center gap-1 text-warning text-sm">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <span>4.9</span>
+                        </div>
+                    </div>
+                    <button class="w-full bg-gradient-to-r from-primary to-secondary text-background font-nunito font-bold py-3 rounded-xl hover:shadow-neon transition-smooth">
+                        Add to Schedule ✨
+                    </button>
+                </div>
+
+                <div class="bg-surface/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-secondary/30 hover:border-secondary/60 transition-smooth transform hover:scale-105">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-background" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-nunito font-bold text-lg text-text-primary">Social Match</h3>
+                            <p class="text-secondary text-sm font-semibold">8 friends going</p>
+                        </div>
+                    </div>
+                    <h4 class="font-montserrat font-bold text-xl text-text-primary mb-3">Campus Gaming Tournament 🎮</h4>
+                    <p class="text-text-secondary mb-4">Your gaming friends are attending this event!</p>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-text-secondary text-sm">Friday, 6:00 PM</span>
+                        <div class="flex items-center gap-1 text-text-secondary text-sm">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                            </svg>
+                            <span>156 attending</span>
+                        </div>
+                    </div>
+                    <button class="w-full bg-gradient-to-r from-secondary to-accent text-background font-nunito font-bold py-3 rounded-xl hover:shadow-neon-pink transition-smooth">
+                        Join Friends 🎉
+                    </button>
+                </div>
+
+                <div class="bg-surface/60 backdrop-blur-sm rounded-2xl p-8 border-2 border-accent/30 hover:border-accent/60 transition-smooth transform hover:scale-105">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-accent to-warning rounded-full flex items-center justify-center">
+                            <svg class="w-6 h-6 text-background" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-nunito font-bold text-lg text-text-primary">Time Optimal</h3>
+                            <p class="text-accent text-sm font-semibold">Fits your schedule</p>
+                        </div>
+                    </div>
+                    <h4 class="font-montserrat font-bold text-xl text-text-primary mb-3">Mindfulness Meditation 🧘</h4>
+                    <p class="text-text-secondary mb-4">Perfect break between your busy Tuesday classes.</p>
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-text-secondary text-sm">Tuesday, 1:00 PM</span>
+                        <div class="flex items-center gap-1 text-accent text-sm">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
+                            </svg>
+                            <span>Wellness focused</span>
+                        </div>
+                    </div>
+                    <button class="w-full bg-gradient-to-r from-accent to-warning text-background font-nunito font-bold py-3 rounded-xl hover:shadow-neon-green transition-smooth">
+                        Add Wellness Break 🌟
+                    </button>
+                </div>
+            </div>
+
+            <!-- AI Insights -->
+            <div class="bg-surface/40 backdrop-blur-sm rounded-2xl p-8 border border-primary/20">
+                <h3 class="font-montserrat font-bold text-2xl text-text-primary mb-6 text-center">AI Schedule Insights 📊</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-nunito font-bold text-text-primary mb-2">Optimal Learning Hours</h4>
+                        <p class="text-text-secondary text-sm">Your peak focus is 10-11 AM based on attendance patterns</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-nunito font-bold text-text-primary mb-2">Social Balance</h4>
+                        <p class="text-text-secondary text-sm">Recommend 2 more social events this week for balance</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                        </div>
+                        <h4 class="font-nunito font-bold text-text-primary mb-2">Energy Management</h4>
+                        <p class="text-text-secondary text-sm">Schedule lighter activities after 3 PM for better performance</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Collaboration Features -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-surface">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="font-montserrat font-black text-4xl sm:text-5xl mb-6">
+                    <span class="bg-gradient-to-r from-accent to-warning bg-clip-text text-transparent">
+                        Collaborative Planning Hub 👥
+                    </span>
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Real-time collaboration with friends, shared calendar overlays, and group messaging integration! 
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Friends Schedule View -->
+                <div class="bg-surface/60 backdrop-blur-sm rounded-2xl p-8 border border-primary/20">
+                    <h3 class="font-nunito font-bold text-xl text-text-primary mb-6 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                        Friends' Schedules
+                    </h3>
+                    
+                    <!-- Friends List -->
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-center gap-3 p-3 bg-surface/40 rounded-lg border border-secondary/20 hover:border-secondary/40 transition-smooth">
+                            <div class="w-10 h-10 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center">
+                                <span class="text-background font-bold text-sm">AS</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-nunito font-bold text-text-primary">Alex Smith</h4>
+                                <p class="text-text-secondary text-sm">Available 2-4 PM today</p>
+                            </div>
+                            <button class="bg-secondary/20 text-secondary px-3 py-1 rounded-full text-sm font-semibold hover:bg-secondary hover:text-background transition-smooth">
+                                View Schedule
+                            </button>
+                        </div>
+
+                        <div class="flex items-center gap-3 p-3 bg-surface/40 rounded-lg border border-accent/20 hover:border-accent/40 transition-smooth">
+                            <div class="w-10 h-10 bg-gradient-to-br from-accent to-warning rounded-full flex items-center justify-center">
+                                <span class="text-background font-bold text-sm">MJ</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-nunito font-bold text-text-primary">Maya Johnson</h4>
+                                <p class="text-text-secondary text-sm">Free until 6 PM</p>
+                            </div>
+                            <button class="bg-accent/20 text-accent px-3 py-1 rounded-full text-sm font-semibold hover:bg-accent hover:text-background transition-smooth">
+                                View Schedule
+                            </button>
+                        </div>
+
+                        <div class="flex items-center gap-3 p-3 bg-surface/40 rounded-lg border border-warning/20 hover:border-warning/40 transition-smooth">
+                            <div class="w-10 h-10 bg-gradient-to-br from-warning to-error rounded-full flex items-center justify-center">
+                                <span class="text-background font-bold text-sm">DC</span>
+                            </div>
+                            <div class="flex-1">
+                                <h4 class="font-nunito font-bold text-text-primary">David Chen</h4>
+                                <p class="text-text-secondary text-sm">Busy until tomorrow</p>
+                            </div>
+                            <button class="bg-warning/20 text-warning px-3 py-1 rounded-full text-sm font-semibold hover:bg-warning hover:text-background transition-smooth">
+                                View Schedule
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Group Actions -->
+                    <div class="flex gap-2">
+                        <button class="flex-1 bg-gradient-to-r from-primary to-secondary text-background font-nunito font-bold py-3 rounded-lg hover:shadow-neon transition-smooth">
+                            Plan Group Study 📚
+                        </button>
+                        <button class="px-4 py-3 border-2 border-primary/30 text-primary rounded-lg hover:bg-primary hover:text-background transition-smooth">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Group Messaging Integration -->
+                <div class="bg-surface/60 backdrop-blur-sm rounded-2xl p-8 border border-secondary/20">
+                    <h3 class="font-nunito font-bold text-xl text-text-primary mb-6 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                        </svg>
+                        Study Group Chat
+                    </h3>
+                    
+                    <!-- Chat Messages -->
+                    <div class="space-y-3 mb-6 h-64 overflow-y-auto bg-surface/20 rounded-lg p-4">
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 bg-gradient-to-br from-secondary to-accent rounded-full flex items-center justify-center">
+                                <span class="text-background font-bold text-xs">AS</span>
+                            </div>
+                            <div>
+                                <div class="bg-secondary/20 text-text-primary rounded-lg px-3 py-2">
+                                    <p class="text-sm">Hey! Want to study together for the CS final?</p>
+                                </div>
+                                <span class="text-text-secondary text-xs mt-1">2 hours ago</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3 justify-end">
+                            <div>
+                                <div class="bg-primary/30 text-text-primary rounded-lg px-3 py-2">
+                                    <p class="text-sm">Absolutely! When works for everyone?</p>
+                                </div>
+                                <span class="text-text-secondary text-xs mt-1 text-right block">1 hour ago</span>
+                            </div>
+                            <div class="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                                <span class="text-background font-bold text-xs">Me</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-8 h-8 bg-gradient-to-br from-accent to-warning rounded-full flex items-center justify-center">
+                                <span class="text-background font-bold text-xs">MJ</span>
+                            </div>
+                            <div>
+                                <div class="bg-accent/20 text-text-primary rounded-lg px-3 py-2">
+                                    <p class="text-sm">I'm free Wednesday 2-6 PM! 📚</p>
+                                </div>
+                                <span class="text-text-secondary text-xs mt-1">30 minutes ago</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-warning/20 border-l-4 border-warning rounded-lg p-3">
+                            <div class="flex items-center gap-2 mb-1">
+                                <svg class="w-4 h-4 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                </svg>
+                                <span class="text-warning font-semibold text-sm">Smart Suggestion</span>
+                            </div>
+                            <p class="text-text-secondary text-sm">All 3 members are free Wednesday 2-4 PM. Perfect for group study!</p>
+                        </div>
+                    </div>
+
+                    <!-- Chat Input -->
+                    <div class="flex gap-2">
+                        <input type="text" placeholder="Type a message..." class="flex-1 bg-surface/40 border border-accent/30 rounded-lg px-4 py-3 text-text-primary placeholder-text-secondary focus:border-accent focus:outline-none transition-smooth" />
+                        <button class="bg-gradient-to-r from-secondary to-accent text-background px-6 py-3 rounded-lg font-nunito font-bold hover:shadow-neon-pink transition-smooth">
+                            Send
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Actions & Voice Input -->
+    <section class="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-surface to-background">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="font-montserrat font-black text-4xl sm:text-5xl mb-6">
+                    <span class="bg-gradient-to-r from-warning to-error bg-clip-text text-transparent">
+                        Quick Actions & Voice Control 🎙️
+                    </span>
+                </h2>
+                <p class="text-xl text-text-secondary">
+                    Streamline your schedule management with voice input and gesture controls! 
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Voice-Powered Event Addition -->
+                <div class="bg-surface/60 backdrop-blur-sm rounded-2xl p-8 border border-primary/20">
+                    <h3 class="font-nunito font-bold text-xl text-text-primary mb-6 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+                        </svg>
+                        Voice Event Creator
+                    </h3>
+                    
+                    <div class="text-center mb-6">
+                        <button id="voice-record-btn" class="w-24 h-24 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center mx-auto mb-4 hover:shadow-neon transition-smooth transform hover:scale-110 pulse-animation">
+                            <svg class="w-10 h-10 text-background" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"/>
+                            </svg>
+                        </button>
+                        <p class="text-text-secondary">Tap and say: "Add study session tomorrow at 3 PM"</p>
+                    </div>
+
+                    <!-- Voice Recognition Status -->
+                    <div id="voice-status" class="hidden bg-primary/20 border border-primary/40 rounded-lg p-4 mb-4">
+                        <div class="flex items-center gap-2 mb-2">
+                            <div class="w-3 h-3 bg-primary rounded-full animate-pulse"></div>
+                            <span class="text-primary font-semibold text-sm">Listening...</span>
+                        </div>
+                        <p class="text-text-secondary text-sm" id="voice-transcript">Speak now to add an event</p>
+                    </div>
+
+                    <!-- Voice Examples -->
+                    <div class="space-y-2">
+                        <p class="text-text-secondary text-sm font-semibold">Try saying:</p>
+                        <div class="space-y-1">
+                            <div class="text-text-secondary text-sm bg-surface/20 rounded px-3 py-2">"Meeting with prof tomorrow at 2"</div>
+                            <div class="text-text-secondary text-sm bg-surface/20 rounded px-3 py-2">"Study group Friday evening"</div>
+                            <div class="text-text-secondary text-sm bg-surface/20 rounded px-3 py-2">"Gym workout Wednesday morning"</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gesture Controls & Settings -->
+                <div class="bg-surface/60 backdrop-blur-sm rounded-2xl p-8 border border-secondary/20">
+                    <h3 class="font-nunito font-bold text-xl text-text-primary mb-6 flex items-center gap-2">
+                        <svg class="w-6 h-6 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                        </svg>
+                        Mobile Gesture Controls
+                    </h3>
+                    
+                    <!-- Gesture Guide -->
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-center gap-4 p-3 bg-surface/20 rounded-lg">
+                            <div class="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center">
+                                <span class="text-secondary font-bold text-lg">👆</span>
+                            </div>
+                            <div>
+                                <h4 class="font-nunito font-bold text-text-primary text-sm">Swipe Up</h4>
+                                <p class="text-text-secondary text-xs">Quick add event</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-3 bg-surface/20 rounded-lg">
+                            <div class="w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center">
+                                <span class="text-accent font-bold text-lg">👈</span>
+                            </div>
+                            <div>
+                                <h4 class="font-nunito font-bold text-text-primary text-sm">Swipe Left</h4>
+                                <p class="text-text-secondary text-xs">Previous day/week</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-3 bg-surface/20 rounded-lg">
+                            <div class="w-10 h-10 bg-warning/20 rounded-full flex items-center justify-center">
+                                <span class="text-warning font-bold text-lg">👉</span>
+                            </div>
+                            <div>
+                                <h4 class="font-nunito font-bold text-text-primary text-sm">Swipe Right</h4>
+                                <p class="text-text-secondary text-xs">Next day/week</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 p-3 bg-surface/20 rounded-lg">
+                            <div class="w-10 h-10 bg-error/20 rounded-full flex items-center justify-center">
+                                <span class="text-error font-bold text-lg">👇</span>
+                            </div>
+                            <div>
+                                <h4 class="font-nunito font-bold text-text-primary text-sm">Long Press</h4>
+                                <p class="text-text-secondary text-xs">Event details & edit</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings Toggle -->
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-primary font-nunito font-semibold">Voice Commands</span>
+                            <button class="w-12 h-6 bg-primary rounded-full relative transition-smooth" id="voice-toggle">
+                                <div class="w-5 h-5 bg-background rounded-full absolute top-0.5 right-0.5 transition-transform"></div>
+                            </button>
+                        </div>
+                        
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-primary font-nunito font-semibold">Gesture Navigation</span>
+                            <button class="w-12 h-6 bg-secondary rounded-full relative transition-smooth" id="gesture-toggle">
+                                <div class="w-5 h-5 bg-background rounded-full absolute top-0.5 right-0.5 transition-transform"></div>
+                            </button>
+                        </div>
+
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-primary font-nunito font-semibold">Smart Notifications</span>
+                            <button class="w-12 h-6 bg-accent rounded-full relative transition-smooth" id="notifications-toggle">
+                                <div class="w-5 h-5 bg-background rounded-full absolute top-0.5 right-0.5 transition-transform"></div>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-surface/80 backdrop-blur-md border-t border-primary/20 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="w-8 h-8 mr-3" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="32" height="32" rx="8" fill="url(#footer-logo-gradient)"/>
+                            <path d="M8 12h16v2H8v-2zm0 4h16v2H8v-2zm0 4h12v2H8v-2z" fill="white"/>
+                            <defs>
+                                <linearGradient id="footer-logo-gradient" x1="0" y1="0" x2="32" y2="32">
+                                    <stop offset="0%" stop-color="#00FFFF"/>
+                                    <stop offset="100%" stop-color="#FF1493"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span class="font-montserrat font-bold text-xl text-primary">TheCampusConnect</span>
+                    </div>
+                    <p class="text-text-secondary mb-4 max-w-md">
+                        Master your campus time with comprehensive planning, AI-powered recommendations, and collaborative features! ✨
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-nunito font-bold text-text-primary mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="homepage_interactive_campus_event_hub.html" class="text-text-secondary hover:text-primary transition-micro">Home</a></li>
+                        <li><a href="events_page_dedicated_event_discovery_hub.html" class="text-text-secondary hover:text-primary transition-micro">Events</a></li>
+                        <li><a href="campus_map_interactive_location_hub.html" class="text-text-secondary hover:text-primary transition-micro">Campus Map</a></li>
+                        <li><a href="social_hub_community_showcase.html" class="text-text-secondary hover:text-primary transition-micro">Social Hub</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-nunito font-bold text-text-primary mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="contact_feedback_community_connection_portal.html" class="text-text-secondary hover:text-primary transition-micro">Contact Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">Help Center</a></li>
+                        <li><a href="javascript:void(0)" class="text-text-secondary hover:text-primary transition-micro">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Navigation background on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('bg-background/95');
+                nav.classList.remove('bg-background/80');
+            } else {
+                nav.classList.add('bg-background/80');
+                nav.classList.remove('bg-background/95');
+            }
+        });
+
+        // View Toggle Buttons with Enhanced Animations
+        document.querySelectorAll('.view-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.view-btn').forEach(b => {
+                    b.classList.remove('active', 'bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-background', 'shadow-neon');
+                    b.classList.add('text-text-secondary');
+                });
+                
+                btn.classList.add('active', 'bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-background', 'shadow-neon');
+                btn.classList.remove('text-text-secondary');
+            });
+        });
+
+        // Enhanced Drag and Drop Functionality
+        let draggedElement = null;
+        let dragOffset = { x: 0, y: 0 };
+
+        document.querySelectorAll('.draggable').forEach(card => {
+            card.addEventListener('dragstart', (e) => {
+                draggedElement = e.target;
+                e.target.style.opacity = '0.6';
+                e.target.style.transform = 'rotate(5deg)';
+                
+                // Visual feedback
+                document.querySelectorAll('.drop-zone').forEach(zone => {
+                    zone.classList.add('border-2', 'border-dashed', 'border-primary/50', 'bg-primary/5');
+                });
+            });
+
+            card.addEventListener('dragend', (e) => {
+                e.target.style.opacity = '1';
+                e.target.style.transform = 'none';
+                draggedElement = null;
+                
+                // Remove visual feedback
+                document.querySelectorAll('.drop-zone').forEach(zone => {
+                    zone.classList.remove('border-2', 'border-dashed', 'border-primary/50', 'bg-primary/5', 'bg-primary/10');
+                });
+            });
+        });
+
+        // Enhanced Drop Zones
+        document.querySelectorAll('.drop-zone').forEach(slot => {
+            slot.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                slot.classList.add('bg-primary/10', 'border-primary/70');
+            });
+
+            slot.addEventListener('dragleave', () => {
+                slot.classList.remove('bg-primary/10', 'border-primary/70');
+            });
+
+            slot.addEventListener('drop', (e) => {
+                e.preventDefault();
+                slot.classList.remove('bg-primary/10', 'border-primary/70');
+                
+                if (draggedElement && !slot.querySelector('.event-card')) {
+                    slot.appendChild(draggedElement);
+                    
+                    // Show conflict detection if needed
+                    if (Math.random() > 0.7) { // 30% chance to show conflict
+                        document.getElementById('conflict-alert').classList.remove('hidden');
+                        setTimeout(() => {
+                            document.getElementById('conflict-alert').classList.add('hidden');
+                        }, 5000);
+                    }
+                    
+                    // Update sync status
+                    updateSyncStatus();
+                }
+            });
+        });
+
+        // Voice Recording Functionality
+        const voiceRecordBtn = document.getElementById('voice-record-btn');
+        const voiceStatus = document.getElementById('voice-status');
+        const voiceTranscript = document.getElementById('voice-transcript');
+        let isRecording = false;
+
+        voiceRecordBtn.addEventListener('click', () => {
+            if (!isRecording) {
+                startVoiceRecording();
+            } else {
+                stopVoiceRecording();
+            }
+        });
+
+        function startVoiceRecording() {
+            isRecording = true;
+            voiceStatus.classList.remove('hidden');
+            voiceRecordBtn.classList.add('bg-error');
+            voiceRecordBtn.classList.remove('bg-gradient-to-br', 'from-primary', 'to-secondary');
+            
+            // Simulate voice recognition
+            let phrases = [
+                "Add study session tomorrow at 3 PM",
+                "Meeting with professor Friday at 10 AM",
+                "Gym workout Wednesday morning at 8"
+            ];
+            
+            let currentPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+            let index = 0;
+            
+            const typeEffect = setInterval(() => {
+                voiceTranscript.textContent = currentPhrase.substring(0, index + 1);
+                index++;
+                
+                if (index >= currentPhrase.length) {
+                    clearInterval(typeEffect);
+                    setTimeout(() => {
+                        processVoiceCommand(currentPhrase);
+                    }, 1000);
+                }
+            }, 50);
+        }
+
+        function stopVoiceRecording() {
+            isRecording = false;
+            voiceStatus.classList.add('hidden');
+            voiceRecordBtn.classList.remove('bg-error');
+            voiceRecordBtn.classList.add('bg-gradient-to-br', 'from-primary', 'to-secondary');
+        }
+
+        function processVoiceCommand(command) {
+            // Simulate processing
+            voiceTranscript.innerHTML = `<span class="text-primary">✓ Processing:</span> "${command}"`;
+            
+            setTimeout(() => {
+                voiceTranscript.innerHTML = `<span class="text-primary">✓ Added:</span> ${command}`;
+                setTimeout(() => {
+                    stopVoiceRecording();
+                }, 2000);
+            }, 1500);
+        }
+
+        // Settings Toggles
+        document.querySelectorAll('[id$="-toggle"]').forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const dot = toggle.querySelector('div');
+                if (dot.classList.contains('right-0.5')) {
+                    dot.classList.remove('right-0.5');
+                    dot.classList.add('left-0.5');
+                    toggle.classList.remove('bg-primary', 'bg-secondary', 'bg-accent');
+                    toggle.classList.add('bg-surface');
+                } else {
+                    dot.classList.add('right-0.5');
+                    dot.classList.remove('left-0.5');
+                    toggle.classList.remove('bg-surface');
+                    if (toggle.id.includes('voice')) toggle.classList.add('bg-primary');
+                    if (toggle.id.includes('gesture')) toggle.classList.add('bg-secondary');
+                    if (toggle.id.includes('notifications')) toggle.classList.add('bg-accent');
+                }
+            });
+        });
+
+        // AI Recommendation Actions
+        document.querySelectorAll('button:contains("Add to Schedule"), button:contains("Join Friends"), button:contains("Add Wellness Break")').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const originalText = btn.innerHTML;
+                btn.innerHTML = 'Adding... ⏳';
+                btn.disabled = true;
+                
+                setTimeout(() => {
+                    btn.innerHTML = 'Added Successfully! ✓';
+                    btn.classList.add('bg-success');
+                    btn.classList.remove('bg-gradient-to-r');
+                    
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
+                        btn.classList.remove('bg-success');
+                        btn.classList.add('bg-gradient-to-r');
+                    }, 2000);
+                }, 1500);
+            });
+        });
+
+        // Sync Status Updates
+        function updateSyncStatus() {
+            const syncStatus = document.getElementById('sync-status');
+            syncStatus.innerHTML = '<span class="text-warning">Syncing... ⏳</span>';
+            
+            setTimeout(() => {
+                syncStatus.innerHTML = '<span class="text-primary">Synced ✓</span>';
+            }, 2000);
+        }
+
+        // Floating particles animation with enhanced movement
+        document.querySelectorAll('.floating-particle').forEach((particle, index) => {
+            particle.style.animation = `float ${4 + index * 0.3}s ease-in-out infinite`;
+            particle.style.animationDelay = `${index * 0.2}s`;
+        });
+
+        // Enhanced CSS animations
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes float {
+                0%, 100% { transform: translateY(0px) rotate(0deg); }
+                25% { transform: translateY(-20px) rotate(2deg); }
+                50% { transform: translateY(-10px) rotate(-1deg); }
+                75% { transform: translateY(-15px) rotate(1deg); }
+            }
+            @keyframes fade-in {
+                from { opacity: 0; transform: translateY(30px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+            @keyframes pulse-animation {
+                0%, 100% { transform: scale(1); }
+                50% { transform: scale(1.05); }
+            }
+            .animate-fade-in {
+                animation: fade-in 0.8s ease-out;
+            }
+            .pulse-animation {
+                animation: pulse-animation 2s ease-in-out infinite;
+            }
+            .shadow-neon {
+                box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+            }
+            .shadow-neon-pink {
+                box-shadow: 0 0 20px rgba(255, 20, 147, 0.5);
+            }
+            .shadow-neon-green {
+                box-shadow: 0 0 20px rgba(50, 205, 50, 0.5);
+            }
+            .cursor-grab {
+                cursor: grab;
+            }
+            .cursor-grabbing {
+                cursor: grabbing;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Enhanced event card interactions
+        document.querySelectorAll('.event-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                if (!card.classList.contains('draggable')) return;
+                
+                // Show event details (placeholder)
+                const eventTitle = card.querySelector('h4').textContent;
+                alert(`Event Details: ${eventTitle}\n\nClick OK to view full details!`);
+            });
+        });
+
+        // Week Navigation
+        document.getElementById('prev-week').addEventListener('click', () => {
+            // Simulate week change with loading
+            const dateElement = document.querySelector('h2');
+            dateElement.style.opacity = '0.5';
+            setTimeout(() => {
+                dateElement.textContent = 'December 9-15, 2025';
+                dateElement.style.opacity = '1';
+                updateSyncStatus();
+            }, 300);
+        });
+
+        document.getElementById('next-week').addEventListener('click', () => {
+            const dateElement = document.querySelector('h2');
+            dateElement.style.opacity = '0.5';
+            setTimeout(() => {
+                dateElement.textContent = 'December 23-29, 2025';
+                dateElement.style.opacity = '1';
+                updateSyncStatus();
+            }, 300);
+        });
+
+        // Auto-save functionality
+        setInterval(() => {
+            console.log('Auto-saving schedule changes...');
+            updateSyncStatus();
+        }, 45000); // Auto-save every 45 seconds
+
+        // Friend schedule viewing
+        document.querySelectorAll('button:contains("View Schedule")').forEach(btn => {
+            btn.addEventListener('click', () => {
+                btn.innerHTML = 'Loading... ⏳';
+                setTimeout(() => {
+                    btn.innerHTML = 'View Schedule';
+                    alert('Friend\'s schedule would open in overlay view!');
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
